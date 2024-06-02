@@ -1,0 +1,30 @@
+.mobile-menu(class=mobileMenuClassName)
+  .wrapper
+    .mobile-menu__group
+      -var cityPicekrClass = "city-picker--menu-item"
+      include /components/ui/city-picker.pug
+      a.mobile-menu__group-link(href="/shop/")
+        svg
+          use(href="/images/sprite.svg#catalog")
+        | Каталог товаров
+
+    .mobile-menu__group
+      a.mobile-menu__group-link(href="tel:+79999999999")
+        svg
+          use(href="/images/sprite.svg#phone")
+        | +7 999 999 99 99
+      a.mobile-menu__group-link(href="tel:+79999999999")
+        svg
+          use(href="/images/sprite.svg#phone")
+        | +7 999 999 99 99
+      a.mobile-menu__group-link(href="mailto:avd-instrument@bk.ru")
+        svg
+          use(href="/images/sprite.svg#email")
+        | avd-instrument@bk.ru
+      - var socialsClass = 'mobile-menu__socials socials--blue'
+      include /components/ui/socials.pug
+      button.mobile-menu__callback.button Заказать звонок
+
+    .mobile-menu__group
+      - var navigationClassName = 'mobile-menu__navigation'
+      include /components/ui/navigation.pug

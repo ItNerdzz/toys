@@ -1,0 +1,25 @@
+.breadcrumbs__inner {
+  padding: 44px 0 30px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 60px;
+  }
+}
+
+.breadcrumbs__list {
+  @include clearlist;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  li {
+    color: $grey;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  a {
+    color: $primary;
+  }
+}

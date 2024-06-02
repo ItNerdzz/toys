@@ -1,0 +1,45 @@
+section.banner(class=bannerClassName)
+  .wrapper
+    .banner__inner
+      .banner__swiper.swiper
+        .swiper-wrapper
+          -
+            const bennerItems = [
+              {
+                title: 'Поставщик комплектующих и запчастей для производств', listItems: [
+                  'В наличии <b>50+ производителей</b> (Homag, Rexroth, Kluber, Siemens и тд)',
+                  'Доставка со склада <b>за 1-2 дня</b>', '<b>Поиск запчастей под заказ</b> от 2 до 6 недель',
+                  'Поставка <b>оригинальных запчастей и аналогов</b>', 'Возможна <b>отсрочка платежа</b> до 30 дней'
+                ],
+                image: '/images/main-block-img2.png'
+              },
+              {
+                title: 'Поставщик комплектующих и запчастей для производств',
+                listItems: [
+                  'В наличии <b>50+ производителей</b> (Homag, Rexroth, Kluber, Siemens и тд)',
+                  'Доставка со склада <b>за 1-2 дня</b>', '<b>Поиск запчастей под заказ</b> от 2 до 6 недель',
+                  'Поставка <b>оригинальных запчастей и аналогов</b>', 'Возможна <b>отсрочка платежа</b> до 30 дней'
+                ],
+                image: '/images/main-block-img.png'
+              },
+              {
+                title: 'Поставщик комплектующих и запчастей для производств',
+                listItems: [
+                  'В наличии <b>50+ производителей</b> (Homag, Rexroth, Kluber, Siemens и тд)',
+                  'Доставка со склада <b>за 1-2 дня</b>', '<b>Поиск запчастей под заказ</b> от 2 до 6 недель',
+                  'Поставка <b>оригинальных запчастей и аналогов</b>', 'Возможна <b>отсрочка платежа</b> до 30 дней'
+                ],
+                image: '/images/main-block-img3.png'}
+            ]
+          each bannerItem in bennerItems
+            .swiper-slide
+              .banner__item
+                .banner__text-container
+                  h1.banner__title.title.title--big= bannerItem.title
+                  ul.banner__list
+                    each item in bannerItem.listItems
+                      li.banner__list-item !{item}
+                .banner__image
+                  img(src=bannerItem.image, width='300', height='100', alt='avd')
+
+        div.banner__pagination.swiper-pagination

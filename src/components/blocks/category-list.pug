@@ -1,0 +1,22 @@
+.wrapper
+  ul.category-list
+    -
+      var categories = [
+        {name: 'Комплектующие и запасти для станков Homag', image: '/images/category-1.png'},
+        {name: 'Ролики и запчасти для линий окутывания', image: '/images/category-2.png'},
+        {name: 'Для кромкооблицовочных станков', image: '/images/category-3.png'},
+        {name: 'Ручки зажимные, счетчик цифровой для станков', image: '/images/category-4.png'},
+        {name: 'Для сверлильно-присадочных станков', image: '/images/category-5.png'},
+        {name: 'Для нестинга и центров ЧПУ', image: '/images/category-6.png'},
+        {name: 'Для форматно-раскроечных станков', image: '/images/category-7.png'},
+        {name: 'Ролики и запчасти для линий окутывания', image: '/images/category-8.png'},
+        {name: 'Для пильных центров с ЧПУ', image: '/images/category-9.png'},
+        {name: 'Для 4х сторонних станков', image: '/images/category-10.png'},
+        {name: 'Смазочные материалы', image: '/images/category-11.png'},
+      ]
+
+    each item in categories
+      li.category-list__item
+        - var categoryName = item.name
+        - var categoryImage = item.image
+        include /components/ui/category-preview.pug

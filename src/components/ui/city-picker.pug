@@ -1,0 +1,13 @@
+.city-picker(class=cityPicekrClass)
+    .city-picker__inner
+      button.city-picker__button
+        svg.city-picker__geo-icon
+          use(href="/images/sprite.svg#geo")
+        | Белгород
+        svg.city-picker__triangle-icon
+          use(href="/images/sprite.svg#triangle")
+      .city-picker__tooltip
+        p.city-picker__tooltip-title Ваш город Белгород?
+        .city-picker__tooltip-button-container
+          button.city-picker__tooltip-button.button.button--small(type="button") Да
+          button.city-picker__tooltip-button.button.button--small.button--alt(type="button") Указать Другой

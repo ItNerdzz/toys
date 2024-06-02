@@ -1,0 +1,37 @@
+-
+  const postsPreviews = [
+    {
+      img: '/images/blog1.jpg',
+      title: 'Приняли поставку Homag, Rexroth и Kluber',
+      subtitle: 'Здесь представлены наши клиенты и партнеры и представлены клиенты и партнеры',
+      date: '21.04.24',
+    },
+    {
+      img: '/images/blog2.jpg',
+      title: 'Приняли поставку Homag, Rexroth и Kluber',
+      subtitle: 'Здесь представлены наши клиенты и партнеры и представлены клиенты и партнеры',
+      date: '21.04.24',
+    },
+    {
+      img: '/images/blog3.jpg',
+      title: 'Приняли поставку Homag, Rexroth и Kluber',
+      subtitle: 'Здесь представлены наши клиенты и партнеры и представлены клиенты и партнеры',
+      date: '21.04.24',
+    },
+  ]
+section.latest-news(class=latestNewsClassName)
+  .wrapper
+    .latest-news__inner
+      .latest-news__header
+        h2.latest-news__title.title.title--medium Новости
+        a.latest-news__link(href="#") Смотреть все
+      ul.latest-news__list
+        each previewItem in postsPreviews
+          li
+            a.news-preview(href="#")
+              img.news-preview__img(src=previewItem.img, width="300", height="100", alt="")
+              .news-preview__text-container
+                h3.news-preview__title.title.title--small= previewItem.title
+                .news-preview__subtitle.subtitle= previewItem.subtitle
+                .news-preview__date= previewItem.date
+

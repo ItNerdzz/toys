@@ -1,0 +1,18 @@
+section.callback(class=callbackClassName)
+  .wrapper
+    .callback__inner
+      h2.callback__title.title.title--small Остались вопросы?
+      p.callback__subtitle.subtitle Свяжитесь с нами по будням с 9:00 до 20:00 <br/> мы проконсультируем Вас по любому вопросу
+      .callback__phones-container
+        a.callback__phones-item(href="+79999999999")
+          svg
+            use(href="/images/sprite.svg#phone")
+          | +7 999 999 99 99
+        a.callback__phones-item(href="+79999999999")
+          svg
+            use(href="/images/sprite.svg#phone")
+          | +7 999 999 99 99
+      .callback__buttons-container
+        button.callback__button.button Заказать звонок
+        - var socialsClass = 'callback__socials socials--blue socials--big'
+        include /components/ui/socials.pug

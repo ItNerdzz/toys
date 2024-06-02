@@ -1,0 +1,53 @@
+.search-form {
+}
+
+.search-form__input-container {
+  position: relative;
+}
+
+.search-form__input {
+  @media screen and (min-width: $tablet) {
+    padding-right: 66px;
+  }
+}
+
+.search-form__submit {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  padding: 15px 13px;
+  box-sizing: border-box;
+  width: 44px;
+  min-height: 48px;
+  background-color: $primary;
+  border: none;
+  border: 1px solid $white;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+
+  &:active {
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}

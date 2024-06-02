@@ -1,0 +1,51 @@
+footer.footer
+  .wrapper
+    | Footer
+//- footer.footer
+//-   .wrapper
+//-     .footer__inner
+
+//-       .footer__item.footer__item-brand
+//-         -var logoClassName = 'footer__logo'
+//-         include /components/ui/logo.pug
+//-         span.footer__item-brand-descriptor Поставщик комплектующих и запчастей для производств
+//-         - var cityPicekrClass = 'footer__city-picker city-picker--to-top city-picker--light'
+//-         include /components/ui/city-picker.pug
+
+//-       .footer__item.footer__item-navigation
+//-         h3.footer__item-title Навигация
+//-         ul.footer__nav
+//-           each item in [{link: '/shop/', name: 'Каталог товаров'}, {link: '/payments-delivery/', name: 'Доставка и оплата'}, {link: '/discounts/', name: 'Акции'}, {link: '/news/', name: 'Новости'}, {link: '/about-us/', name: 'О компании'}, {link: '/contacts/', name: 'Контакты'}, {link: '/partnership/', name: 'Стать представителем'}]
+//-             li
+//-               a.footer__link(href=item.link)= item.name
+
+//-       .footer__item.footer__item-graphic
+//-         h3.footer__item-title График работы
+//-         ul.footer__item-list
+//-           each item in ['Пн-пт с 9:00 до 20:00', 'сб-вс выходной', 'Звонки и обращения \nпринимаем в рабочее время']
+//-             li= item
+
+//-       .footer__item.footer__item-address
+//-         h3.footer__item-title Адрес
+//-         ul.footer__item-list
+//-           each item in ['г. Белгород, ул. Горького, \nд. 72 , офис 2']
+//-             li= item
+
+//-       .footer__item.footer__item-contacts
+//-         h3.footer__item-title Связаться с нами
+//-         ul.footer__nav
+//-           each item in [{link: 'tel:+79999999999', name: '+7 999 999 99 99'}, {link: 'tel:+79999999999', name: '+7 999 999 99 99'}, {link: 'tel:+79999999999', name: '+7 999 999 99 99'}, {link: 'mailto:avd-instrument@bk.ru', name: 'avd-instrument@bk.ru'}]
+//-             li
+//-               a.footer__link(href=item.link)= item.name
+//-         - var socialsClass = 'footer__socials'
+//-         include /components/ui/socials.pug
+
+//-       .footer__bottom-bar
+//-         ul.footer__bottom-bar-nav.footer__nav
+//-           each item in [{link: '/private/', name: 'Согласие на обработку персональных данных'}, {link: '/privacy/', name: 'Политика конфиденциальности'}]
+//-             li
+//-               a.footer__link(href=item.link)= item.name
+
+//-         a.footer__developer.footer__link(href="https://itnerds.ru" target="_blank") Разработано
+//-           svg.footer__developer-logo
+//-             use(href="/images/sprite.svg#dev-logo")

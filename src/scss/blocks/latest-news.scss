@@ -1,0 +1,49 @@
+.latest-news__inner {
+}
+
+.latest-news__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: $indent;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+}
+
+.latest-news__link {
+  color: $grey;
+  font-size: 15px;
+  line-height: 140%;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    color: $primary;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+}
+
+.latest-news__list {
+  @include clearlist;
+
+  display: grid;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 30px;
+  }
+
+  @media screen and (min-width: $tablet-landscape) {
+    gap: indent;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

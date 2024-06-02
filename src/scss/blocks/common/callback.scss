@@ -1,0 +1,115 @@
+.callback__inner {
+  display: grid;
+  background-color: $grey-light;
+  border-radius: 8px;
+  padding: 38px 26px;
+  grid-template-areas:
+    'title'
+    'subtitle'
+    'phones'
+    'buttons';
+
+  @media screen and (min-width: $tablet) {
+    padding: 48px 32px;
+  }
+
+  @media screen and (min-width: $tablet-landscape) {
+    grid-template-areas:
+      'title phones'
+      'subtitle buttons';
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.callback__title {
+  grid-area: title;
+  color: $primary;
+  font-weight: 600;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.callback__subtitle {
+  grid-area: subtitle;
+  margin: 0 0 26px;
+  max-width: 400px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet-landscape) {
+    margin-bottom: 0;
+  }
+}
+
+.callback__phones-container {
+  grid-area: phones;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 26px;
+  }
+
+  @media screen and (min-width: $tablet-landscape) {
+    margin-bottom: 0;
+  }
+}
+
+.callback__phones-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $primary;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+  transition: all 0.3s ease-in-out;
+
+  svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  &:active {
+    color: $light-blue;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: $light-blue;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.callback__buttons-container {
+  grid-area: buttons;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.callback__button {
+  flex-grow: 1;
+}
+
+.callback__socials {
+  margin: 0;
+}

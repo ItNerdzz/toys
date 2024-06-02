@@ -1,0 +1,37 @@
+-
+  const partners = [
+    {
+      image: '/images/partner1.svg',
+      link: '#'
+    },
+    {
+      image: '/images/partner2.png',
+      link: '#'
+    },
+    {
+      image: '/images/partner3.svg',
+      link: '#'
+    },
+    {
+      image: '/images/partner4.png',
+      link: '#'
+    },
+    {
+      image: '/images/partner5.png',
+      link: '#'
+    }
+  ]
+section.partners(class=partnersClassName)
+  .wrapper
+    .partners__inner
+      h2.partners__title.title.title--medium Нам доверяют
+      .partners__subtitle.subtitle Здесь представлены наши клиенты и партнеры
+      .partners__swiper.swiper
+        .swiper-wrapper
+          each partner in partners
+            .partners__swiper-slide.swiper-slide
+              a.partners__item(href=partner.link)
+                img(src=partner.image)
+        - var swiperNavigationClassName = 'partners__swiper-navigation'
+        include /components/ui/swiper-navigation.pug
+

@@ -1,0 +1,62 @@
+.discount-cards {
+}
+
+.discount-cards__list {
+  display: grid;
+  gap: $indent;
+
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.discount-cards__preview {
+  background-color: $grey-light;
+  border-radius: 8px;
+  padding: 28px 26px;
+  background-repeat: no-repeat;
+  background-size: 154px auto;
+  background-position: bottom 22px right;
+
+  @media screen and (min-width: $tablet) {
+    padding: 38px 32px;
+    background-size: contain;
+    background-position: center right;
+  }
+
+  @media screen and (min-width: $tablet-landscape) {
+    padding: 38px 65px;
+  }
+}
+
+.dicount-cards__prewview-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 380px;
+}
+
+.discount-cards__title {
+  color: $primary;
+  margin-bottom: 16px;
+  max-width: 290px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 380px;
+  }
+}
+
+.discount-cards__subtitle {
+  margin-bottom: 30px;
+  max-width: 205px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 310px;
+  }
+}
+
+.discount-cards__link {
+  width: fit-content;
+  min-width: 155px;
+  margin-top: auto;
+}
