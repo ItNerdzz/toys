@@ -1,14 +1,20 @@
 // colors
-$primary: plum; // example
+$primary: #623061;
 $secondary: lime; // example
 $accent: cyan; // example
-$white: #fff;
-$black: #000;
+$bg-intro: #055b5c;
+$accent-title: #fecb5e;
+
+// colors default
+$white: #ffffff;
+$black: #000000;
+$transparent: rgba(255, 255, 255, 0);
 
 // indents
-$padding-x: 20px;
-$padding-x-tablet: 30px;
-$padding-x-tablet-landscape: 50px;
+$padding-x: 4.35%;
+$padding-x-tablet: 4.17%;
+$padding-x-tablet-landscape: 2.78%;
+$padding-x-desktop: 40px;
 $indent: 20px;
 $indent-small: 10px;
 
@@ -16,10 +22,15 @@ $indent-small: 10px;
 $br-default: 8px; // example
 
 // fonts
-$base-font: 'font-family: Arial, Helvetica, sans-serif'; // example
+$base-font: 'Roboto Flex', 'Arial', sans-serif;
 
 // media
-$mobile-only: 779px;
+$mobile-only: 719px;
 $tablet: 720px;
-$tablet-landscape: 1080px;
+$tablet-landscape: 1024px;
 $desktop: 1440px;
+
+// animation-micro
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+$trans-600:                         0.6s $tf-default;

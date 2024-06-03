@@ -3,3 +3,23 @@
   padding: 0;
   margin: 0;
 }
+
+// Mobile first
+
+@mixin vp-tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin vp-tablet-landscape {
+  @media screen and (min-width: $tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin vp-desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

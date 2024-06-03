@@ -1,0 +1,20 @@
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 10px 20px;
+
+  color: $white;
+  background-color: $primary;
+  border-radius: 8px;
+
+  &--border-dashed {
+    background-color: $transparent;
+    border: 2px dashed rgba($white, 0.5);
+  }
+}
+
+.button--small {
+}
+
+.button--alt {
+}
