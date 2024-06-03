@@ -23,7 +23,12 @@ $br-default: 8px; // example
 $base-font: 'Roboto Flex', 'Arial', sans-serif;
 
 // media
-$mobile-only: 779px;
+$mobile-only: 719px;
 $tablet: 720px;
 $tablet-landscape: 1024px;
 $desktop: 1440px;
+
+// animation-micro
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+$trans-600:                         0.6s $tf-default;
