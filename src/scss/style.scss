@@ -8,7 +8,7 @@
 // UI
 @import 'ui/logo.scss';
 @import 'ui/navigation.scss';
-@import 'ui/button.scss';
+@import 'ui/btn.scss';
 @import 'ui/socials.scss';
 @import 'ui/title.scss';
 @import 'ui/subtitle.scss';
@@ -23,6 +23,7 @@
 // BLOCKS
 // common..
 // page-name..
+@import 'blocks/intro-cards.scss';
 
 // PAGES
 @import 'pages/page-home.scss';

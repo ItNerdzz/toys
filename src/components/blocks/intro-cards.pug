@@ -1,0 +1,11 @@
+mixin intro-cards()
+
+  .intro-cards&attributes(attributes)
+    .intro-cards__container
+      .intro-cards__title
+        h3
+          | Безопасность и качество – наш приоритет
+          | #[em с 1996 года!]
+
+      +btn({href: "#"}).btn--border-dashed.intro-cards__btn(aria-label="Перейти к сертификатам.")
+        span Сертификаты продукции
