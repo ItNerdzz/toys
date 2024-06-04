@@ -1,0 +1,11 @@
+.intro {
+
+  &__cards {
+    color: $white;
+    background: $bg-intro;
+    border-radius: 8px;
+
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
