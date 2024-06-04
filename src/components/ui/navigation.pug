@@ -1,4 +1,0 @@
-ul.navigation(class=navigationClassName)
-  each item in [{link: '#', name: 'Доставка и оплата'}, {link: '/discount/', name: 'Акции'}, {link: '/news/', name: 'Новости'}, {link: '/about-us/', name: 'О компании'}, {link: '/contacts/', name: 'Контакты'}, {link: '/partnership/', name: 'Стать представителем'}]
-    li
-      a.navigation__link(class=item.link.includes('discount') ? 'navigation__link--discount' : '' href=item.link)= item.name
