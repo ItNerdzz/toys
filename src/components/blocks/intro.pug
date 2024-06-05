@@ -3,17 +3,23 @@ mixin intro()
   section.intro&attributes(attributes)
     .wrapper
       .intro__container
-        ul.intro__cards
+        .intro__swiper.swiper
+          ul.intro__cards.swiper-wrapper
 
-          li.intro__card
-            .intro__card-context
-              .title.title--big.title--accent.intro__card-title
-                h1
-                  | Безопасность#[br]и&nbsp;качество&nbsp;– наш приоритет#[br]
-                  | #[em с&nbsp;1996&nbsp;года!]
+            li.intro__card.swiper-slide
+              .intro__card-context
+                .title.title--big.title--accent.intro__card-title
+                  h1
+                    | Безопасность#[br]и&nbsp;качество&nbsp;– наш приоритет#[br]
+                    | #[em с&nbsp;1996&nbsp;года!]
 
-              +btn({href: "#"}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
-                span Сертификаты продукции
+                +btn({href: "#"}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
+                  span Сертификаты продукции
 
-            .intro__image
-              img(src='/images/intro.png', width='456', height='470', alt='Сертефицированный товар магазина')
+              .intro__image
+                img(src='/images/intro.png', width='456', height='470', alt='Сертефицированный товар магазина')
+
+          .intro__pagination.swiper-pagination
+
+          .intro__btn-prev.swiper-button-prev
+          .intro__btn-next.swiper-button-next
