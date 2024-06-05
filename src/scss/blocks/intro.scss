@@ -1,8 +1,18 @@
 .intro {
+  /*&__container {
+    position: relative;
+    display: flex;
+  }
+
+  &__swiper {
+    position: absolute;
+    padding: 50%;
+  }*/
+
   &__cards {
+    //display: flex;
     color: $white;
-    background: $bg-intro;
-    border-radius: 8px;
+    //width: 100%;
 
     list-style-type: none;
     padding-left: 0;
@@ -11,6 +21,11 @@
   &__card {
     display: flex;
     flex-direction: column;
+
+    background: $bg-intro;
+    border-radius: 8px;
+    //width: 100%;
+
     padding: 14.29% 5.29% 15.88%;
 
     @include vp-tablet {
