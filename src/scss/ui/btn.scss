@@ -8,8 +8,10 @@
   border-radius: 8px;
 
   &--border-dashed {
+    box-sizing: border-box;
     background-color: $transparent;
     border: 2px dashed rgba($white, 0.5);
+    padding: 15px 32px 16px;
   }
 }
 
