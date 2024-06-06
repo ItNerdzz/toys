@@ -10,12 +10,12 @@ const initIntroSwiper = () => {
   if (introSwiper) {
     new Swiper(introSwiper, {
       direction: 'horizontal',
-      slidesPerView: 1,
-      spaceBetween: 5,
-      initialSlide: 1,
-      // autoHeight: true,
-      speed: 1000,
-      watchOverflow: true,
+      slidesPerView: 1, // демонстрация количества слайдов
+      spaceBetween: 5, // расстояние между слайдами
+      initialSlide: 1, // с какого слайда начать показ
+      // autoHeight: true, // автовысота
+      speed: 1000, // скорость перелистывания
+      watchOverflow: true, // отключает если недостаок слайдов
 
       modules: [Pagination, Navigation],
 
@@ -23,11 +23,12 @@ const initIntroSwiper = () => {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
+        dynamicBullets: true, // динамический вид пагинации
       },
 
       navigation: {
-        nextEl: '.intro__btn-prev',
-        prevEl: '.intro__btn-next',
+        nextEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-next',
       },
     });
   }
