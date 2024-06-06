@@ -2,7 +2,6 @@
   .swiper-button-prev,
   .swiper-button-next {
     visibility: hidden;
-    color: $base-navigation;
     width: 48px;
     height: 48px;
     border-radius: 6%;
@@ -58,16 +57,4 @@
       }
     }
   }
-
-  &__btn-prev {
-    color: $base-navigation;
-  }
-
-  &__btn-next {
-    color: $base-navigation;
-  }
-
 }
-
-// .swiper-button-prev
-// .swiper-button-next
