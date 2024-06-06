@@ -7,11 +7,22 @@
   background-color: $primary;
   border-radius: 8px;
 
+  transition: opacity $trans-default,  background-color $trans-default, color $trans-default;
+
   &--border-dashed {
     box-sizing: border-box;
     background-color: $transparent;
     border: 2px dashed rgba($white, 0.5);
     padding: 15px 32px 16px;
+
+    @include hover-focus {
+      color: $accent-active;
+      background-color: $white;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
 
