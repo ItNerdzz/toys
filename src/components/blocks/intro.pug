@@ -50,9 +50,7 @@ mixin intro()
                 .intro__image
                   img(src='/images/intro.png', width='456', height='470', alt='Сертефицированный товар магазина')
 
-          .navigation-swiper
-            .navigation-swiper__btn-prev.swiper-button-prev
-            .navigation-swiper__btn-next.swiper-button-next
+          +navigation-swiper()
 
           .intro__pagination
             .swiper-pagination
