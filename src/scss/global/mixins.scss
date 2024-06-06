@@ -4,6 +4,19 @@
   margin: 0;
 }
 
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+
 // Mobile first
 
 @mixin vp-tablet {

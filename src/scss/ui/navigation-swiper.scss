@@ -1,3 +1,73 @@
 .navigation-swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    visibility: hidden;
+    color: $base-navigation;
+    width: 48px;
+    height: 48px;
+    border-radius: 6%;
+    background-color: $white;
+
+    transition: filter $trans-default, opacity $trans-default;
+
+    @include vp-tablet {
+      visibility: visible;
+    }
+
+    @include hover-focus {
+      filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.34))
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 18px;
+      background-image: url("/images/icon-arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &.swiper-button-prev {
+
+      @include vp-tablet {
+        left: 20px;
+      }
+
+      @include vp-tablet-landscape {
+        right: 30px;
+      }
+    }
+
+    &.swiper-button-next {
+      @include vp-tablet {
+        right: 20px;
+      }
+
+      @include vp-tablet-landscape {
+        right: 30px;
+      }
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__btn-prev {
+    color: $base-navigation;
+  }
+
+  &__btn-next {
+    color: $base-navigation;
+  }
 
 }
+
+// .swiper-button-prev
+// .swiper-button-next
