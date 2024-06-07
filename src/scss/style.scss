@@ -16,9 +16,12 @@
 @import 'layout/footer.scss';
 
 // BLOCKS
+
 // common..
+
 // page-name..
-@import 'blocks/intro.scss';
+@import 'blocks/index/intro.scss';
+@import 'blocks/index/advantages.scss';
 
 // PAGES
 @import 'pages/page-home.scss';
