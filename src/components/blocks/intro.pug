@@ -1,4 +1,32 @@
 mixin intro()
+  -
+    const options = [
+      {
+        tagName: "h1",
+        title: [
+          'Безопасность<br>и&nbsp;качество&nbsp;– наш приоритет<br><em>с&nbsp;1996&nbsp;года!</em>',
+        ],
+        btnText: "Сертификаты продукции",
+        hrefBtn: "#",
+        image: "/images/intro.png",
+      },
+      {
+        title: [
+          'Безопасность<br>и&nbsp;качество&nbsp;– наш приоритет<br><em>с&nbsp;1996&nbsp;года!</em>',
+        ],
+        btnText: "Сертификаты продукции",
+        hrefBtn: "#",
+        image: "/images/intro.png",
+      },
+      {
+        title: [
+          'Безопасность<br>и&nbsp;качество&nbsp;– наш приоритет<br><em>с&nbsp;1996&nbsp;года!</em>',
+        ],
+        btnText: "Сертификаты продукции",
+        hrefBtn: "#",
+        image: "/images/intro.png",
+      },
+    ];
 
   section.intro&attributes(attributes)
     .wrapper
@@ -8,47 +36,22 @@ mixin intro()
 
           .intro__cards.swiper-wrapper
 
-            .swiper-slide
-              .intro__card
-                .intro__card-context
-                  .title.title--big.title--accent.intro__card-title
-                    h1
-                      | Безопасность#[br]и&nbsp;качество&nbsp;– наш приоритет#[br]
-                      | #[em с&nbsp;1996&nbsp;года!]
+            each option in options
 
-                  +btn({href: "#"}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
-                    span Сертификаты продукции
+              - const tag = option.tagName ? option.tagName : "h2";
 
-                .intro__image
-                  img(src='/images/intro.png', width='456', height='470', alt='Сертефицированный товар магазина')
+              .swiper-slide
+                .intro__card
+                  .intro__card-context
 
-            .swiper-slide
-              .intro__card
-                .intro__card-context
-                  .title.title--big.title--accent.intro__card-title
-                    h2
-                      | Безопасность#[br]и&nbsp;качество&nbsp;– наш приоритет#[br]
-                      | #[em с&nbsp;1996&nbsp;года!]
+                    .title.title--big.title--accent.intro__card-title
+                      #{tag}(tagName=tagName)!= option.title
 
-                  +btn({href: "#"}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
-                    span Сертификаты продукции
+                    +btn({href: option.hrefBtn}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
+                      span!= option.btnText
 
-                .intro__image
-                  img(src='/images/intro.png', width='456', height='470', alt='Сертефицированный товар магазина')
-
-            .swiper-slide
-              .intro__card
-                .intro__card-context
-                  .title.title--big.title--accent.intro__card-title
-                    h2
-                      | Безопасность#[br]и&nbsp;качество&nbsp;– наш приоритет#[br]
-                      | #[em с&nbsp;1996&nbsp;года!]
-
-                  +btn({href: "#"}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
-                    span Сертификаты продукции
-
-                .intro__image
-                  img(src='/images/intro.png', width='456', height='470', alt='Сертефицированный товар магазина')
+                  .intro__image
+                    img(src=option.image, width='456', height='470', alt='Сертефицированный товар магазина')
 
           +navigation-swiper()
 

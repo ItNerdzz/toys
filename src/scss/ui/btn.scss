@@ -7,6 +7,8 @@
   background-color: $primary;
   border-radius: 8px;
 
+  user-select: none;
+
   transition: opacity $trans-default,  background-color $trans-default, color $trans-default;
 
   &--border-dashed {
