@@ -1,8 +1,59 @@
 mixin intro()
+  -
+    const options = [
+      {
+        tagName: "h1",
+        title: [
+          'Безопасность<br>и&nbsp;качество&nbsp;– наш приоритет<br><em>с&nbsp;1996&nbsp;года!</em>',
+        ],
+        btnText: "Сертификаты продукции",
+        hrefBtn: "#",
+        image: "/images/intro.png",
+      },
+      {
+        title: [
+          'Безопасность<br>и&nbsp;качество&nbsp;– наш приоритет<br><em>с&nbsp;1996&nbsp;года!</em>',
+        ],
+        btnText: "Сертификаты продукции",
+        hrefBtn: "#",
+        image: "/images/intro.png",
+      },
+      {
+        title: [
+          'Безопасность<br>и&nbsp;качество&nbsp;– наш приоритет<br><em>с&nbsp;1996&nbsp;года!</em>',
+        ],
+        btnText: "Сертификаты продукции",
+        hrefBtn: "#",
+        image: "/images/intro.png",
+      },
+    ];
 
   section.intro&attributes(attributes)
     .wrapper
       .intro__container
-        h2.visually-hidden Оцените приоритеты нашего магазина
 
-        +intro-cards()
+        .intro__swiper.swiper
+
+          .intro__cards.swiper-wrapper
+
+            each option in options
+
+              - const tag = option.tagName ? option.tagName : "h2";
+
+              .swiper-slide
+                .intro__card
+                  .intro__card-context
+
+                    .title.title--big.title--accent.intro__card-title
+                      #{tag}(tagName=tagName)!= option.title
+
+                    +btn({href: option.hrefBtn}).btn--border-dashed.intro__card-btn(aria-label="Перейти к сертификатам.")
+                      span!= option.btnText
+
+                  .intro__image
+                    img(src=option.image, width='456', height='470', alt='Сертифицированный товар магазина')
+
+          +navigation-swiper()
+
+          .intro__pagination
+            .swiper-pagination
