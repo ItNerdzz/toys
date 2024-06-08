@@ -7,6 +7,8 @@
     border-radius: 6%;
     background-color: $white;
 
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.14));
+
     transition: filter $trans-default, opacity $trans-default;
 
     @include vp-tablet {
@@ -56,5 +58,29 @@
         transform: rotate(180deg);
       }
     }
+  }
+
+  &--btn-secondary {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 44px;
+      height: 44px;
+      visibility: hidden;
+
+      transition: visibility $trans-default;
+
+      @include vp-tablet-landscape {
+        visibility: visible;
+      }
+
+      &::after {
+        width: 9px;
+        height: 16px;
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    visibility: hidden;
   }
 }
