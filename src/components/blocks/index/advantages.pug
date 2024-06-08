@@ -1,6 +1,47 @@
 mixin advantages()
+  -
+    const options = [
+      {
+        title: 'Не срываем сроки поставки',
+        text: 'Мы обеспечим доставку вашего заказа точно в согласованные сроки собственным транспортом или транспортом наших проверенных перевозчиков',
+        icon: 'icon-logistic',
+      },
+      {
+        title: 'Индивидуальный подход к клиентам',
+        text: 'Мы поможем создать особенный и уникальный набор сладостей, который будет соответствовать вашим пожеланиям и предположениям',
+        icon: 'icon-customer',
+      },
+      {
+        title: 'Гарантия качества',
+        text: 'Мы заботимся о качестве нашей продукции, поэтому все сладости в наших новогодних подарках вкусные, свежие и сертифицированы',
+        icon: 'icon-quality',
+      },
+      {
+        title: 'Предоставляем отсрочку платежа',
+        text: 'Для уточнения свяжитесь с менеджером',
+        icon: 'icon-partner',
+      },
+    ];
 
   section.advantages&attributes(attributes)
     .wrapper
       .advantages__container
-        p Секция преимуществ - Слайдер карточек
+        .advantages__swiper.swiper
+
+          .advantages__cards.swiper-wrapper
+
+            each option in options
+              .swiper-slide
+                .advantages__card
+
+                  .advantages__content
+                    .advantages__card-icon
+                      +icon(option.icon, 67, 67)
+
+                    .title.title--small.advantages__card-title
+                      h3!= option.title
+
+                    .text.advantages__card-text
+                      p!= option.text
+
+          //- +navigation-swiper()

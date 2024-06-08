@@ -18,7 +18,7 @@
     padding: 15px 32px 16px;
 
     @include hover-focus {
-      color: $accent-active;
+      color: $base;
       background-color: $white;
     }
 

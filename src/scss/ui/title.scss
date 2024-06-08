@@ -11,6 +11,12 @@
     }
   }
 
+  &--small {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
   &--accent {
     em {
       font-style: inherit;
@@ -28,9 +34,6 @@
 }
 
 .title--medium {
-}
-
-.title--small {
 }
 
 .title--extra-small {

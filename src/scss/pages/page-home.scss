@@ -1,4 +1,28 @@
 .page-home {
   display: flex;
   flex-direction: column;
+
+  &__intro {
+    margin-bottom: 21px;
+
+    @include vp-tablet {
+      margin-bottom: 60px;
+    }
+
+    @include vp-tablet-landscape {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__advantages {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 70px;
+    }
+
+    @include vp-tablet-landscape {
+      margin-bottom: 100px;
+    }
+  }
 }
