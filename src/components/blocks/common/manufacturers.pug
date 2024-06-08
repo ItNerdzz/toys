@@ -1,0 +1,42 @@
+mixin manufacturers()
+  -
+    const dataImages = [
+      {
+        imageName: 'slide-1',
+      },
+      {
+        imageName: 'slide-2',
+      },
+      {
+        imageName: 'slide-3',
+      },
+      {
+        imageName: 'slide-4',
+      },
+      {
+        imageName: 'slide-2',
+      },
+      {
+        imageName: 'slide-3',
+      },
+      {
+        imageName: 'slide-4',
+      },
+    ];
+
+  section.manufacturers&attributes(attributes)
+    .wrapper
+      .manufacturers__container
+        .manufacturers__content
+
+          .manufacturers__context
+            .title.title--medium.manufacturers__title
+              h2 Работаем только с лучшими российскими производителями
+
+            .text.manufacturers__text
+              p
+                | Мы&nbsp;собираем наборы только
+                | #[b из&nbsp;самых вкусных, свежих и&nbsp;качественных сладостей,]
+                | которые придутся по&nbsp;вкусу даже самым взыскательным сладкоежкам
+
+          +slider-image(dataImages)

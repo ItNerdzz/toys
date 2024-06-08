@@ -1,0 +1,16 @@
+mixin slider-image(options = {})
+
+  .slider-image&attributes(attributes)
+    .slider-image__container
+      .slider-image__swiper.swiper
+
+        .slider-image__cards.swiper-wrapper
+
+          each option in options
+            .swiper-slide
+              .slider-image__card
+
+                .slider-image__content
+                  +img(option.imageName, "png", 216, 146, "Логотип партнера.")
+
+        +navigation-swiper().navigation-swiper--btn-secondary

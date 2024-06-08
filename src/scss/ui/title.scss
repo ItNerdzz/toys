@@ -11,6 +11,17 @@
     }
   }
 
+  &--medium {
+    font-weight: 500;
+    line-height: 140%;
+    font-size: 26px;
+
+    @include vp-tablet {
+      line-height: 120%;
+      font-size: 36px;
+    }
+  }
+
   &--small {
     font-weight: 500;
     font-size: 18px;
@@ -31,9 +42,6 @@
     font-size: inherit;
     margin: 0;
   }
-}
-
-.title--medium {
 }
 
 .title--extra-small {

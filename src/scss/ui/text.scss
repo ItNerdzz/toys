@@ -1,5 +1,27 @@
 .text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+
+  @include vp-tablet {
+    font-size: 16px;
+  }
+
   p {
     margin: 0;
+  }
+
+  b {
+    font-weight: 600;
+    color: $primary;
+  }
+
+  &--medium {
+    font-size: 15px;
+  }
+
+
+  &--small {
+    font-size: 14px;
   }
 }

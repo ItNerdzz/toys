@@ -10,6 +10,7 @@
 @import 'ui/title.scss';
 @import 'ui/text.scss';
 @import 'ui/navigation-swiper.scss';
+@import 'ui/slider-image.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -18,7 +19,8 @@
 
 // BLOCKS
 
-// common..
+// common...
+@import 'blocks/common/manufacturers.scss';
 
 // page-name..
 @import 'blocks/index/intro.scss';
