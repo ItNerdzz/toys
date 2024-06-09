@@ -1,10 +1,10 @@
 .slider-image {
 
-  .swiper-slide {
+  /*.swiper-slide {
     display: grid;
     width: 100%;
     min-height: 100%;
-  }
+  }*/
 
   &__cards {
     display: flex;
@@ -16,31 +16,52 @@
     border: 1px solid $border-fill;
     border-radius: 8px;
 
-    background-color: $white;
-    min-width: 100%;
-    width: 85.983%;
+    // min-width: 100%;
+    width: 57.142%;
 
     @include vp-tablet {
-      width: 60.61%;
+      width: 32.727%;
     }
 
     @include vp-tablet-landscape {
-      width: 29.412%;
+      width: 15.882%;
     }
   }
 
   &__content{
+    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 9.232% 6.155% 8.924%;
+    justify-content: center;
+    text-align: center;
+    //width: 100%;
+    padding: 33.68%;
 
 
     @include vp-tablet {
-      padding: 7.5% 7% 9.5%;
+      padding: 33.68%;
+    }
+
+    @include vp-tablet-landscape {
+      padding: 33.68%;
     }
 
     img {
-      max-width: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+
+      object-fit: cover;
+      object-position: center;
+
+      background-color: $white;
+      margin: 0;
     }
   }
 }

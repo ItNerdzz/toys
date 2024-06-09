@@ -5,4 +5,4 @@ import {initSliderImageSwiper} from './slider-image-swiper';
 
 initIntroSwiper();
 initAdvantagesSwiper();
-initSliderImageSwiper();
+// initSliderImageSwiper();
