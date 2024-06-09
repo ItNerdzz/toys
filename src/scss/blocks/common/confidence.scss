@@ -8,15 +8,22 @@
   }
 
   &__title {
-    width: 100%
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include vp-tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
     line-height: 140%;
     width: 100%;
+    margin-bottom: 30px;
 
     @include vp-tablet {
       line-height: 170%;
+      margin-bottom: 50px;
     }
 
     @include vp-tablet-landscape {
