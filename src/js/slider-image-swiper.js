@@ -8,7 +8,7 @@ const initSliderImageSwiper = () => {
   if (sliderImageSwiper) {
     new Swiper(sliderImageSwiper, {
       direction: 'horizontal',
-      slidesPerView: 1.155, // демонстрация количества слайдов
+      slidesPerView: 1.698, // демонстрация количества слайдов
       spaceBetween: 16, // расстояние между слайдами
       initialSlide: 0, // с какого слайда начать показ
       autoHeight: true, // автовысота
@@ -18,13 +18,13 @@ const initSliderImageSwiper = () => {
       //Адаптив Ширина экрана
       breakpoints: {
         720: {
-          slidesPerView: 1.625,
+          slidesPerView: 2.914,
         },
         1024: {
-          slidesPerView: 2.308,
+          slidesPerView: 4.308,
         },
         1440: {
-          slidesPerView: 3.308,
+          slidesPerView: 5.931,
         }
       },
 
