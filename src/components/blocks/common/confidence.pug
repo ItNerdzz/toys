@@ -1,0 +1,39 @@
+mixin confidence()
+  -
+    const dataImages = [
+      {
+        imageName: 'slide-1',
+      },
+      {
+        imageName: 'slide-2',
+      },
+      {
+        imageName: 'slide-3',
+      },
+      {
+        imageName: 'slide-4',
+      },
+      {
+        imageName: 'slide-2',
+      },
+      {
+        imageName: 'slide-3',
+      },
+      {
+        imageName: 'slide-4',
+      },
+    ];
+
+  section.confidence&attributes(attributes)
+    .wrapper
+      .confidence__container
+        .confidence__content
+
+          .confidence__context
+            .title.title--medium.confidence__title
+              h2 Нам доверяют
+
+            .text.confidence__text
+              p Здесь представлены наши клиенты и партнеры
+
+          +slider-image(dataImages)
