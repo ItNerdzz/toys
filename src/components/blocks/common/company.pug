@@ -1,17 +1,49 @@
 mixin company()
+  -
+    const options = [
+      {
+        accentText: '1996',
+        text: 'год основания компании',
+      },
+      {
+        accentText: '2000+',
+        text: 'Клиентов ежемесячно',
+      },
+      {
+        accentText: '5000 м²',
+        text: 'складские мощности',
+      },
+      {
+        accentText: '15т+',
+        text: 'отгружаем ежедневно',
+      },
+    ];
 
   section.company&attributes(attributes)
       .wrapper
         .company__container
           .company__content
 
-            .confidence__context
-              .title.title--medium.confidence__title
+            .company__context
+              .title.title--medium.company__title
                 h2 О компании
 
-              .text.confidence__text
+              .text.company__text
                 p
                   | Компания &laquo;Ратио&raquo; более 10&nbsp;лет производит и&nbsp;поставляет сладкие новогодние подарки.
                   | В&nbsp;наших подарочных наборах вы&nbsp;найдете только самые лучшие и&nbsp;качественные сладости от&nbsp;ведущих российских производителей.
                   | Также, мы&nbsp;заботимся о&nbsp;том, чтобы наши подарки были не&nbsp;только вкусными, но&nbsp;и&nbsp;красивыми и&nbsp;интересными.
                   | Мы&nbsp;всегда рады предложить Вашему вниманию огромный выбор самой разнообразной упаковки, игрушек, развивающих и&nbsp;обучающих игр
+
+                +link({text: "Узнать подробнее", href: "#", ariaLabel:"Переход на страницу «О компании»"}).link--accent-red.company__link
+
+            .company__bg-wrapper
+
+              ul.company__bg-list
+
+                each option in options
+                  li.company__bg-item
+                    i!= option.accentText
+                    span!= option.text
+
+              address.company__address г. Москва, Кусковская&nbsp;ул., дом 20А, корпус&nbsp;В, оф. 505В

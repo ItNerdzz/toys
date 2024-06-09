@@ -1,4 +1,4 @@
-link {
+.link {
   color: $base;
   background-color: transparent;
 
@@ -13,4 +13,7 @@ link {
     opacity: 0.5;
   }
 
+  &--accent-red {
+    color: $accent-link;
+  }
 }
