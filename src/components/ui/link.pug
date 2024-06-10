@@ -1,0 +1,22 @@
+mixin link(options = {})
+  - const href = options.href || "#";
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+  - const text = options.text || "";
+  - const ariaLabel = options.ariaLabel || "";
+
+  a.link(href=href, target=target, rel=rel, aria-label=ariaLabel)&attributes(attributes)!= text
+    if block
+    block
+
+  //- Примеры вызова------
+
+  //- +link({text: "Обычная ссылка", href: "#", isExternal: true, ariaLabel:"Просто ссылка"})
+
+  //- +link({text: "Cсылка с модификатором", href: "#", ariaLabel:"Cсылка с модификатором"}).link--form-agreement
+
+  //- +link({href: "#", isExternal: true, ariaLabel:"Ссылка иконка"})
+  //-   +icon("logo-citilink", 96, 16)
+
+  //- +link({text: "Cсылка картинка", href: "#", ariaLabel:"Cсылка картинка"})
+  //-   +img("content/slides", "placeholder", "png", 150, 150, "Описание картинки")

@@ -1,0 +1,19 @@
+.link {
+  color: $base;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: opacity $trans-default, color $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:active:active {
+    opacity: 0.5;
+  }
+
+  &--accent-red {
+    color: $accent-link;
+  }
+}

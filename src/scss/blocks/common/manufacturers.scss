@@ -1,0 +1,43 @@
+.manufacturers {
+  max-width: 100vw;
+
+  &__context {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    width: 100%;
+
+    @include vp-tablet-landscape {
+      width: 98%;
+    }
+  }
+
+  &__text {
+    line-height: 140%;
+    color: $base;
+    width: 100%;
+
+    @include vp-tablet {
+      width: 75%;
+    }
+
+    @include vp-tablet-landscape {
+      padding-top: 10px;
+    }
+  }
+}

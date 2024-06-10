@@ -1,0 +1,34 @@
+.company {
+  max-width: 100vw;
+
+  &__bg-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__bg-item {
+    display: flex;
+    flex-direction: column;
+
+    i {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 100%;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+  }
+}

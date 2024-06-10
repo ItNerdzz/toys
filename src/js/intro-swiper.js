@@ -1,8 +1,6 @@
 import Swiper from 'swiper';
 import { Pagination, Navigation} from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+
 
 const introSwiper = document.querySelector('.intro__swiper');
 
@@ -14,7 +12,7 @@ const initIntroSwiper = () => {
       spaceBetween: 5, // расстояние между слайдами
       initialSlide: 1, // с какого слайда начать показ
       // autoHeight: true, // автовысота
-      speed: 1000, // скорость перелистывания
+      speed: 500, // скорость перелистывания
       watchOverflow: true, // отключает если недостаок слайдов
 
       modules: [Pagination, Navigation],
@@ -27,8 +25,8 @@ const initIntroSwiper = () => {
       },
 
       navigation: {
-        nextEl: '.swiper-button-prev',
-        prevEl: '.swiper-button-next',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
   }

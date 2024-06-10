@@ -1,0 +1,56 @@
+.advantages {
+  max-width: 100vw;
+  color: $base;
+
+  .swiper-slide {
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  &__cards {
+    display: flex;
+    width: 100%;
+  }
+
+  &__card {
+    background-color: $accent-bg;
+    border-radius: 8px;
+    min-width: 100%;
+    width: 85.983%;
+
+    @include vp-tablet {
+      width: 60.61%;
+    }
+
+    @include vp-tablet-landscape {
+      width: 29.412%;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    padding: 9.232% 6.155% 8.924%;
+
+
+    @include vp-tablet {
+      padding: 7.5% 7% 9.5%;
+    }
+  }
+
+  &__card-title {
+    margin-bottom:12px;
+  }
+
+  &__card-text {
+    line-height: 130%;
+    color: rgba($base, 0.5);
+    margin-bottom: auto;
+  }
+
+  &__card-icon {
+    color: $primary;
+    margin-bottom: 7px;
+  }
+}

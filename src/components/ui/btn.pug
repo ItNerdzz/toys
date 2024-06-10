@@ -9,3 +9,22 @@ mixin btn(options = {})
   #{tag}.btn(href=href, target=target, rel=rel, type=type)&attributes(attributes)!= text
     if block
     block
+
+  //- Примеры вызова
+
+  //- .btn \ default \ button \ просто кнопка
+  //- +btn({text: "Текст"})
+
+  //- .btn \ .btn--red \ link \ кнопка ссылка
+  //- +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+
+  //- .btn \ disabled \ button \ блокированная кнопка
+  //- +btn({text: "Текст"})(disabled)
+
+  //- добавить дочерний элемент \ кнопка со спаном
+  //- +btn()
+  //-   span Текст
+
+  //- Кнопка сабмит с добавлением атрибута
+  //- +btn({type: "submit"}).btn--submit(data-btn-submit, aria-label="Кнопка сабмит с добавлением атрибута")
+        span Текст
