@@ -8,13 +8,29 @@
 
   &__context {
     display: grid;
-    grid-template-columns: 40% auto;
-    gap: 37px;
-    margin-bottom: 50px;
+
+    @include vp-desktop {
+      grid-template-columns: 40% auto;
+      gap: 37px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include vp-desktop {
+      margin-bottom: 0;
+    }
   }
 
   &__text {
-    width: 70%;
+    width: 100%;
+
+    @include vp-desktop {
+      width: 70%;
+    }
+
     p {
       margin-bottom: 10px;
     }
@@ -23,6 +39,16 @@
   &__link {
     display: flex;
     width: fit-content;
+
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 0;
+    }
 
     &::after {
       content: "";
@@ -47,32 +73,58 @@
 
   &__bg-wrapper {
     display: grid;
-    grid-template-columns: 1fr 324px;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 50px;
+
+    @include vp-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include vp-desktop {
+      grid-template-columns: 1fr 324px;
+      gap: 50px;
+    }
   }
 
   &__bg-list{
     color: $white;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 48px 28px 0;
     margin: 0;
+    margin-bottom: auto;
     list-style: none;
 
-    grid-column: 1 / 2;
+    grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 2;
-    margin-top: auto;
-    margin-left: 50px;
-    margin-bottom: 30px;
+
+    @include vp-tablet {
+      grid-column: 1 / 2;
+      padding-left: 54px;
+    }
+
+    @include vp-desktop {
+      flex-direction: row;
+
+      padding: 0;
+      margin-top: auto;
+      margin-left: 50px;
+      margin-bottom: 30px;
+    }
   }
 
   &__bg-item {
     display: flex;
     flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
 
-    margin-right: 60px;
+    @include vp-desktop {
+      margin: 0;
+      margin-right: 60px;
+    }
 
     i {
       font-style: normal;
@@ -90,13 +142,22 @@
 
 
   &__link-address {
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 2;
 
-    margin-top: auto;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin: auto 28px 36px 28px;
+
+    @include vp-tablet {
+      grid-column: 2 / -1;
+      margin-left: 0;
+      margin-right: 32px;
+      margin-bottom: 49px;
+    }
+
+    @include vp-desktop {
+      margin: auto 30px 30px 0;
+    }
   }
 
   &__address {
@@ -125,20 +186,35 @@
 
     span {
       display: block;
-      max-width: 187px;
       margin-left: 16px;
+      width: 73%;
+
+      @include vp-tablet {
+        width: 100%;
+      }
+
+      @include vp-desktop {
+        max-width: 187px;
+      }
     }
   }
 
 
   &__bg-image {
-    width: 100%;
     display: block;
     position: relative;
     overflow: hidden;
 
+    border-radius: 8px;
+    width: 100%;
+    height: 570px;
+
     grid-column: 1 / -1;
     grid-row: 1 / -1;
+
+    @include vp-tablet {
+      height: 484px;
+    }
 
     @include vp-desktop {
       height: 390px;
@@ -150,19 +226,30 @@
       width: 100%;
       height: 100%;
       background-image: linear-gradient(rgba($black, 0.3), rgba($black, 0.3));
+      z-index: 1;
     }
 
     img {
-      //position: absolute;
       display: block;
       width: 100%;
-      height: auto;
+      height: 102%;
       margin: 0;
 
-      @include vp-desktop {
-        width: 100%;
+      object-fit: cover;
+      object-position: center top;
+
+      @include vp-tablet {
+        height: 123%;
+      }
+
+      @include vp-tablet-landscape {
         height: 100%;
-        object-fit: cover;
+        object-position: center;
+      }
+
+      @include vp-desktop {
+        height: 100%;
+
         object-position: center;
       }
     }
