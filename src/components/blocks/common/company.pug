@@ -46,4 +46,9 @@ mixin company()
                     i!= option.accentText
                     span!= option.text
 
-              address.company__address г. Москва, Кусковская&nbsp;ул., дом 20А, корпус&nbsp;В, оф. 505В
+              +link({href: "#", ariaLabel:"Переход на карту к локации компании"}).company__link-address
+                address.company__address
+                  span г. Москва, Кусковская&nbsp;ул., дом 20А, корпус&nbsp;В, оф. 505В
+
+              .company__bg-image
+                +img("company-bg", "png", 1360, 1025, "Вид административного здания компании.")
