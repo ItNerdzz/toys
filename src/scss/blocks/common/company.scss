@@ -246,12 +246,6 @@
         height: 100%;
         object-position: center;
       }
-
-      @include vp-desktop {
-        height: 100%;
-
-        object-position: center;
-      }
     }
   }
 }
