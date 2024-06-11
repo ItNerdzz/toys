@@ -1,0 +1,61 @@
+mixin certificates()
+  -
+    const optionsSliderImg = [
+      {
+        imageName: 'certificate',
+      },
+      {
+        imageName: 'certificate',
+      },
+      {
+        imageName: 'certificate',
+      },
+    ];
+
+  -
+    const optionsText = [
+      {
+        text: 'Сладости, упаковки и&nbsp;вложения, которые мы&nbsp;используем для сборки наших подарков <em>соответствуют всем стандартам качества, принятым в&nbsp;РФ</em>',
+      },
+      {
+        text: '<em>Мы&nbsp;предоставляем сертификаты качества и&nbsp;декларации соответствия продукции</em> требованиям технического регламента таможенного союза',
+      },
+    ];
+
+  section.certificates&attributes(attributes)
+    .wrapper
+      .certificates__container
+        .certificates__content
+
+          .certificates__context
+            .title.title--medium.certificates__title
+              h2 Все подарки сертифицированы
+
+            .text.certificates__text
+              each option in optionsText
+                p!= option.text
+
+
+          .certificates__image-slider
+            .certificates__image-container
+              .certificates__image-swiper.swiper
+
+                .certificates__image-cards.swiper-wrapper
+
+                  each option in optionsSliderImg
+                    .swiper-slide
+                      .certificates__image-card
+
+                        .certificates__image-content
+                          +img(option.imageName, "png", 471, 397, "Бланк сертификата.")
+
+                +navigation-swiper().navigation-swiper--btn-secondary
+
+              +link({href: "#", ariaLabel:"Переход на страницу сертификатов"}).certificates__image-link
+                .certificates__link-button
+
+                  svg.circle(viewBox="0 0 100 100")
+                    path#circle(d="M 0,46.1 a 46.1,46.1 0 1,1 0,1 z")
+                    text
+                      textPath(xlink:href="#circle")
+                        | посмотреть посмотреть посмотреть

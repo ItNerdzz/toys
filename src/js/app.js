@@ -6,7 +6,9 @@ import 'swiper/css/navigation';
 import {initIntroSwiper} from './intro-swiper';
 import {initAdvantagesSwiper} from './advantages-swiper';
 import {initSliderImageSwiper} from './slider-image-swiper';
+import {initСertificatesSwiper} from './certificates-swiper';
 
 initIntroSwiper();
 initAdvantagesSwiper();
 initSliderImageSwiper();
+initСertificatesSwiper();
