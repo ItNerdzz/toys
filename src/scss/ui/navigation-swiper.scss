@@ -6,6 +6,7 @@
     height: 48px;
     border-radius: 6%;
     background-color: $white;
+    color: $base;
 
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.14));
 
@@ -28,7 +29,14 @@
       position: absolute;
       width: 11px;
       height: 18px;
-      background-image: url("/images/icon-arrow.svg");
+
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-image: url("/images/icon-arrow.svg");
+
+      background: currentColor;
+
+      //background-image: url("/images/icon-arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -60,6 +68,7 @@
     }
   }
 
+  &--btn-secondary-accent,
   &--btn-secondary {
     .swiper-button-prev,
     .swiper-button-next {
@@ -81,6 +90,17 @@
 
     .swiper-button-disabled {
       visibility: hidden;
+    }
+  }
+
+  &--btn-secondary-accent {
+    .swiper-button-prev,
+    .swiper-button-next {
+      visibility: visible;
+      color: $primary;
+      background-color: $transparent;
+      box-sizing: border-box;
+      border: 1px solid rgba($primary, 0.4);
     }
   }
 }
