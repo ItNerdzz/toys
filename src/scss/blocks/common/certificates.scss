@@ -54,10 +54,33 @@
   }
 
   &__title {
+    display: flex;
+    padding-right: 9px;
     margin-bottom: 20px;
+
+    @include vp-tablet {
+      padding-right: 104px;
+    }
+
     @include vp-tablet-landscape {
       margin-bottom: 30px;
+      padding: 0;
+    }
 
+
+    &::after {
+      content: "";
+      display: block;
+      width: 99px;
+      height: 99px;
+
+      margin-top: -30px;
+      margin-right: auto;
+
+      background-image: url("/images/icon-certificate.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 
@@ -95,6 +118,7 @@
   }
 
   &__image-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,6 +153,84 @@
       user-select: none;
     }
   }
+
+  &__image-btn {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    display: flex;
+    width: 23.204%;
+    max-width: 142px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    height: fit-content;
+    border-radius: 50%;
+    border: none;
+    background-color: $transparent;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 142px;
+      height: 142px;
+
+      background-image: url("/images/certificate-btn-bg.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      animation: rotateAnimation 7s linear infinite;
+
+
+      @keyframes rotateAnimation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      margin-top: -20px;
+      top: 50%;
+      z-index: 2;
+
+      background-image: url("/images/icon-hand.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      background-color: rgba($white, 0.6);
+      border-radius: 50%;
+    }
+  }
+
+  /*&__image-btn-item{
+
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      background-image: url("/images/icon-hand.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }*/
 
   // кнопка текст
   // ----------------

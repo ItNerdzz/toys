@@ -29,7 +29,7 @@ mixin certificates()
 
           .certificates__context
             .title.title--medium.certificates__title
-              h2 Все подарки сертифицированы
+              h2 Все подарки#[br]сертифицированы
 
             .text.certificates__text
               each option in optionsText
@@ -48,6 +48,11 @@ mixin certificates()
 
                         .certificates__image-content
                           +img(option.imageName, "png", 471, 397, "Бланк сертификата.")
+
+
+                        button.certificates__image-btn(type='button')
+                          //-+icon("certificate-btn-bg", 142, 142)
+                          span.certificates__image-btn-item
 
                 +navigation-swiper().navigation-swiper--btn-secondary-accent
 
