@@ -1,0 +1,65 @@
+mixin cooperation()
+  -
+    const options = [
+      {
+        title: 'Выбор товара',
+        text: 'Выбираете подарки на&nbsp;сайте и&nbsp;делаете заказ через корзину, телефон или почту',
+        icon: 'cooperation-basket-search',
+      },
+      {
+        title: 'Подтверждение заказа',
+        text: 'Мы&nbsp;звоним Вам и&nbsp;согласовываем состав, упаковку подарка, количество, цену и&nbsp;сроки доставки',
+        icon: 'cooperation-telephone',
+      },
+      {
+        title: 'Оплата',
+        text: 'По&nbsp;электронной почте&nbsp;Вы получаете счет, договор, спецификация. Совершаете предоплату',
+        icon: 'cooperation-cash',
+      },
+      {
+        title: 'Согласование доставки',
+        text: 'За&nbsp;2-3 дня до&nbsp;даты доставки наши сотрудники связываются с&nbsp;Вами и&nbsp;уточняют день, время, адрес доставки и&nbsp;т.д.',
+        icon: 'cooperation-shopping-cart',
+      },
+      {
+        title: 'Доставка',
+        text: 'В&nbsp;указанный день мы&nbsp;доставляем заказ',
+        icon: 'cooperation-truck',
+      },
+    ];
+
+  section.cooperation&attributes(attributes)
+    .wrapper
+      .cooperation__container
+
+        .title.title--medium.cooperation__title
+          h2 Сотрудничество с&nbsp;нами проходит следующим образом
+
+        .cooperation__swiper.swiper
+
+          ol.cooperation__cards.swiper-wrapper
+
+            each option in options
+              li.cooperation__card.swiper-slide
+
+                .cooperation__content
+                  .cooperation__card-icon
+                    +icon(option.icon, 56, 56)
+
+                  .title.title--small.cooperation__card-title
+                    h3!= option.title
+
+                  .text.text--small.cooperation__card-text
+                    p!= option.text
+
+        article.cooperation__deferment-block
+
+          .cooperation__context
+            .title.title--small.cooperation__deferment-title
+              h2 Необходима отсрочка платежа?
+
+            .text.text--small.cooperation__deferment-text
+              p Свяжитесь с менеджером#[br]для уточнение деталей
+
+          +btn().btn--border-dashed.cooperation__deferment-btn
+            span Связаться с&nbsp;менеджером
