@@ -29,6 +29,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    list-style-type: none;
   }
 
   &__card {
@@ -79,7 +80,51 @@
     margin-bottom: 33px;
   }
 
+
   &__deferment-block {
+    display: flex;
+    flex-direction: column;
     background-color: $accent-bg-items;
+    padding: 34px 29px;
+    border-radius: 8px;
+
+    @include vp-tablet {
+      padding: 36px 33px;
+    }
+
+    @include vp-tablet-landscape {
+      flex-direction: row;
+      padding: 36px 95px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  }
+
+  &__deferment-title {
+    margin-bottom: 10px;
+  }
+
+  &__deferment-text {
+    margin-bottom: 22px;
+
+    @include vp-tablet {
+      margin-bottom: 24px;
+    }
+
+    @include vp-tablet-landscape {
+      margin-bottom: 0;
+    }
+  }
+
+  &__deferment-btn{
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    width: fit-content;
+    height: fit-content;
   }
 }
