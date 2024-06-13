@@ -7,8 +7,10 @@ import {initIntroSwiper} from './intro-swiper';
 import {initAdvantagesSwiper} from './advantages-swiper';
 import {initSliderImageSwiper} from './slider-image-swiper';
 import {initСertificatesSwiper} from './certificates-swiper';
+import {initCooperationSwiper} from './cooperation-swiper';
 
 initIntroSwiper();
 initAdvantagesSwiper();
 initSliderImageSwiper();
 initСertificatesSwiper();
+initCooperationSwiper();
