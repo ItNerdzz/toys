@@ -1,0 +1,15 @@
+mixin popular()
+
+  section.popular&attributes(attributes)
+    .wrapper
+      .popular__container
+        .popular__content
+
+          .title.title--medium.popular__title
+              h2 Популярные позиции
+
+          +catalog-card().popular__catalog-card
+
+          +btn().btn--border-dashed-base.popular__btn-look
+            span Смотреть еще
+
