@@ -1,3 +1,27 @@
-mixin catalog-card()
+mixin catalog-card(options = {})
 
   .catalog-card&attributes(attributes)
+
+    +link({href: options.hrefProduct, ariaLabel:"Переход в карточку товара"}).catalog-card__link
+
+      +img(options.imageName, "png", 166, 156, "Товар магазина.")
+      h3.catalog-card__title.title.title--extra-small!= options.textTitle
+
+    .catalog-card__container
+
+      .catalog-card__product-code
+        span Артитикул #[strong!= options.textCode]
+
+      .catalog-card__data-add
+
+        .catalog-card__price
+          b!= options.textPrice
+        .catalog-card__info
+          i!= options.textInfo
+
+      .catalog-card__buttons-wrapper
+        button.catalog-card__order-btn.button
+          | Запрос в 1 клик
+        button.catalog-card__cart-btn.button
+          span В корзину
+
