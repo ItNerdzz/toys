@@ -10,6 +10,70 @@ mixin popular()
         textPrice: "1300 руб.",
         textInfo: "800 гр.",
       },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
     ];
 
   section.popular&attributes(attributes)
@@ -20,9 +84,10 @@ mixin popular()
           .title.title--medium.popular__title
               h2 Популярные позиции
 
-          each option in optionsCard
-            +catalog-card(option).popular__catalog-card
+          .popular__cards-list
+            each option in optionsCard
+              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").popular__cards-item
 
-          +btn().btn--border-dashed-base.popular__btn-look
+          +btn().btn--border-dashed-primary.popular__btn-look
             span Смотреть еще
 

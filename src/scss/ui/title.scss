@@ -28,6 +28,12 @@
     line-height: 21px;
   }
 
+  &--extra-small {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
   &--accent {
     em {
       font-style: inherit;
@@ -42,7 +48,4 @@
     font-size: inherit;
     margin: 0;
   }
-}
-
-.title--extra-small {
 }
