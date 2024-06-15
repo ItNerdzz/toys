@@ -5,7 +5,7 @@ mixin catalog-card(options = {}, classCartBtn)
     +link({href: options.hrefProduct, ariaLabel:"Переход в карточку товара"}).catalog-card__link
 
       +img(options.imageName, "png", 166, 156, "Товар магазина.")
-      .catalog-card__title.title.title--extra-small
+      .catalog-card__title.title.title--small-line-big
         h3!= options.textTitle
 
     .catalog-card__container

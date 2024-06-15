@@ -27,11 +27,9 @@
   }
 
   &--cart {
-    //display: block;
     border: none;
     border-radius: 6px;
     padding: 10.5px 12px;
-    //max-height: 42px;
     margin: auto 0;
 
     @include hover-focus {
@@ -63,7 +61,7 @@
   &--border-dashed-primary {
     border: 2px dashed rgba($primary, 0.5);
     color: $primary;
-    padding: 15px 35px;
+    padding: 13px 33px;
   }
 
   &--border-dashed-base,

@@ -1,0 +1,47 @@
+.request {
+  display: flex;
+  flex-direction: column;
+  padding: 7.813% 7.032%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: $base-bg-btn;
+  color: $primary;
+
+  justify-content: space-between;
+
+  background-image: url('/images/magic-castle.png');
+  background-repeat: no-repeat;
+  background-position: 80px 20px;
+  background-size: 150px;
+
+  &__context {
+    width: 80%;
+
+    @include vp-tablet-landscape {
+      padding-top: 70%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    opacity: 0.8;
+    margin-bottom: 26px;
+
+    @include vp-tablet-landscape {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    span {
+      margin: 0 auto;
+    }
+  }
+}

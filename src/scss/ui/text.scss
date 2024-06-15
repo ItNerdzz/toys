@@ -25,6 +25,17 @@
     font-size: 15px;
   }
 
+  &--medium-bold {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+
+    @include vp-tablet {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 130%;
+    }
+  }
 
   &--small {
     font-size: 14px;
