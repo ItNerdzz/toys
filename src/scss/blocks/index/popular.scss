@@ -32,6 +32,22 @@
 
     @include vp-tablet-landscape {
       display: block;
+      width: 12.5%;
+      min-width: 170px;
+    }
+  }
+
+  &__request-desktop {
+    display: none;
+    @include vp-tablet-landscape {
+      display: flex;
+    }
+  }
+
+  &__request-mobile {
+    display: flex;
+    @include vp-tablet-landscape {
+      display: none;
     }
   }
 }

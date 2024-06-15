@@ -2,13 +2,12 @@ mixin request()
 
   .request&attributes(attributes)
 
+    .request__context
+      .request__title.title.title--medium-narrow
+        h3 Не&nbsp;нашли то&nbsp;что хотели?
 
-      .request__context
-        .request__title.title.title--medium-narrow
-          h3 Не&nbsp;нашли то&nbsp;что хотели?
+      .text.text--medium-bold.request__text
+        p Скомплектуем подарок согласно вашим пожеланиям
 
-        .text.text--medium-bold.request__text
-          p Скомплектуем подарок согласно вашим пожеланиям
-
-      +btn().btn--border-dashed-primary.request__btn
-        span Оставить заявку
+    +btn().btn--border-dashed-primary.request__btn
+      span Оставить заявку
