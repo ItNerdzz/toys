@@ -12,6 +12,8 @@
 @import 'ui/text.scss';
 @import 'ui/navigation-swiper.scss';
 @import 'ui/slider-image.scss';
+@import 'ui/catalog-card.scss';
+@import 'ui/request.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -30,6 +32,7 @@
 // page-name..
 @import 'blocks/index/intro.scss';
 @import 'blocks/index/advantages.scss';
+@import 'blocks/index/popular.scss';
 
 // PAGES
 @import 'pages/page-home.scss';

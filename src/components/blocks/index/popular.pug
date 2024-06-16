@@ -1,0 +1,99 @@
+mixin popular()
+
+  -
+    const optionsCard = [
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "#",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+    ];
+
+  section.popular&attributes(attributes)
+    .wrapper
+      .popular__container
+        .popular__content
+
+          .title.title--medium.popular__title
+              h2 Популярные позиции
+
+          .popular__swiper.swiper
+            .popular__cards-list.swiper-wrapper
+              each option in optionsCard
+                .swiper-slide
+                  +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").popular__cards-item
+
+              +request().request--desktop.popular__request-desktop
+
+          +btn().btn--border-dashed-primary.popular__btn-look
+            span Смотреть еще
+
+          +request().request--mobile.popular__request-mobile
+

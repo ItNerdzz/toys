@@ -1,0 +1,78 @@
+.request {
+  display: flex;
+  flex-direction: column;
+  padding: 9.525% 7.408%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: $base-bg-btn;
+  color: $primary;
+
+  justify-content: space-between;
+
+  background-image: url('/images/magic-castle.png');
+  background-repeat: no-repeat;
+  background-position: 100% 75% ;
+  background-size: 133px;
+
+  transition: box-shadow $trans-default;
+
+  @include vp-tablet {
+    padding: 5.455% 4.243%;
+
+    background-position: 100% 0;
+    background-size: 189px;
+  }
+
+  @include vp-tablet-landscape {
+    padding: 7.813% 7.032%;
+
+    background-position: 90% 0;
+    background-size: 150px;
+
+    @include hover {
+      box-shadow: 0px 0px 14px rgba($black, 0.08);
+    }
+  }
+
+  &__context {
+    width: 82%;
+
+    @include vp-tablet {
+      width: 50%;
+    }
+
+    @include vp-tablet-landscape {
+      padding-top: 70%;
+      width: 80%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    opacity: 0.8;
+    margin-bottom: 26px;
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    width: 55.5%;
+
+    @include vp-tablet {
+      width: 39.13%;
+    }
+
+    @include vp-tablet-landscape {
+      width: 100%;
+    }
+
+    span {
+      margin: 0 auto;
+    }
+  }
+}
