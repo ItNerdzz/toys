@@ -2,6 +2,10 @@
   max-width: 100vw;
   height: fit-content;
 
+  &__container {
+    background-color: $accent-bg;
+  }
+
   .swiper-slide {
     display: grid;
     width: 100%;
@@ -24,16 +28,11 @@
     display: flex;
     flex-direction: column;
     color: $primary;
-    background-color: $accent-bg;
-
-    box-shadow: 50px 0 0 0 $accent-bg, -50px 0 0 0 $accent-bg;
 
     @include vp-tablet-landscape {
       flex-direction: row;
       //gap: 20px;
       width: 100%;
-
-      box-shadow: 900px 0 0 0 $accent-bg, -900px 0 0 0 $accent-bg;
     }
 
     @include vp-desktop {
@@ -151,7 +150,6 @@
       object-fit: cover;
       object-position: center;
 
-      background-color: $accent-bg;
       margin: 0;
 
       user-select: none;
