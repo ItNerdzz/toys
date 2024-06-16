@@ -91,11 +91,15 @@
 
 
   &__deferment-block {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: $accent-bg-items;
     padding: 34px 29px;
     border-radius: 8px;
+
+    overflow: hidden;
+    z-index: 2;
 
     @include vp-tablet {
       padding: 36px 33px;
@@ -108,6 +112,42 @@
       align-items: center;
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1059px;
+      height: 453.87px;
+      background-image: url('/images/rectangle-bg.svg');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      bottom: 80%;
+      right: -400px;
+      z-index: -1;
+
+      transform: rotate(-90deg);
+
+      @include vp-tablet {
+        background-position: bottom;
+        bottom: -18%;
+        right: revert;
+        left: 40%;
+        transform: rotate(0deg);
+
+      }
+
+      @include vp-tablet-landscape {
+        background-position: bottom;
+        bottom: -60%;
+        left: 38%;
+        transform: rotate(3deg);
+      }
+    }
+
+  }
+
+  &__context {
+    width: 71%;
   }
 
   &__deferment-title {
@@ -116,13 +156,20 @@
 
   &__deferment-text {
     margin-bottom: 22px;
+    opacity: 0.8;
 
     @include vp-tablet {
       margin-bottom: 24px;
+      width: 71%;
     }
 
     @include vp-tablet-landscape {
       margin-bottom: 0;
+      width: 58%;
+    }
+
+    @include vp-desktop {
+      width: 35%;
     }
   }
 
@@ -132,8 +179,20 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    width: 81%;
+    min-width: 259px;
 
-    width: fit-content;
-    height: fit-content;
+    @include vp-tablet {
+      width: 42%;
+    }
+
+    @include vp-tablet-landscape {
+      width: fit-content;
+      height: fit-content;
+    }
+
+    span {
+      margin: 0 auto;
+    }
   }
 }
