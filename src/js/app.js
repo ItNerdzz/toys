@@ -8,9 +8,12 @@ import {initAdvantagesSwiper} from './advantages-swiper';
 import {initSliderImageSwiper} from './slider-image-swiper';
 import {initСertificatesSwiper} from './certificates-swiper';
 import {initCooperationSwiper} from './cooperation-swiper';
+import {initPopularSwiperMobile} from './popular-swiper';
+
 
 initIntroSwiper();
 initAdvantagesSwiper();
 initSliderImageSwiper();
 initСertificatesSwiper();
 initCooperationSwiper();
+initPopularSwiperMobile();

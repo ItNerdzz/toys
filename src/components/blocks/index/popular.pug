@@ -84,11 +84,13 @@ mixin popular()
           .title.title--medium.popular__title
               h2 Популярные позиции
 
-          .popular__cards-list
-            each option in optionsCard
-              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").popular__cards-item
+          .popular__swiper.swiper
+            .popular__cards-list.swiper-wrapper
+              each option in optionsCard
+                .swiper-slide
+                  +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").popular__cards-item
 
-            +request().request--desktop.popular__request-desktop
+              +request().request--desktop.popular__request-desktop
 
           +btn().btn--border-dashed-primary.popular__btn-look
             span Смотреть еще

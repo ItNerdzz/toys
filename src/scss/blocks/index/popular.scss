@@ -1,16 +1,29 @@
 .popular {
   max-width: 100vw;
 
+  .swiper-slide {
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+  }
+
   &__cards-list {
+    display: flex;
     width: 100%;
     margin-bottom: 40px;
 
-    @include vp-tablet {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
-      column-gap: 20px;
-      row-gap: 24px;
+    @include vp-tablet-landscape {
+      &.swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+        column-gap: 20px;
+        row-gap: 24px;
+      }
     }
+  }
+
+  &__cards-item {
+    width: 100%;
   }
 
   &__title {
