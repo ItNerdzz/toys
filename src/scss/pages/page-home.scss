@@ -33,6 +33,7 @@
       margin-bottom: 50px;
     }
   }
+
   &__popular,
   &__cooperation,
   &__certificates,
@@ -42,6 +43,14 @@
 
     @include vp-tablet {
       margin-bottom: 100px;
+    }
+  }
+
+  &__news-company {
+    margin-bottom: 100px;
+
+    @include vp-tablet {
+      margin-bottom: 120px;
     }
   }
 }

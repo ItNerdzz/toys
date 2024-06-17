@@ -1,0 +1,41 @@
+mixin news-company()
+  -
+    const dataCardsNews = [
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Название',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+    ];
+
+  section.news-company&attributes(attributes)
+    .wrapper
+      .news-company__container
+        .news-company__content
+
+          .title.title--medium.news-company__title
+              h2 Новости компании
+
+          +news-cards(dataCardsNews).news-company__cards
+
+          +btn().btn--border-dashed-primary.news-company__btn
+            span Все новости
