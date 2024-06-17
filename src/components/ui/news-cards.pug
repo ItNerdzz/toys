@@ -1,0 +1,23 @@
+mixin news-cards(options = {})
+
+  .news-card&attributes(attributes)
+      .news-cards__container
+
+        ul.news-cards__list
+
+          each option in options
+            li.news-cards__item
+
+              +link({href: option.linkNews, ariaLabel:"Переход на страницу новости"}).news-cards__link
+                .news-cards__image
+                  +img(option.imageName, "png", 660, 306, "Контентная картинка блога новостей.")
+
+                .title.title--small-large.news-cards__title
+                  h3!= option.titleCard
+
+
+              .text.text--medium.news-cards__text
+                p!= option.textCard
+
+              .text.news-cards__datetime
+                time(datetime= option.dataАttribute)!= option.dateNewsText
