@@ -1,0 +1,72 @@
+mixin card-product()
+
+  -
+    const togglesOptions = [
+      {
+        inputLabel: "800 гр.",
+        inputValue: "800",
+        inputName: "weight",
+        inputChecked: true
+      },
+      {
+        inputLabel: "400 гр.",
+        inputValue: "400",
+        inputName: "weight",
+        inputChecked: false
+      },
+    ];
+
+  section.card-product&attributes(attributes)
+    .wrapper
+      .card-product__container
+        .card-product__content
+
+          .title.title--medium.card-product__title
+              h2 Сладкий подарок «Антошка»
+
+          .card-product__product-code
+            span Артитикул #[strong 7898]
+
+          .card-product__text
+            p
+              | Ролики для линии укутывания отличаются разнообразием форм, так как работают с&nbsp;заготовками сложной конфигурации.
+              | Профиль такого ролика для мебельного станка может быть прямым, закругленным, скошенным.
+
+          .card-product__info
+            i Возможно размещение логотипа вашей компании на&nbsp;упаковке
+
+          form.card-product__form(action="product.html", method="get", autocomplete="off")
+
+            fieldset
+              legend Выберите вес:
+
+              ul.card-product__options-list
+
+                each option in togglesOptions
+                  li.card-product__options-item
+
+                    +custom-toggle({inputType: "radio", inputLabel: option.inputLabel, inputValue: option.inputValue, inputName: option.inputName, inputChecked: option.inputChecked}).card-product__custom-toggle
+
+            .card-product__order
+
+              .card-product__preorder
+
+                .card-product__price
+                  b Цена: #[strong 1300 руб.]
+
+                .card-product__quantity-wrapper
+                  label
+                    button.card-product__quantity-btn.card-product__quantity-btn--decrease(type="button")
+                      span
+                    input(type="number", name="quantity", value="1", min="1", max="100")
+                    button.card-product__quantity-btn.card-product__quantity-btn--increase(type="button")
+                      span
+
+              .card-product__buttons-wrapper
+
+                +btn().card-product__order-btn.btn--base
+                  span Запрос в 1 клик
+
+                +btn({type: "submit"}).btn--cart.card-product__cart-btn
+                  +icon("icon-cart", 18, 21)
+                  span В корзину
