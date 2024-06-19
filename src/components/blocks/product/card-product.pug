@@ -54,13 +54,14 @@ mixin card-product()
                 .card-product__price
                   b Цена: #[strong 1300 руб.]
 
-                .card-product__quantity-wrapper
-                  label
-                    button.card-product__quantity-btn.card-product__quantity-btn--decrease(type="button")
-                      span
-                    input(type="number", name="quantity", value="1", min="1", max="100")
-                    button.card-product__quantity-btn.card-product__quantity-btn--increase(type="button")
-                      span
+                .card-product__quantity-set
+                  button.card-product__quantity-btn.card-product__quantity-btn--decrease(type="button")
+                    span
+
+                  input(type="number", name="quantity", value="1", min="1", max="100")
+
+                  button.card-product__quantity-btn.card-product__quantity-btn--increase(type="button")
+                    span
 
               .card-product__buttons-wrapper
 
@@ -70,3 +71,44 @@ mixin card-product()
                 +btn({type: "submit"}).btn--cart.card-product__cart-btn
                   +icon("icon-cart", 18, 21)
                   span В корзину
+
+            .card-product__specification-block
+              .title.title--small.card-product__specification-title
+                h3 Сладкий подарок «Антошка»
+
+              dl.card-product__specification
+
+                .card-product__specification-set
+                  dt.card-product__term Упаковка:
+                  dd.card-product__definition Картон
+
+                .card-product__specification-set
+                  dt.card-product__term Материал упаковки:
+                  dd.card-product__definition Хром-эрзац
+
+                .card-product__specification-set
+                  dt.card-product__term Размера подарка, см:
+                  dd.card-product__definition
+
+                    ul.card-product__sizes
+                      li.card-product__size.card-product__size--width
+                        span 18
+                      li.card-product__size.card-product__size--depth
+                        span 6
+                      li.card-product__size.card-product__size--height
+                        span 19
+
+                .card-product__specification-set
+                  dt.card-product__term Вес:
+                  dd.card-product__definition
+
+                    ul.card-product__weight
+                      li.card-product__weight-item
+                        span 400 гр.,
+                      li.card-product__weight-item
+                        span 800 гр.
+
+                .card-product__specification-set
+                  dt.card-product__term Вложения:
+                  dd.card-product__definition 41 шт.
+                    +link({href: "#", text: "Детальный состав", ariaLabel:"Переход к детализации состава."}).card-product__specification-link
