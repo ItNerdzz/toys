@@ -54,6 +54,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 40px;
 
     legend {
       font-weight: 500;
@@ -74,33 +75,19 @@
   }
 
   &__options-item {
-    //width: 50%;
+    margin-right: 16px;
+    width: 27.6%;
+    min-width: 100px;
   }
 
   &__custom-toggle {
-    width: 100%;
-
-    label {
-      display: flex;
-      width: 100%;
-    }
 
     .custom-toggle__label {
-      display: flex;
       font-weight: 400;
       font-size: 16px;
       line-height: 140%;
 
       color: $secondary;
-      user-select: none;
-
-      box-sizing: border-box;
-      border: 1px solid rgba($base, 0.5);
-      border-radius: 6px;
-
-      width: 100%;
-      min-width: fit-content;
-      padding: 8.23% 24px;
 
       @include vp-tablet {
         font-size: 18px;
