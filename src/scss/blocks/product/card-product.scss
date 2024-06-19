@@ -36,17 +36,47 @@
   }
 
   &__info {
+    display: grid;
+    grid-template-columns: 36px auto;
+    gap: 20px;
     border-radius: 8px;
     background-color: $accent-bg-items;
     padding: 16px;
     margin-bottom: 40px;
+    width: 77.25%;
+
+    span {
+      display: flex;
+      background-color: $primary;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 20px;
+
+        background-image: url("/images/icon-info.svg");
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
+      }
+    }
 
 
     i {
+      display: block;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 130%;
+
+      width: fit-content;
     }
   }
 
@@ -63,6 +93,20 @@
 
       margin-bottom: 20px;
     }
+  }
+
+  &__order {
+    background-color: $accent-bg;
+    border-radius: 8px;
+    padding: 30px 18px;
+
+    @include vp-tablet {
+      padding: 30px;
+    }
+  }
+
+  &__preorder {
+    display: flex;
   }
 
   &__options-list {
@@ -135,6 +179,30 @@
   &__quantity-btn {
     width: 16px;
     height: 16px;
+  }
+
+  &__buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+
+    @include vp-tablet {
+      gap: 20px;
+    }
+  }
+
+  &__order-btn {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+
+    @include vp-tablet {
+    font-size: 16px;
+    }
+
+    span {
+      margin: 0 auto;
+    }
   }
 
   &__term {

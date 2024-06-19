@@ -65,6 +65,15 @@
     padding: 13px 20px;
   }
 
+  &--clear {
+    background-color: $transparent;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    color: $primary;
+    padding: 15px 20px;
+  }
+
+  &--clear,
   &--border-dashed-base,
   &--border-dashed-primary {
     @include hover-focus {
