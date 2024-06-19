@@ -21,13 +21,13 @@ mixin card-product()
       .card-product__container
         .card-product__content
 
-          .title.title--medium.card-product__title
+          .title.title--medium-litle.card-product__title
               h2 Сладкий подарок «Антошка»
 
           .card-product__product-code
             span Артитикул #[strong 7898]
 
-          .card-product__text
+          .card-product__text.text
             p
               | Ролики для линии укутывания отличаются разнообразием форм, так как работают с&nbsp;заготовками сложной конфигурации.
               | Профиль такого ролика для мебельного станка может быть прямым, закругленным, скошенным.
@@ -37,7 +37,7 @@ mixin card-product()
 
           form.card-product__form(action="product.html", method="get", autocomplete="off")
 
-            fieldset
+            fieldset.card-product__set-weight
               legend Выберите вес:
 
               ul.card-product__options-list
@@ -73,8 +73,8 @@ mixin card-product()
                   span В корзину
 
             .card-product__specification-block
-              .title.title--small.card-product__specification-title
-                h3 Сладкий подарок «Антошка»
+              .title.title--small-large.card-product__specification-title
+                h3 Характеристики
 
               dl.card-product__specification
 

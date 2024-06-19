@@ -1,0 +1,179 @@
+.card-product {
+  display: flex;
+  flex-direction: column;
+  color: $base;
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include vp-tablet {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__product-code {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 118%;
+
+    color: $secondary;
+    margin-bottom: 20px;
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
+
+    strong {
+      font-weight: 500;
+      color: $base;
+    }
+  }
+
+  &__text {
+    line-height: 140%;
+    opacity: 50%;
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    border-radius: 8px;
+    background-color: $accent-bg-items;
+    padding: 16px;
+    margin-bottom: 40px;
+
+
+    i {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+
+  &__set-weight {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    legend {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 118%;
+
+      margin-bottom: 20px;
+    }
+  }
+
+  &__options-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__options-item {
+    //width: 50%;
+  }
+
+  &__custom-toggle {
+    width: 100%;
+
+    label {
+      display: flex;
+      width: 100%;
+    }
+
+    .custom-toggle__label {
+      display: flex;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+
+      color: $secondary;
+      user-select: none;
+
+      box-sizing: border-box;
+      border: 1px solid rgba($base, 0.5);
+      border-radius: 6px;
+
+      width: 100%;
+      min-width: fit-content;
+      padding: 8.23% 24px;
+
+      @include vp-tablet {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__price {
+    b {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+
+      @include vp-tablet {
+        font-size: 26px;
+      }
+    }
+
+    strong {
+      font-weight: 500;
+      font-size: 22px;
+
+      @include vp-tablet {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__quantity-set {
+    display: flex;
+    align-items: center;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      margin: 0;
+
+      appearance: none;
+    }
+
+    input[type="number"] {
+      appearance: textfield;
+    }
+  }
+
+  &__quantity-btn {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__term {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+
+    color: $secondary;
+  }
+
+  &__definition {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  &__sizes,
+  &__weight {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__specification-link {
+    color: $accent-link;
+    text-decoration-line: underline;
+  }
+}
