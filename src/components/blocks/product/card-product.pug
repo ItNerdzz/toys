@@ -1,6 +1,19 @@
 mixin card-product()
 
   -
+    const dataImages = [
+      {
+        imageName: 'product',
+      },
+      {
+        imageName: 'product',
+      },
+      {
+        imageName: 'product',
+      },
+    ];
+
+
     const togglesOptions = [
       {
         inputLabel: "800 гр.",
@@ -19,6 +32,24 @@ mixin card-product()
   section.card-product&attributes(attributes)
     .wrapper
       .card-product__container
+
+        .card-product__image-container
+          .card-product__image-swiper.swiper
+
+            .card-product__image-cards.swiper-wrapper
+
+              each option in dataImages
+                .swiper-slide
+                  .card-product__image-card
+
+                    .card-product__image-content
+                      +img(option.imageName, "png", 358, 336, "Вид продукта.")
+
+            +navigation-swiper().navigation-swiper--btn-secondary
+
+          .card-product__gallery-container
+            .card-product__gallery Здесь будет галерея!
+
         .card-product__content
 
           .title.title--medium-litle.card-product__title

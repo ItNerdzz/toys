@@ -9,6 +9,7 @@ import {initSliderImageSwiper} from './slider-image-swiper';
 import {initСertificatesSwiper} from './certificates-swiper';
 import {initCooperationSwiper} from './cooperation-swiper';
 import {initPopularSwiperMobile} from './popular-swiper';
+import {initCardProductSwiper} from './card-product-swiper';
 
 
 initIntroSwiper();
@@ -17,3 +18,4 @@ initSliderImageSwiper();
 initСertificatesSwiper();
 initCooperationSwiper();
 initPopularSwiperMobile();
+initCardProductSwiper();
