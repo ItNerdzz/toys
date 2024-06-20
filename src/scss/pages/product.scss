@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 
+  &__composition,
   &__advantages,
   &__card-product {
     margin-bottom: 90px;
