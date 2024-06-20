@@ -15,6 +15,7 @@
 @import 'ui/catalog-card.scss';
 @import 'ui/request.scss';
 @import 'ui/news-cards.scss';
+@import 'ui/custom-toggle.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -36,5 +37,10 @@
 @import 'blocks/index/popular.scss';
 @import 'blocks/index/news-company.scss';
 
+@import 'blocks/product/card-product.scss';
+@import 'blocks/product/composition.scss';
+
 // PAGES
 @import 'pages/page-home.scss';
+@import 'pages/catalog.scss';
+@import 'pages/product.scss';

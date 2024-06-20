@@ -68,6 +68,7 @@
     }
   }
 
+  &--btn-secondary-visible,
   &--btn-secondary-accent,
   &--btn-secondary {
     .swiper-button-prev,
@@ -90,6 +91,15 @@
 
     .swiper-button-disabled {
       visibility: hidden;
+    }
+  }
+
+  &--btn-secondary-visible{
+    .swiper-button-prev,
+    .swiper-button-next {
+      visibility: visible;
+      border-radius: 50%;
+      background-color: $accent-bg;
     }
   }
 

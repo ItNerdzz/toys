@@ -1,0 +1,146 @@
+mixin card-product()
+
+  -
+    const dataImages = [
+      {
+        imageName: 'product',
+      },
+      {
+        imageName: 'product',
+      },
+      {
+        imageName: 'product',
+      },
+    ];
+
+
+    const togglesOptions = [
+      {
+        inputLabel: "800 гр.",
+        inputValue: "800",
+        inputName: "weight",
+        inputChecked: true
+      },
+      {
+        inputLabel: "400 гр.",
+        inputValue: "400",
+        inputName: "weight",
+        inputChecked: false
+      },
+    ];
+
+  section.card-product&attributes(attributes)
+    .wrapper
+      .card-product__container
+
+        .card-product__image-container
+          .card-product__image-swiper.swiper
+
+            .card-product__image-cards.swiper-wrapper
+
+              each option in dataImages
+                .swiper-slide
+                  .card-product__image-card
+
+                    .card-product__image-content
+                      +img(option.imageName, "png", 358, 336, "Вид продукта.")
+
+            +navigation-swiper().navigation-swiper--btn-secondary-visible
+
+          .card-product__gallery-container
+            .card-product__gallery Здесь будет галерея!
+
+        .card-product__content
+
+          .title.title--medium-litle.card-product__title
+              h2 Сладкий подарок «Антошка»
+
+          .card-product__product-code
+            span Артитикул #[strong 7898]
+
+          .card-product__text.text
+            p
+              | Ролики для линии укутывания отличаются разнообразием форм, так как работают с&nbsp;заготовками сложной конфигурации.
+              | Профиль такого ролика для мебельного станка может быть прямым, закругленным, скошенным.
+
+          .card-product__info
+            span
+            i Возможно размещение логотипа вашей компании на&nbsp;упаковке
+
+          form.card-product__form(action="product.html", method="get", autocomplete="off")
+
+            fieldset.card-product__set-weight
+              legend Выберите вес:
+
+              ul.card-product__options-list
+
+                each option in togglesOptions
+                  li.card-product__options-item
+
+                    +custom-toggle({inputType: "radio", inputLabel: option.inputLabel, inputValue: option.inputValue, inputName: option.inputName, inputChecked: option.inputChecked}).card-product__custom-toggle
+
+            .card-product__order
+
+              .card-product__preorder
+
+                .card-product__price
+                  b Цена: #[strong 1300 руб.]
+
+                .card-product__quantity-set
+                  button.card-product__quantity-btn.card-product__quantity-btn--decrease(type="button")
+                    span
+
+                  input(type="number", name="quantity", value="1", min="1", max="100")
+
+                  button.card-product__quantity-btn.card-product__quantity-btn--increase(type="button")
+                    span
+
+              .card-product__buttons-wrapper
+
+                +btn().card-product__order-btn.btn--clear
+                  span Запрос в 1 клик
+
+                +btn({type: "submit"}).btn--cart.card-product__cart-btn
+                  +icon("icon-cart", 18, 21)
+                  span В корзину
+
+          .card-product__specification-block
+            .title.title--small-large.card-product__specification-title
+              h3 Характеристики
+
+            dl.card-product__specification
+
+              .card-product__specification-set
+                dt.card-product__term Упаковка:
+                dd.card-product__definition Картон
+
+              .card-product__specification-set
+                dt.card-product__term Материал упаковки:
+                dd.card-product__definition Хром-эрзац
+
+              .card-product__specification-set
+                dt.card-product__term Размера подарка, см:
+                dd.card-product__definition
+
+                  ul.card-product__sizes
+                    li.card-product__size.card-product__size--width
+                      span 18
+                    li.card-product__size.card-product__size--depth
+                      span 6
+                    li.card-product__size.card-product__size--height
+                      span 19
+
+              .card-product__specification-set
+                dt.card-product__term Вес:
+                dd.card-product__definition
+
+                  ul.card-product__weight
+                    li.card-product__weight-item
+                      span 400 гр.,
+                    li.card-product__weight-item
+                      span 800 гр.
+
+              .card-product__specification-set
+                dt.card-product__term Вложения:
+                dd.card-product__definition 41 шт.
+                  +link({href: "#", text: "Детальный состав", ariaLabel:"Переход к детализации состава."}).card-product__specification-link

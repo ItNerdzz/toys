@@ -1,0 +1,14 @@
+.product {
+  display: flex;
+  flex-direction: column;
+
+  &__composition,
+  &__advantages,
+  &__card-product {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
+}
