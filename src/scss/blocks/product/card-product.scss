@@ -18,10 +18,26 @@
   width: 100%;
   height: fit-content;
 
+  @include vp-tablet-landscape {
+    padding-top: 50px;
+  }
+
     .swiper-slide {
       display: grid;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__image-swiper {
+    margin-bottom: 26px;
+
+    @include vp-tablet {
+      margin-bottom: 80px;
+    }
+
+    @include vp-tablet-landscape {
+      margin-bottom: 70px;
     }
   }
 
