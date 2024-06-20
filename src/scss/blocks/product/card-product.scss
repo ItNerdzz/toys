@@ -99,6 +99,7 @@
     background-color: $accent-bg;
     border-radius: 8px;
     padding: 30px 18px;
+    margin-bottom: 50px;
 
     @include vp-tablet {
       padding: 30px;
@@ -107,6 +108,8 @@
 
   &__preorder {
     display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
   }
 
   &__options-list {
@@ -205,6 +208,30 @@
     }
   }
 
+  &__cart-btn {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 8px;
+
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
+
+    span {
+      margin-left: 12.9px;
+    }
+  }
+
+  &__specification-title {
+    margin-bottom: 6px;
+  }
+
   &__term {
     font-weight: 400;
     font-size: 15px;
@@ -227,8 +254,62 @@
     margin: 0;
   }
 
+  &__specification {
+    margin: 0;
+  }
+
+  &__specification-set {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba($base, 0.2);;
+  }
+
+  &__size {
+    margin-left: 11px;
+  }
+
+  &__weight-item {
+    margin-left: 0.3em;
+  }
+
   &__specification-link {
     color: $accent-link;
     text-decoration-line: underline;
+    margin-left: 16px;
+  }
+
+  &__size--height,
+  &__size--depth,
+  &__size--width {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+
+      background-image: url("/images/icon-size.svg");
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+    }
+  }
+
+  &__size--depth {
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__size--height {
+    &::before {
+      transform: rotate(90deg);
+    }
   }
 }

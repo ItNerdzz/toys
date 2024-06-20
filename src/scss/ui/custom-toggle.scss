@@ -41,6 +41,9 @@
 
     transition: border $trans-default, font-weight $trans-default, color $trans-default;
 
+    @include hover-focus {
+      border-color: rgba($primary, 0.5);
+    }
   }
 
   &__icon {
