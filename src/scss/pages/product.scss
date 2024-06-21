@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 
+  &__similar-product,
   &__composition,
   &__advantages,
   &__card-product {
@@ -19,4 +20,13 @@
       margin-bottom: 120px;
     }
   }
+
+  &__similar-product {
+    display: none;
+
+    @include vp-tablet-landscape {
+      display: block;
+    }
+  }
 }
+
