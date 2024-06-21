@@ -4,7 +4,7 @@
     visibility: hidden;
     width: 48px;
     height: 48px;
-    border-radius: 6%;
+    border-radius: 6px;
     background-color: $white;
     color: $base;
 
@@ -36,7 +36,6 @@
 
       background: currentColor;
 
-      //background-image: url("/images/icon-arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
