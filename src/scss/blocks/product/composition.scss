@@ -1,4 +1,166 @@
 .composition {
   max-width: 100vw;
   color: $base;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 25.74% auto;
+      grid-template-rows: min-content min-content auto auto;
+      column-gap: 20px;
+    }
+
+    @include vp-desktop {
+      column-gap: 40px;
+    }
+  }
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    @include vp-tablet-landscape {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &__nav + &__section {
+    grid-row: 1 / 4;
+  }
+
+  &__request {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  &__nav {
+    background-color: $accent-bg;
+
+    @include vp-tablet-landscape {
+      border-radius: 8px;
+      padding: 40px 25px 35px;
+      height: fit-content;
+
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin-bottom: 30px;
+    }
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 140%;
+      background-color: $accent-bg-items;
+      padding: 12px 20px;
+      border-radius: 8px;
+
+      @include vp-tablet {
+        font-size: 16px;
+      }
+
+      @include vp-tablet-landscape {
+        border-radius: 6px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @include vp-tablet-landscape {
+      padding-left: 20px;
+    }
+  }
+
+  &__nav-item {
+    @include vp-tablet-landscape {
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__nav-link {
+    color: rgba($base, 0.7);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__section-title {
+    margin-bottom: 30px;
+  }
+
+  &__section-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @include vp-tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include vp-tablet-landscape {
+      grid-template-columns: repeat(auto-fill, minmax(207px, 1fr));
+    }
+
+    @include vp-desktop {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__section-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid $border-fill;
+    border-radius: 8px;
+    padding: 0 18px 25px;
+  }
+
+  &__card-image {
+    padding: 0 5px;
+    margin-bottom: 3px;
+  }
+
+  &__card-info {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    i {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+
+      @include vp-tablet {
+        font-size: 22px;
+      }
+    }
+  }
 }

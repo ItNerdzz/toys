@@ -90,10 +90,10 @@ mixin popular()
                 .swiper-slide
                   +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").popular__cards-item
 
-              +request().request--desktop.popular__request-desktop
+              +request("Не&nbsp;нашли то&nbsp;что хотели?").request--desktop.popular__request-desktop
 
           +btn().btn--border-dashed-primary.popular__btn-look
             span Смотреть еще
 
-          +request().request--mobile.popular__request-mobile
+          +request("Не&nbsp;нашли то&nbsp;что хотели?").request--mobile.popular__request-mobile
 
