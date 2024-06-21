@@ -33,7 +33,6 @@
 
     @include vp-tablet-landscape {
       grid-column: 2 / -1;
-      //grid-row: 4 / 5;
     }
   }
 
@@ -44,10 +43,6 @@
   &__request {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-
-    .request__context {
-      padding-top: 0;
-    }
   }
 
   &__nav {
@@ -69,7 +64,6 @@
       font-size: 15px;
       line-height: 140%;
       background-color: $accent-bg-items;
-      //width: 100%;
       padding: 12px 20px;
       border-radius: 8px;
 
@@ -157,7 +151,6 @@
     position: absolute;
     top: 18px;
     right: 18px;
-    //text-align: right;
 
     i {
       font-style: normal;

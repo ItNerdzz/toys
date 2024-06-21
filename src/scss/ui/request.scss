@@ -75,4 +75,29 @@
       margin: 0 auto;
     }
   }
+
+  &--composition {
+    &.request {
+      @include vp-tablet-landscape {
+        background-position: 107% -12%;
+        background-size: 130px;
+      }
+    }
+
+    .request {
+      &__context {
+        @include vp-tablet-landscape {
+          padding-top: 0;
+          width: 77%;
+        }
+      }
+
+      &__title {
+        @include vp-tablet-landscape {
+          white-space: pre-line;
+          width: 83%;
+        }
+      }
+    }
+  }
 }
