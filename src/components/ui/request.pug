@@ -1,10 +1,11 @@
-mixin request()
+mixin request(textTitle)
 
   article.request&attributes(attributes)
 
     .request__context
       .request__title.title.title--medium-narrow
-        h3 Не&nbsp;нашли то&nbsp;что хотели?
+        h3!= textTitle
+        //-Не&nbsp;нашли то&nbsp;что хотели?
 
       .text.text--medium-bold.request__text
         p Скомплектуем подарок согласно вашим пожеланиям
