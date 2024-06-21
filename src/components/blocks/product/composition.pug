@@ -1,9 +1,142 @@
 mixin composition()
 
+  -
+    const navSections = [
+      {
+        hrefLink: '#',
+        textItem: 'Раздел 1 &#40;8&#41;'
+      },
+      {
+        hrefLink: '#',
+        textItem: 'Раздел 2 &#40;20&#41;'
+      },
+    ];
+
+
+    const sectionCardOptions = {
+
+      'Раздел 1 &#40;8&#41;': [
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+      ],
+
+      'Раздел 2 &#40;20&#41;': [
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+        {
+          textInfo: 'х1',
+          imageName: 'toy-dragon',
+          textTitle: 'Сладкий подарок «Антошка»',
+        },
+      ],
+    }
+
+
   section.composition&attributes(attributes)
     .wrapper
       .composition__container
+        .title.title--medium-litle.composition__title
+            h2 Состав подарка
+
         .composition__content
 
-          .title.title--medium-litle.composition__title
-              h2 Состав подарка
+          .composition__nav
+            span Всего &#40;40&#41;
+            ul.composition__nav-list
+
+              each option in navSections
+                li.composition__nav-item
+                  +link({href: option.hrefLink, ariaLabel:"Переход к разделу с составом продукта."}).composition__nav-link!= option.textItem
+
+          each options, titleSection in sectionCardOptions
+
+            .composition__section
+              .title.title--special-small.composition__section-title
+                h3!= titleSection
+
+              ul.composition__section-cards
+
+                each option in options
+                  li.composition__section-card
+
+                    .composition__card-info
+                      i!= option.textInfo
+
+                    .composition__card-image
+                      +img(option.imageName, "png", 166, 156, "Компонент состава товара.")
+
+                    .title.title--small-extra.composition__card-title
+                      h3!= option.textTitle
+
+          +request().composition__request

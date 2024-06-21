@@ -72,8 +72,24 @@
     line-height: 130%;
   }
 
-  &--extra-small {
+  &--special-small {
     font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+
+    @include vp-tablet {
+      font-size: 26px;
+    }
+  }
+
+  &--small-extra {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
   }
 
   &--accent {
