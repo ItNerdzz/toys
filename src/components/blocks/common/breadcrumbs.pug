@@ -1,0 +1,18 @@
+mixin breadcrumbs(itemsName)
+
+  section.breadcrumbs&attributes(attributes)
+    .wrapper
+      .breadcrumbs__inner
+        span
+          span
+            span
+              a(href="/") Главная
+
+            each item, index in itemsName
+              if index < itemsName.length - 1
+                | /
+                span
+                  a(href="#")= item
+              else
+                | /
+                span= item

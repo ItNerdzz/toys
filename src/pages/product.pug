@@ -1,7 +1,14 @@
 extends /layouts/main.pug
 
 block pageContent
+  -
+    const nameIitemsBreadcrumbs = [
+      "Каталог",
+      "Категория",
+      "Название товара"
+    ];
 
+  +breadcrumbs(nameIitemsBreadcrumbs).product__breadcrumbs
   +card-product().product__card-product
   +advantages().product__advantages
   +composition().product__composition
