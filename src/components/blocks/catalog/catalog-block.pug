@@ -1,0 +1,118 @@
+mixin catalog-block()
+  -
+    const optionsCard = [
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+    ];
+
+  section.catalog-block&attributes(attributes)
+    .wrapper
+      .catalog-block__container
+        .title.title--medium.catalog-block__title
+          h1 Каталог
+
+        .catalog-block__content
+          .catalog-block__filters
+            h2 Фильтр
+
+          .catalog-block__sort
+            span По&nbsp;алфавиту: А-Я
+
+          .catalog-block__cards
+            each option in optionsCard
+              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--mobile").catalog-block__cards-item
+
