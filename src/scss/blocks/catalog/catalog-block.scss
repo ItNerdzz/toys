@@ -1,11 +1,29 @@
 .catalog-block {
   max-width: 100vw;
 
+  .wrapper {
+    padding: 0;
+
+    @include vp-tablet-landscape {
+      padding: 0 $padding-x-tablet-landscape;
+    }
+
+    @include vp-desktop {
+      padding: 0 $padding-x-desktop;
+    }
+  }
+
   &__title {
     margin-bottom: 40px;
+    padding: 0 $padding-x;
 
     @include vp-tablet {
       margin-bottom: 50px;
+      padding: 0 $padding-x-tablet;
+    }
+
+    @include vp-tablet-landscape {
+      padding: 0;
     }
   }
 
@@ -27,10 +45,28 @@
   &__filters {
     color: $white;
     background-color: $primary;
+    margin-left: calc($padding-x * 2.06);
+
+    @include vp-tablet {
+      margin-left: calc($padding-x-tablet * 2.0336);
+    }
+
+    @include vp-tablet-landscape {
+      margin-left: 0;
+    }
   }
 
   &__sort {
     background-color: $accent-bg;
+    margin-right: calc($padding-x * 2.06);
+
+    @include vp-tablet {
+      margin-right: calc($padding-x-tablet * 2.0336);
+    }
+
+    @include vp-tablet-landscape {
+      margin-right: 0;
+    }
   }
 
   &__cards {
