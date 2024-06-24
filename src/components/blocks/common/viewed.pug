@@ -1,0 +1,86 @@
+mixin viewed()
+  -
+    const optionsCardViewed = [
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+    ];
+
+  section.viewed&attributes(attributes)
+    .wrapper
+      .viewed__container
+
+        .viewed__content
+          .title.title--medium.viewed__title
+            h2 Недавно просмотренные
+
+          +slider-card(optionsCardViewed).viewed__slider-card

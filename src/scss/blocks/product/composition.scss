@@ -47,11 +47,20 @@
 
   &__nav {
     background-color: $accent-bg;
+    border-radius: 8px;
+    height: fit-content;
+    padding: 35px 25px 35px;
+    margin-bottom: 30px;
+
+    @include vp-tablet {
+      margin-bottom: 40px;
+    }
 
     @include vp-tablet-landscape {
-      border-radius: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
       padding: 40px 25px 35px;
-      height: fit-content;
 
       grid-column: 1 / 2;
       grid-row: 1 / 2;
@@ -66,13 +75,13 @@
       background-color: $accent-bg-items;
       padding: 12px 20px;
       border-radius: 8px;
+      margin-bottom: 14px;
 
       @include vp-tablet {
         font-size: 16px;
       }
 
       @include vp-tablet-landscape {
-        border-radius: 6px;
         margin-bottom: 14px;
       }
     }
@@ -82,17 +91,12 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-
-    @include vp-tablet-landscape {
-      padding-left: 20px;
-    }
+    padding-left: 20px;
   }
 
   &__nav-item {
-    @include vp-tablet-landscape {
-      &:not(:last-child) {
-        margin-bottom: 14px;
-      }
+    &:not(:last-child) {
+      margin-bottom: 14px;
     }
   }
 

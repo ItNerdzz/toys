@@ -1,0 +1,12 @@
+mixin slider-card(optionsCard)
+
+  .slider-card&attributes(attributes)
+    .slider-card__container
+
+      .slider-card__swiper.swiper
+        ul.slider-card__cards-list.swiper-wrapper
+          each option in optionsCard
+            li.swiper-slide
+              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").slider-card__cards-item
+
+        +navigation-swiper().navigation-swiper--btn-secondary

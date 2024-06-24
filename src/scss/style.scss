@@ -16,6 +16,7 @@
 @import 'ui/request.scss';
 @import 'ui/news-cards.scss';
 @import 'ui/custom-toggle.scss';
+@import 'ui/slider-card.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -30,6 +31,7 @@
 @import 'blocks/common/company.scss';
 @import 'blocks/common/certificates.scss';
 @import 'blocks/common/cooperation.scss';
+@import 'blocks/common/viewed.scss';
 
 // page-name..
 @import 'blocks/index/intro.scss';
@@ -39,6 +41,7 @@
 
 @import 'blocks/product/card-product.scss';
 @import 'blocks/product/composition.scss';
+@import 'blocks/product/similar-product.scss';
 
 // PAGES
 @import 'pages/page-home.scss';

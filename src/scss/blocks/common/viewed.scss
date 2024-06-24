@@ -1,0 +1,17 @@
+.viewed {
+  max-width: 100vw;
+  color: $base;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+}
