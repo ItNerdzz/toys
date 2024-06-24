@@ -92,6 +92,14 @@
         color: $white;
       }
     }
+
+    &--catalog-block {
+      span {
+        @include vp-desktop {
+          display: none;
+        }
+      }
+    }
   }
 
   &--border-none {
@@ -101,6 +109,16 @@
     @include vp-tablet-landscape {
       border-radius: 8px;
       border: 1px solid $border-fill;
+    }
+
+    .catalog-card {
+      &__buttons-wrapper {
+        flex-direction: column;
+
+        @include vp-desktop {
+          flex-direction: row;
+        }
+      }
     }
   }
 }
