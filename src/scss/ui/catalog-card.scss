@@ -93,4 +93,14 @@
       }
     }
   }
+
+  &--border-none {
+    border-radius: 0;
+    border: none;
+
+    @include vp-tablet-landscape {
+      border-radius: 8px;
+      border: 1px solid $border-fill;
+    }
+  }
 }
