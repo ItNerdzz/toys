@@ -88,7 +88,7 @@ mixin popular()
             .popular__cards-list.swiper-wrapper
               each option in optionsCard
                 .swiper-slide
-                  +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").popular__cards-item
+                  +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular", classOrderBtn= "btn--base").popular__cards-item
 
               +request("Не&nbsp;нашли то&nbsp;что хотели?").request--desktop.popular__request-desktop
 

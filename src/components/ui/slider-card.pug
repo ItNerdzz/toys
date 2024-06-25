@@ -7,6 +7,6 @@ mixin slider-card(optionsCard)
         ul.slider-card__cards-list.swiper-wrapper
           each option in optionsCard
             li.swiper-slide
-              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular").slider-card__cards-item
+              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--popular", classOrderBtn= "btn--base").slider-card__cards-item
 
         +navigation-swiper().navigation-swiper--btn-secondary

@@ -72,6 +72,17 @@
     line-height: 130%;
   }
 
+  &--small-mix {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include vp-tablet-landscape {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
   &--special-small {
     font-weight: 500;
     font-size: 20px;

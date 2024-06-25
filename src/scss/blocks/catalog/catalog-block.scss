@@ -31,6 +31,7 @@
     display: grid;
     gap: 12px;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto;
 
     @include vp-tablet-landscape {
       grid-template-columns: 350px 1fr;
@@ -44,28 +45,50 @@
 
   &__filters {
     color: $white;
-    background-color: $primary;
-    margin-left: calc($padding-x * 2.06);
+    padding-left: calc($padding-x * 2.06);
 
     @include vp-tablet {
-      margin-left: calc($padding-x-tablet * 2.0336);
+      padding-left: calc($padding-x-tablet * 2.0336);
     }
 
     @include vp-tablet-landscape {
-      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+    }
+  }
+
+  &__filters-wrapper {
+    background-color: $primary;
+
+    @include vp-tablet-landscape {
+      margin-bottom: 30px;
     }
   }
 
   &__sort {
-    background-color: $accent-bg;
-    margin-right: calc($padding-x * 2.06);
+    padding-right: calc($padding-x * 2.06);
 
     @include vp-tablet {
-      margin-right: calc($padding-x-tablet * 2.0336);
+      padding-right: calc($padding-x-tablet * 2.0336);
     }
 
     @include vp-tablet-landscape {
-      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__sort-wrapper {
+    background-color: $accent-bg;
+  }
+
+  &__cards-wrapper {
+    grid-column: 1 / -1;
+
+    @include vp-tablet-landscape {
+      grid-column: 2 / -1;
     }
   }
 
@@ -75,20 +98,18 @@
     grid-template-columns: 1fr 1fr;
     background-color: $border-fill;
 
-    grid-column: 1 / -1;
-
     padding-top: 1px;
     padding-bottom: 1px;
+
+    margin-bottom: 40px;
 
     @include vp-tablet {
       grid-template-columns: 1fr 1fr 1fr;
     }
 
     @include vp-tablet-landscape {
-      gap: 7px 5px;
+      gap: 13px 10px;
       background-color: $white;
-
-      grid-column: 2 / -1;
 
       padding-top: 0;
       padding-bottom: 0;
@@ -102,5 +123,31 @@
 
   &__cards-item {
     background-color: $white;
+  }
+
+  &__request-wrapper {
+    background-color: $white;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+
+    padding: 7.25% 4.35%;
+
+    @include vp-tablet {
+      grid-row: 3 / 4;
+
+      padding: 5.56% 4.167%;
+    }
+
+    @include vp-tablet-landscape {
+      display: none;
+    }
+  }
+
+  &__request-desktop {
+    display: none;
+
+    @include vp-tablet-landscape {
+      display: flex;
+    }
   }
 }

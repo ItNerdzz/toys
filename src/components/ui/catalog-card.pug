@@ -1,4 +1,4 @@
-mixin catalog-card(options = {}, classCartBtn)
+mixin catalog-card(options = {}, classCartBtn, classOrderBtn)
 
   .catalog-card&attributes(attributes)
 
@@ -23,7 +23,7 @@ mixin catalog-card(options = {}, classCartBtn)
 
       .catalog-card__buttons-wrapper
 
-        +btn().catalog-card__order-btn.btn--base
+        +btn().catalog-card__order-btn(class= classOrderBtn)
           span Запрос в 1 клик
 
         +btn().btn--cart.catalog-card__cart-btn(class= classCartBtn)

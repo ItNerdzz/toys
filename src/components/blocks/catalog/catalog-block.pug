@@ -107,12 +107,25 @@ mixin catalog-block()
 
         .catalog-block__content
           .catalog-block__filters
-            h2 Фильтр
+            .catalog-block__filters-wrapper
+              .title.title--small-mix.catalog-block__filters-title
+                h2 Фильтр
+              .catalog-block__form-filters
+                | Здесь должна быть форма фильтров
+
+            +request("Не&nbsp;нашли\n то&nbsp;что хотели?").request--desktop-catalog.catalog-block__request-desktop
 
           .catalog-block__sort
-            span По&nbsp;алфавиту: А-Я
+            .catalog-block__sort-wrapper
+              span По&nbsp;алфавиту: А-Я
 
-          .catalog-block__cards
-            each option in optionsCard
-              +catalog-card(option, classCartBtn= "catalog-card__cart-btn--catalog-block").catalog-card--border-none.catalog-block__cards-item
+          .catalog-block__cards-wrapper
+            .catalog-block__cards
+              each option in optionsCard
+                +catalog-card(option, classCartBtn= "catalog-card__cart-btn--catalog-block", classOrderBtn= "btn--base-small").catalog-card--border-none.catalog-block__cards-item
 
+              .catalog-block__request-wrapper
+                +request("Не&nbsp;нашли то&nbsp;что хотели?").request--mobile.catalog-block__request-mobile
+
+            +btn().btn--border-dashed-primary.popular__btn-look
+              span Показать еще
