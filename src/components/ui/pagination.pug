@@ -1,0 +1,16 @@
+mixin pagination(options = {})
+
+  .pagination&attributes(attributes)
+    .pagination__items
+      a.prev.page-numbers(href="#")
+        | &lt;
+        span.visually-hidden Предыдущая страница
+
+      span.page-numbers.current(aria-current="page") 1
+
+      each option in options
+        a.page-numbers(href="#")!= option.numberPage
+
+      a.next.page-numbers(href="#")
+        | &gt;
+        span.visually-hidden Следующая страница
