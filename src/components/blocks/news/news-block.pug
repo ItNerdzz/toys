@@ -1,0 +1,106 @@
+mixin news-block()
+  -
+    const dataCardsNews = [
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Название',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Название',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Название',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+      {
+        linkNews: '#',
+        imageName: 'news',
+        titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
+        textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
+        dateNewsText: '21.04.24',
+        dataАttribute: '2024-04-21',
+      },
+    ];
+
+    const paginationButtonNext = [
+      {
+        numberPage: '2',
+      },
+      {
+        numberPage: '3',
+      },
+      {
+        numberPage: '4',
+      },
+      {
+        numberPage: '5',
+      },
+    ];
+
+
+  section.news-block&attributes(attributes)
+    .wrapper
+      .news-block__container
+        .news-company__content
+          .title.title--medium.news-block__title
+            h1 Новости компании
+
+          +news-cards(dataCardsNews).news-block__cards
+
+          +btn().btn--border-dashed-primary.news-block__btn
+            span Все новости
+
+          +pagination(paginationButtonNext).news-block__pagination

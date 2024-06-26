@@ -1,4 +1,4 @@
-.catalog {
+.news {
   display: flex;
   flex-direction: column;
 
@@ -10,7 +10,7 @@
     }
   }
 
-  &__catalog-block {
+  &__news-block {
     margin-bottom: 90px;
 
     @include vp-tablet {
