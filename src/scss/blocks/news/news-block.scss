@@ -1,0 +1,44 @@
+.news-block {
+  color: $base;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet-landscape {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    width: 44.98%;
+    min-width: 170px;
+
+    @include vp-tablet {
+    width: 25.76%;
+    }
+
+    @include vp-tablet-landscape {
+      width: 17.58%;
+    }
+
+    span {
+      margin: 0 auto;
+    }
+  }
+
+  &__pagination {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
