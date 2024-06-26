@@ -1,0 +1,148 @@
+mixin catalog-block()
+  -
+    const optionsCard = [
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+      {
+        hrefProduct: "product.html",
+        imageName: "toy-dragon",
+        textTitle: "Сладкий подарок «Антошка»",
+        textCode: "7898",
+        textPrice: "1300 руб.",
+        textInfo: "800 гр.",
+      },
+    ];
+
+    const paginationButtonNext = [
+      {
+        numberPage: '2',
+      },
+      {
+        numberPage: '3',
+      },
+      {
+        numberPage: '4',
+      },
+      {
+        numberPage: '5',
+      },
+    ];
+
+  section.catalog-block&attributes(attributes)
+    .wrapper
+      .catalog-block__container
+        .title.title--medium.catalog-block__title
+          h1 Каталог
+
+        .catalog-block__content
+          .catalog-block__filters
+            .catalog-block__filters-wrapper
+              .title.title--small-mix.catalog-block__filters-title
+                h2 Фильтр
+              .catalog-block__form-filters
+                | Здесь должна быть форма фильтров
+
+            +request("Не&nbsp;нашли\n то&nbsp;что хотели?").request--desktop-catalog.catalog-block__request-desktop
+
+          .catalog-block__sort
+            .catalog-block__sort-wrapper
+              span По&nbsp;алфавиту: А-Я
+
+          .catalog-block__cards-wrapper
+            .catalog-block__cards
+              each option in optionsCard
+                +catalog-card(option, classCartBtn= "catalog-card__cart-btn--catalog-block", classOrderBtn= "btn--base-small").catalog-card--border-none.catalog-block__cards-item
+
+              .catalog-block__request-wrapper
+                +request("Не&nbsp;нашли то&nbsp;что хотели?").request--mobile.catalog-block__request-mobile
+
+            +btn().btn--border-dashed-primary.catalog-block__cards-btn
+              span Показать еще
+
+            +pagination(paginationButtonNext).catalog-block__pagination

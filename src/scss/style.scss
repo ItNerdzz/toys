@@ -17,6 +17,7 @@
 @import 'ui/news-cards.scss';
 @import 'ui/custom-toggle.scss';
 @import 'ui/slider-card.scss';
+@import 'ui/pagination.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -43,6 +44,8 @@
 @import 'blocks/product/card-product.scss';
 @import 'blocks/product/composition.scss';
 @import 'blocks/product/similar-product.scss';
+
+@import 'blocks/catalog/catalog-block.scss';
 
 // PAGES
 @import 'pages/page-home.scss';

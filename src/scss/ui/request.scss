@@ -76,6 +76,7 @@
     }
   }
 
+  &--desktop-catalog,
   &--composition {
     &.request {
       @include vp-tablet-landscape {
@@ -97,6 +98,14 @@
           white-space: pre-line;
           width: 83%;
         }
+      }
+    }
+  }
+
+  &--mobile {
+    .request {
+      &__context {
+        padding-top: 0;
       }
     }
   }

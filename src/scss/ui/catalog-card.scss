@@ -71,15 +71,21 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+
+    gap: 10px;
   }
 
   &__order-btn {
+    font-family: 'Roboto Flex';
+    font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
   }
 
   &__cart-btn {
+    font-family: 'Roboto Flex';
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 118%;
@@ -90,6 +96,60 @@
       span {
         display: none;
         color: $white;
+      }
+    }
+
+    &--catalog-block {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 118%;
+
+      span {
+        margin-left: 10.2px;
+        @include vp-desktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--border-none {
+    border-radius: 0;
+    border: none;
+
+    padding: 11.63% 8.72% 13.56%;
+
+    @include vp-tablet {
+      padding: 14.21% 12.54% 15.88%;
+    }
+
+    @include vp-tablet-landscape {
+      border-radius: 8px;
+      border: 1px solid $border-fill;
+
+      padding: 5.72% 5.72% 8.36%;
+    }
+
+    .catalog-card {
+      &__buttons-wrapper {
+        flex-direction: column;
+        gap: 0;
+
+        @include vp-desktop {
+          flex-direction: row;
+          gap: 10px;
+        }
+      }
+
+      &__order-btn {
+        font-size: 14px;
+        line-height: 118%;
+
+        margin-bottom: 10px;
+
+        @include vp-desktop {
+          margin-bottom: 0;
+        }
       }
     }
   }
