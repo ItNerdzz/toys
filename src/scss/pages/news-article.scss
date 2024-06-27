@@ -1,6 +1,8 @@
 .news-article {
+  display: flex;
+  flex-direction: column;
+
   &__breadcrumbs {
-    position: relative;
     z-index: 3;
 
     padding-top: 45px;
