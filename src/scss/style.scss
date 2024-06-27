@@ -49,8 +49,12 @@
 
 @import 'blocks/news/news-block.scss';
 
+@import 'blocks/news-article/article.scss';
+@import 'blocks/news-article/article-banner.scss';
+
 // PAGES
 @import 'pages/page-home.scss';
 @import 'pages/catalog.scss';
 @import 'pages/product.scss';
 @import 'pages/news.scss';
+@import 'pages/news-article.scss';

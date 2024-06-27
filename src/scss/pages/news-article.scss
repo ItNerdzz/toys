@@ -1,0 +1,21 @@
+.news-article {
+  &__breadcrumbs {
+    position: relative;
+    z-index: 3;
+
+    padding-top: 45px;
+    margin-bottom: -67.4px;
+  }
+
+  &__article-banner {
+    margin-bottom: 70px;
+
+    @include vp-tablet {
+      margin-bottom: 80px;
+    }
+
+    @include vp-tablet-landscape {
+      margin-bottom: 100px;
+    }
+  }
+}
