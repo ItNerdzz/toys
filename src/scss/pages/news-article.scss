@@ -24,4 +24,12 @@
       margin-bottom: 100px;
     }
   }
+
+  &__article {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
 }

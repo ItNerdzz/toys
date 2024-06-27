@@ -1,3 +1,54 @@
 .article {
   max-width: 100vw;
+
+  &__nav-list,
+  &__nav-list-secondary {
+    line-height: 140%;
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__nav-list {
+    font-weight: 500;
+    font-size: 16px;
+
+    background-color: $accent-bg;
+    border-radius: 8px;
+
+    padding: 38px 28px;
+
+    @include vp-tablet {
+      padding: 38px 32px;
+    }
+
+    @include vp-tablet-landscape {
+      padding: 38px 40px;
+    }
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__nav-list-secondary {
+    font-weight: 400;
+    font-size: 15px;
+
+    padding-left: 10px;
+    margin-top: 10px;
+
+    a {
+      color: rgba($base, 0.5);
+    }
+  }
+
+  &__nav-item-secondary {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
 }

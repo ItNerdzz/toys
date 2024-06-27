@@ -1,8 +1,67 @@
 mixin article()
 
+  -
+    const navNameItemSecondary = [
+      {
+        hrefLink: '#',
+        textItem: 'Заголовок'
+      },
+      {
+        hrefLink: '#',
+        textItem: 'Заголовок'
+      },
+      {
+        hrefLink: '#',
+        textItem: 'Заголовок'
+      },
+    ];
+
   section.article&attributes(attributes)
     .wrapper
       .article__container
 
-        .title.title--medium-large.article__title
-          h2 С&nbsp;другой стороны начало повседневной работы
+        .article__nav
+          ul.article__nav-list
+            li.article__nav-item
+              +link({href: "#", ariaLabel:"Переход к разделу статьи."}).article__nav-link
+                span Вступление
+            li.article__nav-item
+              +link({href: "#", ariaLabel:"Переход к разделу статьи."}).article__nav-link
+                span Начало повседневной работы
+
+              ul.article__nav-list-secondary
+                each option in navNameItemSecondary
+                  li.article__nav-item-secondary
+                    +link({href: option.hrefLink, ariaLabel:"Переход к заголовку статьи."}).article__nav-link-secondary
+                      span!= option.textItem
+
+            li.article__nav-item
+              +link({href: "#", ariaLabel:"Переход к разделу статьи."}).article__nav-link
+                span Заключение
+
+        .article__content
+          .title.title--special-medium.article__title
+            h2 С&nbsp;другой стороны начало повседневной работы
+
+          .text.article__text
+            p
+              | С&nbsp;другой стороны начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа существенных финансовых и&nbsp;административных условий.
+              | С&nbsp;другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от&nbsp;нас анализа позиций, занимаемых участниками в&nbsp;отношении поставленных задач.
+              | С&nbsp;другой стороны консультация с&nbsp;широким активом позволяет выполнять важные задания по&nbsp;разработке новых предложений.
+
+
+          .text.article__text
+            p
+              | С&nbsp;другой стороны начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа существенных финансовых и&nbsp;административных условий.
+              | С&nbsp;другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от&nbsp;нас анализа позиций, занимаемых участниками в&nbsp;отношении поставленных задач.
+              | С&nbsp;другой стороны консультация с&nbsp;широким активом позволяет выполнять важные задания по&nbsp;разработке новых предложений.
+
+          .title.title--special-medium.article__title
+            h2 Начало повседневной работы
+
+          .text.article__text
+            p
+              | С&nbsp;другой стороны начало повседневной работы по&nbsp;формированию позиции требуют от&nbsp;нас анализа существенных финансовых и&nbsp;административных условий.
+              | С&nbsp;другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от&nbsp;нас анализа позиций, занимаемых участниками в&nbsp;отношении поставленных задач.
+              | С&nbsp;другой стороны консультация с&nbsp;широким активом позволяет выполнять важные задания по&nbsp;разработке новых предложений.
+

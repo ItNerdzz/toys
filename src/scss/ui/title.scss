@@ -33,6 +33,16 @@
     }
   }
 
+  &--special-medium {
+    font-weight: 500;
+    line-height: 140%;
+    font-size: 26px;
+
+    @include vp-tablet {
+      font-size: 28px;
+    }
+  }
+
   &--medium-litle {
     font-weight: 500;
     font-size: 24px;
