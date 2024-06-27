@@ -22,6 +22,12 @@
 
   &__title {
     margin-bottom: 20px;
+    margin-top: 25.93%;
+
+    @include vp-tablet {
+      width: 98%;
+      margin-top: 17.58%;
+    }
 
     @include vp-tablet-landscape {
       width: 50%;
@@ -30,17 +36,23 @@
   }
 
   &__wrapper-text {
+    display: flex;
+    flex-direction: column;
     opacity: 0.7;
     line-height: 140%;
 
     @include vp-tablet-landscape {
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
     }
   }
 
   &__text {
     line-height: 140%;
+
+    @include vp-tablet {
+      width: 70%;
+    }
 
     @include vp-tablet-landscape {
       width: 34%;
@@ -52,7 +64,9 @@
   }
 
   &__datetime {
-    align-self: center;
+    @include vp-tablet-landscape {
+      align-self: center;
+    }
 
     time {
       line-height: inherit;
@@ -71,7 +85,9 @@
     //text-align: center;
     //border-radius: 8px;
 
-    padding: 29.1% 0;
+    padding: 88.76% 0;
+    //-padding: 335.5px 0;
+    //-max-height: 671px;
     //margin-bottom: 18px;
 
     //overflow: hidden;
@@ -79,7 +95,7 @@
     //z-index: -1;
 
     @include vp-tablet {
-      padding: 23.18% 0;
+      padding: 32.81% 0;
     }
 
     @include vp-tablet-landscape {
@@ -92,15 +108,20 @@
       top: 0;
       left: 0;
       right: 0;
-      width: auto;
-      height: 206%;
+      //-width: auto;
+      //-height: 95%;
+
+      width: 167.5%;
+      height: auto;
 
       object-fit: cover;
       object-position:  center;
 
       margin-left: auto;
-      margin-right: -5%;
-      margin-top: -14%;
+      //-margin-right: -30%;
+      //-margin-top: 59%;
+      margin-top: 223px;
+      margin-right: -113.4px;
 
       /*height: 210%;
 
@@ -111,6 +132,27 @@
       //margin: 0;
       //z-index: 0;
       //max-height: 822px;
+
+      @include vp-tablet {
+        width: 100%;
+        height: auto;
+
+        margin-top: 18px;
+        margin-right: -234px;
+
+      }
+
+      @include vp-tablet-landscape {
+        width: auto;
+        height: 206%;
+
+        object-fit: cover;
+        object-position:  center;
+
+        margin-left: auto;
+        margin-right: -5%;
+        margin-top: -14%;
+      }
     }
   }
 }
