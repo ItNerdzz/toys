@@ -1,5 +1,5 @@
 mixin company()
-  -
+  //-
     const options = [
       {
         accentText: '1996',
@@ -37,18 +37,18 @@ mixin company()
 
                 +link({text: "Узнать подробнее", href: "#", ariaLabel:"Переход на страницу «О компании»"}).link--accent-red.company__link
 
-            .company__bg-wrapper
+            +company-image().company__bg-wrapper
 
-              ul.company__bg-list
+              //-ul.company__bg-list
 
                 each option in options
                   li.company__bg-item
                     i!= option.accentText
                     span!= option.text
 
-              +link({href: "#", ariaLabel:"Переход на карту к локации компании"}).company__link-address
+              //-+link({href: "#", ariaLabel:"Переход на карту к локации компании"}).company__link-address
                 address.company__address
                   span г. Москва, Кусковская&nbsp;ул., дом 20А, корпус&nbsp;В, оф. 505В
 
-              .company__bg-image
+              //-.company__bg-image
                 +img("company-bg", "png", 1360, 1025, "Вид административного здания компании.")

@@ -1,89 +1,15 @@
-.company {
-  max-width: 100vw;
+.company-image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
+  @include vp-tablet {
+    grid-template-columns: 1fr 1fr;
   }
 
-  &__context {
-    display: grid;
-
-    @include vp-desktop {
-      grid-template-columns: 40% auto;
-      gap: 37px;
-      margin-bottom: 50px;
-    }
-  }
-
-  &__title {
-    margin-bottom: 20px;
-
-    @include vp-desktop {
-      margin-bottom: 0;
-    }
-  }
-
-  &__text {
-    width: 100%;
-
-    @include vp-desktop {
-      width: 70%;
-    }
-
-    p {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__link {
-    display: flex;
-    width: fit-content;
-
-    margin-bottom: 40px;
-
-    @include vp-tablet {
-      margin-bottom: 50px;
-    }
-
-    @include vp-desktop {
-      margin-bottom: 0;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 11px;
-      margin-left: 6px;
-      margin-top: auto;
-      margin-bottom: auto;
-
-      mask-repeat: no-repeat;
-      mask-position: center;
-      mask-image: url("/images/icon-arrow.svg");
-
-      background: currentColor;
-      background-size: contain;
-      background-position: center;
-      transform: rotate(180deg);
-    }
-  }
-
-
-  /* &__bg-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-
-    @include vp-tablet {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @include vp-desktop {
-      grid-template-columns: 1fr 324px;
-      gap: 50px;
-    }
+  @include vp-desktop {
+    grid-template-columns: 1fr 324px;
+    gap: 50px;
   }
 
   &__bg-list{
@@ -247,5 +173,7 @@
         object-position: center;
       }
     }
-  }*/
+  }
+
+
 }
