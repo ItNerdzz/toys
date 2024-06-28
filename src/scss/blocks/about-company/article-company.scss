@@ -69,4 +69,10 @@
       margin-bottom: 10px;
     }
   }
+
+  &__bg-wrapper {
+    @include vp-tablet-landscape {
+      grid-column: 1 / -1;
+    }
+  }
 }
