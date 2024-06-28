@@ -1,0 +1,51 @@
+.about-company {
+  display: flex;
+  flex-direction: column;
+
+  &__breadcrumbs {
+    background-color: $accent-bg;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include vp-tablet {
+      padding-top: 44px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__article-company {
+    background-color: $accent-bg;
+    padding-bottom: 70px;
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      padding-bottom: 100px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__manufacturers {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__confidence,
+  &__cooperation {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__viewed {
+    margin-bottom: 110px;
+
+    @include vp-tablet {
+      margin-bottom: 120px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+extends /layouts/main.pug
+
+block pageContent
+  -
+    const nameIitemsBreadcrumbs = [
+      "О компании",
+    ];
+
+  +breadcrumbs(nameIitemsBreadcrumbs).about-company__breadcrumbs
+  +article-company().about-company__article-company
+  +manufacturers().about-company__manufacturers
+
+  +confidence().about-company__confidence
+  +cooperation().about-company__cooperation
+  +viewed().about-company__viewed
