@@ -2,7 +2,7 @@ mixin news-block()
   -
     const dataCardsNews = [
       {
-        linkNews: '#',
+        linkNews: 'news-article.html',
         imageName: 'news',
         titleCard: 'Название',
         textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
@@ -10,7 +10,7 @@ mixin news-block()
         dataАttribute: '2024-04-21',
       },
       {
-        linkNews: '#',
+        linkNews: 'news-article.html',
         imageName: 'news',
         titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
         textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
@@ -18,7 +18,7 @@ mixin news-block()
         dataАttribute: '2024-04-21',
       },
       {
-        linkNews: '#',
+        linkNews: 'news-article.html',
         imageName: 'news',
         titleCard: 'Новая поставка к&nbsp;Новому Году 2025!',
         textCard: 'Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры',
@@ -94,7 +94,7 @@ mixin news-block()
   section.news-block&attributes(attributes)
     .wrapper
       .news-block__container
-        .news-company__content
+        .news-block__content
           .title.title--medium.news-block__title
             h1 Новости компании
 

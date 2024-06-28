@@ -1,5 +1,6 @@
 .breadcrumbs {
   max-width: 100vw;
+  user-select: none;
 
   &__inner {
     span {
@@ -55,6 +56,28 @@
 
           @include vp-tablet {
             font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  &--item-white {
+    .breadcrumbs {
+      &__inner {
+        span {
+          span {
+            color: rgba($white, 0.5);
+
+            a {
+              color: $white;
+            }
+
+            &:not(:first-child) {
+              a {
+                color: rgba($white, 0.5);
+              }
+            }
           }
         }
       }

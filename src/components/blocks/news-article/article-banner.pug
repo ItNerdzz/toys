@@ -1,0 +1,24 @@
+mixin article-banner()
+
+  section.article-banner&attributes(attributes)
+
+    .article-banner__container
+
+      .article-banner__banner
+        .wrapper
+
+          .article-banner__content
+            .article-banner__context
+
+              .title.title--medium-large.article-banner__title
+                h1 Идейные соображения высшего порядка, а&nbsp;также консультация с&nbsp;широким активом
+
+              .article-banner__wrapper-text.text
+                .article-banner__text
+                  p Здесь представлены наши клиенты и&nbsp;партнеры и&nbsp;представлены клиенты и&nbsp;партнеры
+
+                .article-banner__datetime
+                  time(datetime= "2024-04-21") 21.04.24
+
+            .article-banner__image
+              +img("banner-article", "png", 822, 822, "Контентная картинка статьи новостей.")
