@@ -1,0 +1,30 @@
+.manufacturers-page {
+  display: flex;
+  flex-direction: column;
+
+  &__breadcrumbs,
+  &__manufacturers {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__video-vlog,
+  &__certificates {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__viewed {
+    margin-bottom: 110px;
+
+    @include vp-tablet {
+      margin-bottom: 120px;
+    }
+  }
+}
