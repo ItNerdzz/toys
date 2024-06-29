@@ -1,0 +1,33 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "Здесь должно быть видео";
+    position: absolute;
+    display: block;
+    width: fit-content;
+    height: auto;
+
+    font-weight: 600;
+    font-size: 20px;
+    left: 25%;
+    top: 50%;
+
+    transform: rotate(-45deg);
+    color: red;
+
+    @include vp-tablet {
+      font-size: 30px;
+    }
+  }
+
+  img {
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
