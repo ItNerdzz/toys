@@ -11,6 +11,7 @@ import {initCooperationSwiper} from './cooperation-swiper';
 import {initPopularSwiperMobile} from './popular-swiper';
 import {initCardProductSwiper} from './card-product-swiper';
 import {initSliderCardSwiper} from './slider-card-swiper';
+import {initGratitudeSwiper} from './gratitude-swiper';
 
 initIntroSwiper();
 initAdvantagesSwiper();
@@ -20,3 +21,4 @@ initCooperationSwiper();
 initPopularSwiperMobile();
 initCardProductSwiper();
 initSliderCardSwiper();
+initGratitudeSwiper();

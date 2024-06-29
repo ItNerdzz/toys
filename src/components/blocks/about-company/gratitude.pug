@@ -1,0 +1,50 @@
+gratitude
+mixin gratitude()
+  -
+    const dataImages = [
+      {
+        imageName: 'gratitude',
+      },
+      {
+        imageName: 'gratitude',
+      },
+      {
+        imageName: 'gratitude',
+      },
+      {
+        imageName: 'gratitude',
+      },
+      {
+        imageName: 'gratitude',
+      },
+      {
+        imageName: 'gratitude',
+      },
+      {
+        imageName: 'gratitude',
+      },
+    ];
+
+  section.gratitude&attributes(attributes)
+    .wrapper
+      .gratitude__container
+        .gratitude__content
+
+          .gratitude__context
+            .title.title--medium.gratitude__title
+              h2 Благодарственные письма от&nbsp;наших клиентов
+
+          .gratitude__image
+            .gratitude__image-container
+              .gratitude__image-swiper.swiper
+
+                .gratitude__image-cards.swiper-wrapper
+
+                  each option in dataImages
+                    .swiper-slide
+                      .gratitude__image-card
+
+                        .gratitude__image-content
+                          +img(option.imageName, "png", 240, 341, "Благодарственное письмо клиента.")
+
+                +navigation-swiper().navigation-swiper--btn-secondary
