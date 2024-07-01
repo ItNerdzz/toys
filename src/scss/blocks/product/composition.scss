@@ -143,12 +143,34 @@
     box-sizing: border-box;
     border: 1px solid $border-fill;
     border-radius: 8px;
-    padding: 0 18px 25px;
+    padding: 13px 18px 25px;
   }
 
   &__card-image {
-    padding: 0 5px;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
+
+    @include vp-desktop {
+      margin-bottom: 12px;
+    }
+
+    img {
+      height: 121px;
+      width: 100%;
+      margin: 0 auto;
+      object-position: center;
+      object-fit: contain;
+
+      @include vp-desktop {
+        height: 148px;
+      }
+    }
+  }
+
+  &__card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 
   &__card-info {

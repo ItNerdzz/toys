@@ -79,7 +79,7 @@
       width: auto;
       height: 100%;
 
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
 
       background-color: $white;
@@ -144,6 +144,18 @@
     padding: 16px;
     margin-bottom: 40px;
     width: 77.25%;
+
+    @include vp-tablet {
+      width: 47%;
+    }
+
+    @include vp-tablet-landscape {
+      width: 64%;
+    }
+
+    @include vp-desktop {
+      width: 45%;
+    }
 
     span {
       display: flex;
