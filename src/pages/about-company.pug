@@ -1,16 +1,28 @@
 extends /layouts/main.pug
 
-block pageContent
-  -
-    const nameIitemsBreadcrumbs = [
-      "О компании",
-    ];
+block variables
+  - const title = "About company" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "about-company.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
-  +breadcrumbs(nameIitemsBreadcrumbs).about-company__breadcrumbs
-  +article-company().about-company__article-company
-  +manufacturers().about-company__manufacturers
-  +video-vlog().about-company__video-vlog
-  +confidence().about-company__confidence
-  +gratitude().about-company__gratitude
-  +cooperation().about-company__cooperation
-  +viewed().about-company__viewed
+//-block pageContent
+
+block main
+  main.about-company
+    -
+      const nameIitemsBreadcrumbs = [
+        "О компании",
+      ];
+
+    +breadcrumbs(nameIitemsBreadcrumbs).about-company__breadcrumbs
+    +article-company().about-company__article-company
+    +manufacturers().about-company__manufacturers
+    +video-vlog().about-company__video-vlog
+    +confidence().about-company__confidence
+    +gratitude().about-company__gratitude
+    +cooperation().about-company__cooperation
+    +viewed().about-company__viewed

@@ -1,13 +1,26 @@
 extends /layouts/main.pug
 
-block pageContent
-  -
-    const nameIitemsBreadcrumbs = [
-      "Производители",
-    ];
+block variables
+  - const title = "Manufacturers" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "manufacturers-page.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
-  +breadcrumbs(nameIitemsBreadcrumbs).manufacturers-page__breadcrumbs
-  +manufacturers().manufacturers-page__manufacturers
-  +video-vlog().manufacturers-page__video-vlog
-  +certificates().manufacturers-page__certificates
-  +viewed().manufacturers-page__viewed
+
+//-block pageContent
+
+block main
+  main.manufacturers-page
+    -
+      const nameIitemsBreadcrumbs = [
+        "Производители",
+      ];
+
+    +breadcrumbs(nameIitemsBreadcrumbs).manufacturers-page__breadcrumbs
+    +manufacturers().manufacturers-page__manufacturers
+    +video-vlog().manufacturers-page__video-vlog
+    +certificates().manufacturers-page__certificates
+    +viewed().manufacturers-page__viewed

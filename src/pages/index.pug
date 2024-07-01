@@ -1,14 +1,27 @@
 extends /layouts/main.pug
 
-block pageContent
+block variables
+  - const title = "Site title" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
-  +intro().page-home__intro
-  +advantages().page-home__advantages
-  +popular().page-home__popular
-  +manufacturers().page-home__manufacturers
-  +video-vlog().page-home__video-vlog
-  +certificates().page-home__certificates
-  +cooperation().page-home__cooperation
-  +company().page-home__company
-  +confidence().page-home__confidence
-  +news-company().page-home__news-company
+
+//- block pageContent
+
+block main
+  main.page-home
+
+    +intro().page-home__intro
+    +advantages().page-home__advantages
+    +popular().page-home__popular
+    +manufacturers().page-home__manufacturers
+    +video-vlog().page-home__video-vlog
+    +certificates().page-home__certificates
+    +cooperation().page-home__cooperation
+    +company().page-home__company
+    +confidence().page-home__confidence
+    +news-company().page-home__news-company

@@ -1,16 +1,28 @@
 extends /layouts/main.pug
 
-block pageContent
-  -
-    const nameIitemsBreadcrumbs = [
-      "Каталог",
-      "Категория",
-      "Название товара"
-    ];
+block variables
+  - const title = "Card-product" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "product.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
-  +breadcrumbs(nameIitemsBreadcrumbs).product__breadcrumbs
-  +card-product().product__card-product
-  +advantages().product__advantages
-  +composition().product__composition
-  +similar-product().product__similar-product
-  +viewed().product__viewed
+//- block pageContent
+
+block main
+  main.product
+    -
+      const nameIitemsBreadcrumbs = [
+        "Каталог",
+        "Категория",
+        "Название товара"
+      ];
+
+    +breadcrumbs(nameIitemsBreadcrumbs).product__breadcrumbs
+    +card-product().product__card-product
+    +advantages().product__advantages
+    +composition().product__composition
+    +similar-product().product__similar-product
+    +viewed().product__viewed

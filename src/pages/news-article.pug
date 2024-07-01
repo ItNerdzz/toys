@@ -1,13 +1,25 @@
 extends /layouts/main.pug
 
-block pageContent
-  -
-    const nameIitemsBreadcrumbs = [
-      "Новости",
-      "Название статьи",
-    ];
+block variables
+  - const title = "News article" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "news-article.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
-  +breadcrumbs(nameIitemsBreadcrumbs).breadcrumbs--item-white.news-article__breadcrumbs
-  +article-banner().news-article__article-banner
-  +article().news-article__article
-  +viewed().news-article__viewed
+
+//- block pageContent
+block main
+  main.news-article
+    -
+      const nameIitemsBreadcrumbs = [
+        "Новости",
+        "Название статьи",
+      ];
+
+    +breadcrumbs(nameIitemsBreadcrumbs).breadcrumbs--item-white.news-article__breadcrumbs
+    +article-banner().news-article__article-banner
+    +article().news-article__article
+    +viewed().news-article__viewed

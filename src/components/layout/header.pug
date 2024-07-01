@@ -1,6 +1,8 @@
-header.header
-  .wrapper
-    | Header
+mixin header(headerMods, currentUrl)
+
+  header.header(class=headerMods)
+    .wrapper
+      | Header
 //- header.header
 //-   include /components/blocks/header-bar.pug
 
