@@ -52,5 +52,10 @@
   &__card-icon {
     color: $primary;
     margin-bottom: 7px;
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
   }
 }
