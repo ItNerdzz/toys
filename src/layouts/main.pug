@@ -12,11 +12,18 @@ html(lang="ru")
       meta(name="description", content="Интернет магазин")
 
   body
-    include /components/layout/header.pug
+    //-include /components/layout/header.pug
+
+    if (hasHeader)
+      +header(headerMods, currentUrl)
 
 
-    main(class=className)
-      block pageContent
 
-    include /components/layout/footer.pug
+    block main
+      //-block pageContent
+
+    //-include /components/layout/footer.pug
+    if (hasFooter)
+      +footer(footerMods)
+
     script(src="/src/js/app.js" type="module")
