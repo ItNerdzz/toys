@@ -16,10 +16,14 @@
 
   &__link {
     img {
-      width: 72.33%;
-      height: auto;
+      //width: 72.33%;
+      //height: auto;
+      height: 156px;
+      width: 100%;
       margin: 0 auto;
       margin-bottom: 25px;
+      object-position: center;
+      object-fit: contain;
     }
   }
 
