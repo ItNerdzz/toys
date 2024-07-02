@@ -124,6 +124,13 @@
     }
   }
 
+  &--special-footer {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 170%;
+    text-transform: uppercase;
+  }
+
   &--accent {
     em {
       font-style: inherit;

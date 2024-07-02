@@ -1,0 +1,6 @@
+mixin navigation(options = {})
+
+  ul.navigation&attributes(attributes)
+    each option in options
+      li.navigation__item(class= option.classItem)
+        +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).navigation__link

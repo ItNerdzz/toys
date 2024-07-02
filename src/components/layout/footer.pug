@@ -1,53 +1,143 @@
 mixin footer(footerMods)
+  -
+    const optionsNav = [
+      {
+        link: 'catalog.html',
+        nameItem: 'Каталог',
+        ariaLabel: 'Переход на страницу - Каталог.'
+      },
+      {
+        link: '#',
+        nameItem: 'Доставка и оплата',
+        ariaLabel: 'Переход на страницу - Доставка и оплата.'
+      },
+      {
+        classItem: 'navigation__item--accent',
+        link: '#',
+        nameItem: 'Акции',
+        ariaLabel: 'Переход на страницу - Акции.'
+      },
+      {
+        link: 'news.html',
+        nameItem: 'Новости',
+        ariaLabel: 'Переход на страницу - Новости.'
+      },
+      {
+        link: 'about-company.html',
+        nameItem: 'О компании',
+        ariaLabel: 'Переход на страницу - О компании.'
+      },
+      {
+        link: '#',
+        nameItem: 'Контакты',
+        ariaLabel: 'Переход на страницу - Контакты.'
+      },
+      {
+        link: '#',
+        nameItem: 'Вакансии',
+        ariaLabel: 'Переход на страницу - Вакансии.'
+      },
+      {
+        link: 'manufacturers-page.html',
+        nameItem: 'Производители',
+        ariaLabel: 'Переход на страницу - Производители.'
+      },
+    ];
+
+    const optionsMode = [
+      {
+        text: 'Пн-пт с&nbsp;9:00 до&nbsp;18:00'
+      },
+      {
+        text: 'сб-вс выходной'
+      },
+      {
+        text: 'Звонки и&nbsp;обращения \nпринимает в&nbsp;рабочее время'
+      },
+    ];
+
+    const optionsAddress = [
+      {
+        text: 'г. Москва, Кусковская&nbsp;ул., \nдом 20А, корпус&nbsp;В, оф. 505В'
+      },
+    ];
+
+    const optionsContacts = [
+      {
+        link: 'tel:+79999999999',
+        nameItem: '+7 (999) 999-99-99',
+        ariaLabel: 'Переход к звонку по телефону'
+      },
+      {
+        link: 'tel:+79999999999',
+        nameItem: '+7 (999) 999-99-99',
+        ariaLabel: 'Переход к звонку по телефону'
+      },
+      {
+        link: 'mailto:info@mail.ru',
+        nameItem: 'info@mail.ru',
+        ariaLabel: 'Написать на электронную почту'
+      },
+    ];
+
+    const optionsBottomBar = [
+      {
+        link: '#',
+        nameItem: 'Согласие на обработку персональных данных',
+        ariaLabel: 'Переход к разделу - Согласие на обработку персональных данных'
+      },
+      {
+        link: '#',
+        nameItem: 'Политика конфиденциальности',
+        ariaLabel: 'Переход к разделу - Политика конфиденциальности'
+      },
+    ];
 
   footer.footer(class=footerMods)
     .wrapper
-      | Footer
-//-footer.footer
-  .wrapper
-    .footer__inner
+      .footer__inner
 
-      .footer__item.footer__item-brand
-        -var logoClassName = 'footer__logo'
-        include /components/ui/logo.pug
-        span.footer__item-brand-descriptor Поставщик комплектующих и запчастей для производств
-        - var cityPicekrClass = 'footer__city-picker city-picker--to-top city-picker--light'
-        include /components/ui/city-picker.pug
+        .footer__item.footer__item-brand
 
-      .footer__item.footer__item-navigation
-        h3.footer__item-title Навигация
-        ul.footer__nav
-          each item in [{link: '/shop/', name: 'Каталог товаров'}, {link: '/payments-delivery/', name: 'Доставка и оплата'}, {link: '/discounts/', name: 'Акции'}, {link: '/news/', name: 'Новости'}, {link: '/about-us/', name: 'О компании'}, {link: '/contacts/', name: 'Контакты'}, {link: '/partnership/', name: 'Стать представителем'}]
-            li
-              a.footer__link(href=item.link)= item.name
+          .footer__logo
+            +link({href: "index.html", ariaLabel: "Переход к началу главной страницы"}).footer__logo-link
+              +img("logo", "png", 66, 93, "Лолготип.")
 
-      .footer__item.footer__item-graphic
-        h3.footer__item-title График работы
-        ul.footer__item-list
-          each item in ['Пн-пт с 9:00 до 20:00', 'сб-вс выходной', 'Звонки и обращения \nпринимаем в рабочее время']
-            li= item
+          span.footer__item-brand-descriptor Поставщик сладких подарочных наборов и игрушек
 
-      .footer__item.footer__item-address
-        h3.footer__item-title Адрес
-        ul.footer__item-list
-          each item in ['г. Белгород, ул. Горького, \nд. 72 , офис 2']
-            li= item
+        .footer__container.text.text--small
 
-      .footer__item.footer__item-contacts
-        h3.footer__item-title Связаться с нами
-        ul.footer__nav
-          each item in [{link: 'tel:+79999999999', name: '+7 999 999 99 99'}, {link: 'tel:+79999999999', name: '+7 999 999 99 99'}, {link: 'tel:+79999999999', name: '+7 999 999 99 99'}, {link: 'mailto:avd-instrument@bk.ru', name: 'avd-instrument@bk.ru'}]
-            li
-              a.footer__link(href=item.link)= item.name
-        - var socialsClass = 'footer__socials'
-        include /components/ui/socials.pug
+          .footer__item.footer__item-navigation
+            h3.title.title--special-footer.footer__item-title Меню
 
-      .footer__bottom-bar
-        ul.footer__bottom-bar-nav.footer__nav
-          each item in [{link: '/private/', name: 'Согласие на обработку персональных данных'}, {link: '/privacy/', name: 'Политика конфиденциальности'}]
-            li
-              a.footer__link(href=item.link)= item.name
+            +navigation(optionsNav).footer__nav
 
-        a.footer__developer.footer__link(href="https://itnerds.ru" target="_blank") Разработано
-          svg.footer__developer-logo
-            use(href="/images/sprite.svg#dev-logo")
+          .footer__item.footer__item-mode
+            h3.title.title--special-footer.footer__item-title График работы
+            ul.footer__item-list
+              each option in optionsMode
+                li
+                  span!= option.text
+
+
+          .footer__item.footer__item-address
+            h3.title.title--special-footer.footer__item-title Адрес
+            ul.footer__item-list
+              each option in optionsAddress
+                li
+                  span!= option.text
+
+
+          .footer__item.footer__item-contacts
+            h3.title.title--special-footer.footer__item-title Контакты
+            ul.footer__contacts
+              each option in optionsContacts
+                li
+                  +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__item-contacts-link
+
+
+        .footer__bottom-bar.text.text--small-extra
+          ul.footer__bottom-bar-nav
+            each option in optionsBottomBar
+              li
+                +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__bottom-bar-link
