@@ -2,6 +2,17 @@
   max-width: 100vw;
   color: $base;
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 30% auto;
+      grid-template-rows: auto min-content;
+    }
+  }
+
   &__item-brand {
     display: flex;
     gap: 18px;
@@ -23,5 +34,59 @@
     color: $logo-text;
     padding-top: 15px;
     max-width: 147px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 47.35% auto;
+    grid-template-rows: auto auto auto;
+
+    @include vp-tablet {
+      grid-template-columns: 18.33% 31.06% auto;
+      grid-template-rows: auto auto;
+      column-gap: 10.6%;
+      row-gap: 20px;
+    }
+
+    @include vp-tablet-landscape {
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto;
+    }
+  }
+
+  &__item-navigation {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+
+  &__item-contacts {
+    grid-row: 1 / 2;
+
+    @include vp-tablet {
+      grid-column: -1 / -2;
+    }
+  }
+
+  &__item-list,
+  &__contacts,
+  &__bottom-bar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__bottom-bar {
+    @include vp-tablet-landscape {
+      grid-column: 1 / -1;
+      grid-row: -1 / -2;
+    }
+  }
+
+  &__bottom-bar-nav {
+    display: flex;
+    flex-direction: column;
+    @include vp-tablet {
+      flex-direction: row;
+    }
   }
 }

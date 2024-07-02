@@ -105,34 +105,35 @@ mixin footer(footerMods)
 
           span.footer__item-brand-descriptor Поставщик сладких подарочных наборов и игрушек
 
+        .footer__container
 
-        .footer__item.footer__item-navigation
-          h3.footer__item-title Меню
+          .footer__item.footer__item-navigation
+            h3.footer__item-title Меню
 
-          +navigation(optionsNav).footer__nav
+            +navigation(optionsNav).footer__nav
 
-        .footer__item.footer__item-mode
-          h3.footer__item-title График работы
-          ul.footer__item-list
-            each option in optionsMode
-              li
-               span!= option.text
-
-
-        .footer__item.footer__item-address
-          h3.footer__item-title Адрес
-          ul.footer__item-list
-            each option in optionsAddress
-              li
-               span!= option.text
+          .footer__item.footer__item-mode
+            h3.footer__item-title График работы
+            ul.footer__item-list
+              each option in optionsMode
+                li
+                span!= option.text
 
 
-        .footer__item.footer__item-contacts
-          h3.footer__item-title Контакты
-          ul.footer__contacts
-            each option in optionsContacts
-              li
-                +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__item-contacts-link
+          .footer__item.footer__item-address
+            h3.footer__item-title Адрес
+            ul.footer__item-list
+              each option in optionsAddress
+                li
+                span!= option.text
+
+
+          .footer__item.footer__item-contacts
+            h3.footer__item-title Контакты
+            ul.footer__contacts
+              each option in optionsContacts
+                li
+                  +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__item-contacts-link
 
 
         .footer__bottom-bar
