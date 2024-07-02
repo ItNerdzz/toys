@@ -2,4 +2,49 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+
+  &__item {
+    .link {
+      @include hover-focus {
+        opacity: 1;
+        color: $primary;
+      }
+
+      &:active:active {
+      opacity: 0.5;
+      }
+    }
+  }
+
+  &__item--accent {
+    .link {
+      display: flex;
+      color: $accent-link;
+      width: fit-content;
+
+      @include hover-focus {
+        opacity: 0.8;
+        color: $accent-link;
+      }
+
+      &:active:active {
+        opacity: 0.5;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 9px;
+        height: 9px;
+
+        background-image: url("/images/icon-sale.svg");
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
+        align-self: center;
+        margin-right: 4.8px;
+      }
+    }
+  }
 }

@@ -105,38 +105,38 @@ mixin footer(footerMods)
 
           span.footer__item-brand-descriptor Поставщик сладких подарочных наборов и игрушек
 
-        .footer__container
+        .footer__container.text.text--small
 
           .footer__item.footer__item-navigation
-            h3.footer__item-title Меню
+            h3.title.title--special-footer.footer__item-title Меню
 
             +navigation(optionsNav).footer__nav
 
           .footer__item.footer__item-mode
-            h3.footer__item-title График работы
+            h3.title.title--special-footer.footer__item-title График работы
             ul.footer__item-list
               each option in optionsMode
                 li
-                span!= option.text
+                  span!= option.text
 
 
           .footer__item.footer__item-address
-            h3.footer__item-title Адрес
+            h3.title.title--special-footer.footer__item-title Адрес
             ul.footer__item-list
               each option in optionsAddress
                 li
-                span!= option.text
+                  span!= option.text
 
 
           .footer__item.footer__item-contacts
-            h3.footer__item-title Контакты
+            h3.title.title--special-footer.footer__item-title Контакты
             ul.footer__contacts
               each option in optionsContacts
                 li
                   +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__item-contacts-link
 
 
-        .footer__bottom-bar
+        .footer__bottom-bar.text.text--small-extra
           ul.footer__bottom-bar-nav
             each option in optionsBottomBar
               li
