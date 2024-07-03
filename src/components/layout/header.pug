@@ -12,21 +12,21 @@ mixin header(headerMods, currentUrl)
             span.header__logo
               +img("logo", "png", 64, 90, "Лолготип.")
           else
-            +link({href: "index.html", ariaLabel: "Переход на главную страницу"}).header__logo
+            +link({href: "index.html", ariaLabel: "Переход на главную страницу"}).header__logo-link
               +img("logo", "png", 64, 90, "Лолготип.")
 
           span.header__brand-descriptor Поставщик сладких подарочных наборов и игрушек
 
-
-      //-div.header__middle
-          a.header__catalog.button(href="/shop/")
-            svg
-              use(href="/images/sprite.svg#catalog-wide")
+        .header__middle
+          //-+link({href: "/catalog/", ariaLabel: "Переход к странице каталога"}).header__middle-link
+          +btn({href: "catalog.html"}).btn--catalog-wide.header__catalog(aria-label="Переход к странице каталога")
+            +icon("catalog-wide", 14, 14)
             span Каталог
-          -var serachFormClassName = 'header__search-form'
+
+        //--var serachFormClassName = 'header__search-form'
           include /components/ui/search-form.pug
 
-        div.header__buttons
+      //-div.header__buttons
           .header__contacts
             span.header__contacts-trigger +7 (492)
               svg
