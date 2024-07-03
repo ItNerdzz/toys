@@ -1,7 +1,8 @@
 mixin header(headerMods, currentUrl)
 
   header.header(class=headerMods)
-    //-include /components/blocks/header-bar.pug
+    +header-bar().header__header-bar
+
     .wrapper
       .header__inner
 
