@@ -18,10 +18,11 @@ mixin header(headerMods, currentUrl)
           span.header__brand-descriptor Поставщик сладких подарочных наборов и игрушек
 
         .header__middle
-          //-+link({href: "/catalog/", ariaLabel: "Переход к странице каталога"}).header__middle-link
           +btn({href: "catalog.html"}).btn--catalog-wide.header__catalog(aria-label="Переход к странице каталога")
             +icon("catalog-wide", 14, 14)
             span Каталог
+
+          +search-form().header__search-form
 
         //--var serachFormClassName = 'header__search-form'
           include /components/ui/search-form.pug
