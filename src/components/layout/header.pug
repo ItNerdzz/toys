@@ -3,23 +3,62 @@ mixin header(headerMods, currentUrl)
     const optionsPhones = [
       {
         link: 'tel:+79999999999',
-        nameItem: '+7 999 999-99-99',
+        nameItem: '+7 999 999 99 99',
         ariaLabel: 'Переход к звонку по телефону'
       },
       {
         link: 'tel:+79999999999',
-        nameItem: '+7 999 999-99-99',
+        nameItem: '+7 999 999 99 99',
         ariaLabel: 'Переход к звонку по телефону'
       },
       {
         link: 'tel:+79999999999',
-        nameItem: '+7 999 999-99-99',
+        nameItem: '+7 999 999 99 99',
         ariaLabel: 'Переход к звонку по телефону'
       },
     ];
 
+    const optionsNav = [
+      {
+        link: '#',
+        nameItem: 'Доставка и оплата',
+        ariaLabel: 'Переход на страницу - Доставка и оплата.'
+      },
+      {
+        classItem: 'navigation__item--accent',
+        link: '#',
+        nameItem: 'Акции',
+        ariaLabel: 'Переход на страницу - Акции.'
+      },
+      {
+        link: 'news.html',
+        nameItem: 'Новости',
+        ariaLabel: 'Переход на страницу - Новости.'
+      },
+      {
+        link: 'about-company.html',
+        nameItem: 'О компании',
+        ariaLabel: 'Переход на страницу - О компании.'
+      },
+      {
+        link: '#',
+        nameItem: 'Контакты',
+        ariaLabel: 'Переход на страницу - Контакты.'
+      },
+      {
+        link: '#',
+        nameItem: 'Вакансии',
+        ariaLabel: 'Переход на страницу - Вакансии.'
+      },
+      {
+        link: 'manufacturers-page.html',
+        nameItem: 'Производители',
+        ariaLabel: 'Переход на страницу - Производители.'
+      },
+    ];
+
   header.header(class=headerMods)
-    +header-bar().header__header-bar
+    +header-bar(optionsNav).header__header-bar
 
     .wrapper
       .header__inner
@@ -72,5 +111,4 @@ mixin header(headerMods, currentUrl)
             span
             span
 
-  //-- var mobileMenuClassName = 'header__menu'
-    include /components/blocks/mobile-menu.pug
+    +mobile-menu(optionsNav).header__menu

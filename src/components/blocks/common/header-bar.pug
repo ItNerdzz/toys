@@ -1,44 +1,4 @@
-mixin header-bar()
-  -
-    const optionsNav = [
-      {
-        link: '#',
-        nameItem: 'Доставка и оплата',
-        ariaLabel: 'Переход на страницу - Доставка и оплата.'
-      },
-      {
-        classItem: 'navigation__item--accent',
-        link: '#',
-        nameItem: 'Акции',
-        ariaLabel: 'Переход на страницу - Акции.'
-      },
-      {
-        link: 'news.html',
-        nameItem: 'Новости',
-        ariaLabel: 'Переход на страницу - Новости.'
-      },
-      {
-        link: 'about-company.html',
-        nameItem: 'О компании',
-        ariaLabel: 'Переход на страницу - О компании.'
-      },
-      {
-        link: '#',
-        nameItem: 'Контакты',
-        ariaLabel: 'Переход на страницу - Контакты.'
-      },
-      {
-        link: '#',
-        nameItem: 'Вакансии',
-        ariaLabel: 'Переход на страницу - Вакансии.'
-      },
-      {
-        link: 'manufacturers-page.html',
-        nameItem: 'Производители',
-        ariaLabel: 'Переход на страницу - Производители.'
-      },
-    ];
-
+mixin header-bar(optionsNav)
 
   section.header-bar&attributes(attributes)
     .wrapper
