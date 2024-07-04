@@ -22,4 +22,12 @@
       margin-bottom: 100px;
     }
   }
+
+  &__requisites {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
 }

@@ -1,0 +1,28 @@
+mixin requisites()
+
+  section.requisites&attributes(attributes)
+    .wrapper
+      .requisites__inner
+        .title.title--medium.requisites__title
+          h2 Реквизиты
+
+        dl.requisites__specification
+
+          .requisites__specification-set
+            dt.requisites__term Наименование
+            dd.requisites__definition Общество с ограниченной ответственностью “РАТИО”
+
+          .requisites__specification-set
+            dt.requisites__term Юридический адрес
+            dd.requisites__definition г. Москва, Кусковская ул., дом 20А, корпус В, оф. 505В
+
+          .requisites__specification-set
+            dt.requisites__term ИНН
+            dd.requisites__definition 6452046989
+
+          .requisites__specification-set
+            dt.requisites__term ОГРН
+            dd.requisites__definition 1026402674946
+
+        +btn({href: "#"}).btn--border-dashed-primary.requisites__download(aria-label="Скачать реквизиты")
+          span Скачать реквизиты
