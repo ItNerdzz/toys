@@ -1,0 +1,46 @@
+.mobile-menu {
+  z-index: 0;
+  position: absolute;
+  top: -200vh;
+  left: 0;
+  right: 0;
+  transition: all .9s ease-in-out;
+  padding-top: 104px;
+  padding-bottom: 50px;
+  background-color: $white;
+  max-height: 100vh;
+  overflow: scroll;
+
+  @include vp-tablet-landscape {
+    display: none;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 34px 0 40px;
+    border-top: 1px solid $border-fill;
+  }
+
+  &__group-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $base;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+
+    svg {
+      color: $primary;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -2,18 +2,83 @@
   max-width: 100vw;
   color: $special-color-header;
 
+  display: none;
+  background-color: $accent-bg;
+
+  @include vp-tablet-landscape {
+    display: block;
+  }
+
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    position: relative;
+    gap: 20px;
+    align-items: center;
+    padding: 14px 0;
   }
 
   &__nav {
     display: flex;
     flex-wrap: wrap;
+    gap: 24px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    //position: absolute;
+    max-width: 800px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 
     a {
       color: $special-color-header;
     }
   }
+
+  &__logistics,
+  &__working-since {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
+
+
+/*.header-bar {
+  display: none;
+  background-color: #f4f5f6
+}
+
+@media screen and (min-width: 1440px) {
+  .header-bar {
+      display:block
+  }
+}
+
+.header-bar__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 14px 0
+}
+
+.header-bar__navigation {
+  position: absolute;
+  max-width: 800px;
+  margin: 0 auto;
+  left: 0;
+  right: 0
+}
+
+.header-bar__worktime {
+  color: #727272;
+  font-weight: 500;
+  font-size: 14px
+}*/
