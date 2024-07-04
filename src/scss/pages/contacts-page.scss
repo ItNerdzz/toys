@@ -23,7 +23,8 @@
     }
   }
 
-  &__requisites {
+  &__requisites,
+  &__contacts-map {
     margin-bottom: 90px;
 
     @include vp-tablet {
