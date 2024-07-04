@@ -1,0 +1,55 @@
+mixin contacts-main-block()
+  -
+    const optionsPhones = [
+      {
+        link: 'tel:+7452754263',
+        nameItem: '+7 (452) 75-42-63',
+        ariaLabel: 'Переход к звонку по телефону'
+      },
+      {
+        link: 'tel:+7722754564',
+        nameItem: '+7 (722) 75-45-64',
+        ariaLabel: 'Переход к звонку по телефону'
+      },
+    ];
+
+    const optionsMode = [
+      {
+        text: 'Пн-пт с&nbsp;9:00 до&nbsp;18:00'
+      },
+      {
+        text: 'Сб - Вс выходной \nЗвонки и обращения принимает в рабочее время'
+      },
+    ];
+
+  section.contacts-main-block&attributes(attributes)
+    .wrapper
+      .contacts-main-block__inner
+        .title.title--medium.contacts-main-block__title
+          h1 ООО “Ратио”
+
+        .contacts-main-block__contacts
+
+          .contacts-main-block__contacts-group.contacts-main-block__contacts-group--phones
+            .contacts-main-block__contacts-group-title
+              h3 Контактный телефон
+            each option in optionsPhones
+              +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).contacts-main-block__contacts-item
+
+          .contacts-main-block__contacts-group.contacts-main-block__contacts-group--emails
+            .contacts-main-block__contacts-group-title
+              h3 Почта
+            +link({href: "mailto:info@mail.ru", text: "info@mail.ru", ariaLabel: "Написать на e-mail"}).contacts-main-block__contacts-item
+
+          .contacts-main-block__contacts-group.contacts-main-block__contacts-group--address
+            .contacts-main-block__contacts-group-title
+              h3 Адрес
+            .contacts-main-block__contacts-item
+              span г. Москва, Кусковская ул., дом 20А, корпус В, оф. 505В
+
+          .contacts-main-block__contacts-group.contacts-main-block__contacts-group--mode
+            .contacts-main-block__contacts-group-title
+              h3 Режим работы
+            each option in optionsMode
+              .contacts-main-block__contacts-item
+                span!= option.text

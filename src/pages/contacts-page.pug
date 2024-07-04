@@ -1,0 +1,22 @@
+extends /layouts/main.pug
+
+block variables
+  - const title = "Сontacts" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "contacts-page.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+//-block pageContent
+
+block main
+  main.about-company
+    -
+      const nameIitemsBreadcrumbs = [
+        "Контакты",
+      ];
+
+    +breadcrumbs(nameIitemsBreadcrumbs).contacts-page__breadcrumbs
+    +contacts-main-block().contacts-page__contacts-main-block
