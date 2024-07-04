@@ -1,0 +1,42 @@
+mixin mobile-menu(optionsNav)
+  -
+    const optionsLink = [
+      {
+        link: 'tel:+79999999999',
+        nameItem: '+7 999 999 99 99',
+        ariaLabel: 'Переход к звонку по телефону',
+        nameIcon: 'phone'
+      },
+      {
+        link: 'tel:+79999999999',
+        nameItem: '+7 999 999 99 99',
+        ariaLabel: 'Переход к звонку по телефону',
+        nameIcon: 'phone'
+      },
+      {
+        link: 'mailto:info@mail.ru',
+        nameItem: 'info@mail.ru',
+        ariaLabel: 'Написать на e-mail',
+        nameIcon: 'email'
+      },
+    ];
+
+
+  .mobile-menu&attributes(attributes)
+    .wrapper
+      .mobile-menu__group
+        +link({href: "catalog.html", ariaLabel: "Переход к странице каталога"}).mobile-menu__group-link
+          +icon("catalog-wide", 14, 14)
+          span Каталог товаров
+
+      .mobile-menu__group
+        each option in optionsLink
+          +link({href: option.link, ariaLabel: option.ariaLabel}).mobile-menu__group-link
+            +icon(option.nameIcon, 18, 18)
+            span!= option.nameItem
+
+        +btn().btn--border-dashed-primary.mobile-menu__callback.callback-button
+          span Заказать звонок
+
+      .mobile-menu__group
+        +navigation(optionsNav).mobile-menu__navigation

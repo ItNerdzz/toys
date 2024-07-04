@@ -1,0 +1,7 @@
+mixin search-form()
+
+  form.search-form&attributes(attributes)
+    .search-form__input-container
+      input.input.search-form__input(type="text", placeholder="Поиск по: названию, артикулу, категории")
+      button.search-form__submit(type="submit")
+        +icon("search", 18, 18)

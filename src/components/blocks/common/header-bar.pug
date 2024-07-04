@@ -1,0 +1,13 @@
+mixin header-bar(optionsNav)
+
+  section.header-bar&attributes(attributes)
+    .wrapper
+      .header-bar__inner
+
+        .header-bar__logistics
+          span Доставка по всей России
+
+        +navigation(optionsNav).header-bar__nav
+
+        .header-bar__working-since
+          span Работаем с 1996 года
