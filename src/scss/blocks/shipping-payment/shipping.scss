@@ -1,0 +1,70 @@
+.shipping {
+  max-width: 100vw;
+  color: $base;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__tabs-text {
+    line-height: 170%;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tabs-nav {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__tabs-content {
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__tabs-pane {
+    display: none;
+
+    @include vp-tablet-landscape {
+      &--grid {
+        grid-column: 2 / -1;
+      }
+    }
+
+    &.tabs__pane--show {
+      display: block;
+    }
+  }
+
+  &__tabs-button {
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    width: 50%;
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
+  }
+}

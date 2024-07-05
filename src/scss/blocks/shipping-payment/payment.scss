@@ -1,0 +1,64 @@
+.payment {
+  max-width: 100vw;
+  color: $base;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include vp-tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @include vp-tablet-landscape {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    background-color: $accent-bg;
+    border-radius: 8px;
+    padding: 18px;
+
+    @include vp-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 29px;
+    }
+  }
+
+  &__card-text {
+    @include vp-tablet {
+      white-space: pre-line;
+    }
+  }
+
+  &__card-icon {
+    color: $primary;
+
+    margin-right: 30px;
+
+    @include vp-tablet {
+      margin-right: 0;
+      margin-bottom: 9px;
+    }
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}

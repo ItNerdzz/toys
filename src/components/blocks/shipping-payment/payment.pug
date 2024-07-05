@@ -1,0 +1,35 @@
+mixin payment()
+  -
+    const options = [
+      {
+        text: 'Безналичный \nрасчет',
+        icon: 'payment-credit',
+      },
+      {
+        text: 'Наличный \nрасчет',
+        icon: 'payment-cash',
+      },
+      {
+        text: 'Отсрочка \nплатежа',
+        icon: 'payment-basket',
+      },
+      {
+        text: 'Фиксирование стоимости \nпри&nbsp;50% предоплате',
+        icon: 'payment-percent',
+      },
+    ];
+
+  section.payment&attributes(attributes)
+      .wrapper
+        .payment__inner
+          .title.title--medium.payment__title
+            h2 Оплата
+
+          .payment__cards
+            each option in options
+              .payment__card
+                .payment__card-icon
+                  +icon(option.icon, 65, 65)
+
+                .text.text--big.payment__card-text
+                  p!= option.text

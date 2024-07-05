@@ -9,4 +9,28 @@
       margin-bottom: 50px;
     }
   }
+
+  &__shipping {
+    margin-bottom: 80px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__payment {
+    margin-bottom: 90px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__viewed {
+    margin-bottom: 110px;
+
+    @include vp-tablet {
+      margin-bottom: 120px;
+    }
+  }
 }
