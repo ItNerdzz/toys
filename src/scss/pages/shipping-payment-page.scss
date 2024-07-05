@@ -9,4 +9,13 @@
       margin-bottom: 50px;
     }
   }
+
+  &__shipping {
+    margin-bottom: 80px;
+
+    @include vp-tablet {
+      margin-bottom: 100px;
+    }
+
+  }
 }

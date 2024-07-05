@@ -1,0 +1,46 @@
+.shipping {
+  max-width: 100vw;
+  color: $base;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tabs-nav {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__tabs-pane {
+    display: none;
+
+    &.tabs__pane--show {
+      display: block;
+    }
+  }
+
+  &__tabs-button {
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    width: 50%;
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
+  }
+}

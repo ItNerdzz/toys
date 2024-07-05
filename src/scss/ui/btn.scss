@@ -15,6 +15,32 @@
     opacity: 0.8;
   }
 
+  &--tabs {
+    color: $base;
+    border-radius: 0;
+    border: none;
+    justify-content: center;
+
+    &.tabs__button {
+      background-color: $accent-bg;
+
+      &:not(.tabs__button--active) {
+        @include hover-focus {
+          background-color: $accent-bg-items-hover;
+        }
+      }
+
+      &--active {
+        cursor: default;
+        background-color: $accent-bg-items;
+
+        &:active {
+          opacity: revert;
+        }
+      }
+    }
+  }
+
   &--base,
   &--base-small {
     background-color: $base-bg-btn;
