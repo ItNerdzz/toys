@@ -1,0 +1,12 @@
+.payment {
+  max-width: 100vw;
+  color: $base;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+}
