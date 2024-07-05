@@ -12,7 +12,7 @@ import {initPopularSwiperMobile} from './popular-swiper';
 import {initCardProductSwiper} from './card-product-swiper';
 import {initSliderCardSwiper} from './slider-card-swiper';
 import {initGratitudeSwiper} from './gratitude-swiper';
-import './tabs';
+import {initTabs} from './tabs';
 
 initIntroSwiper();
 initAdvantagesSwiper();
@@ -23,3 +23,4 @@ initPopularSwiperMobile();
 initCardProductSwiper();
 initSliderCardSwiper();
 initGratitudeSwiper();
+initTabs();
