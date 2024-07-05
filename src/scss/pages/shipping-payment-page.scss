@@ -1,0 +1,12 @@
+.shipping-payment-page {
+  display: flex;
+  flex-direction: column;
+
+  &__breadcrumbs {
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
+  }
+}
