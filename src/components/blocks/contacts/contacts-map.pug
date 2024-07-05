@@ -1,0 +1,10 @@
+mixin contacts-map()
+
+  section.contacts-map&attributes(attributes)
+    .wrapper
+      .contacts-map__inner
+        .contacts-map__widget
+          iframe(src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;um=constructor%3Acdb68af590ff39137c7ad102b79d0e39fc725927c36d3285dbd9c705b4392c26", frameborder="0", allowfullscreen="true", width="500px", height="400px", style="display: block")
+
+        +btn({href: "https://yandex.ru/maps/4/belgorod/?from=mapframe&amp;ll=36.563237%2C50.580784&amp;mode=usermaps&amp;source=mapframe&amp;um=constructor%3Acdb68af590ff39137c7ad102b79d0e39fc725927c36d3285dbd9c705b4392c26&amp;utm_source=mapframe&amp;z=16", isExternal: true}).btn--border-dashed-primary.contacts-map__link(aria-label="Переход в Яндекс Карты.")
+          span Перейти в Яндекс Карты

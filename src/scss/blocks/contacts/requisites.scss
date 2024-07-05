@@ -1,0 +1,72 @@
+.requisites {
+  max-width: 100vw;
+  color: $base;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include vp-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__specification {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__specification-set {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+
+    padding-top: 30px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba($base, 0.2);
+
+    @include vp-tablet {
+      font-size: 18px;
+    }
+
+    @include vp-tablet-landscape {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__term {
+    margin-bottom: 11px;
+    color: rgba($base, 0.7);
+
+    @include vp-tablet {
+      margin-bottom: 8px;
+    }
+
+    @include vp-tablet-landscape {
+      margin-bottom: 0;
+      width: fit-content;
+    }
+  }
+
+  &__definition {
+    width: 86%;
+    margin-left: 0;
+
+    @include vp-tablet {
+      width: 100%;
+    }
+
+    @include vp-tablet-landscape {
+      width: fit-content;
+    }
+  }
+
+  &__download {
+    place-self: center;
+  }
+}
