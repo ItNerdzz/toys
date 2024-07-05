@@ -10,6 +10,10 @@
     }
   }
 
+  &__tabs-text {
+    line-height: 170%;
+  }
+
   &__tabs {
     display: flex;
     flex-direction: column;
@@ -20,10 +24,30 @@
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
+
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__tabs-content {
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
   }
 
   &__tabs-pane {
     display: none;
+
+    @include vp-tablet-landscape {
+      &--grid {
+        grid-column: 2 / -1;
+      }
+    }
 
     &.tabs__pane--show {
       display: block;
