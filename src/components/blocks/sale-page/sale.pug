@@ -1,0 +1,39 @@
+mixin sale()
+  -
+    const options = [
+      {
+        text: 'Скидки при&nbsp;50% предоплате за&nbsp;подарки в&nbsp;летние месяцы',
+        dateAttributeStsrt: '2023-04-21',
+        dateAttributeFinish: '2024-05-22',
+        dateStart: '21.04.23',
+        dateFinish: '22.05.24'
+      },
+      {
+        text: 'Скидки при&nbsp;50% предоплате',
+        dateAttributeStsrt: '2023-04-21',
+        dateAttributeFinish: '2024-05-22',
+        dateStart: '21.04.23',
+        dateFinish: '22.05.24'
+      },
+    ];
+
+  section.sale&attributes(attributes)
+      .wrapper
+        .sale__inner
+          .title.title--medium.sale__title
+            h2 Наши акции
+
+          .sale__cards
+            each option in options
+              .sale__card
+                .text.text--medium-bold.sale__card-datetime
+                  P
+                    | #[time(datetime= option.dateAttributeStsrt)!= option.dateStart]
+                    | -
+                    | #[time(datetime= option.dateAttributeFinish)!= option.dateFinish]
+
+                .text.text--super-big.sale__card-text
+                  p!= option.text
+
+                +btn().btn--border-dashed-base.sale__card-btn
+                  span Подробнее
