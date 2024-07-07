@@ -3,8 +3,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import {mobileVhFix} from './utils/mobile-vh-fix.js';
-import {initModals} from './init-modals';
 import './header.js';
 import './popup.js';
 import './callback.js';
@@ -27,7 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  mobileVhFix();
 
   // Modules
   // ---------------------------------
@@ -38,9 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-
-    initModals();
-
     initAdvantagesSwiper();
     initSliderImageSwiper();
     initСertificatesSwiper();
