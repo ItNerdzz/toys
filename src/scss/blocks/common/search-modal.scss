@@ -99,7 +99,8 @@
     display: grid;
     grid-template-areas:
     'image title'
-    'image article';
+    'image article'
+    'image price';
     grid-template-columns: 113px 1fr;
     grid-template-rows: min-content min-content;
     align-content: center;
@@ -145,6 +146,13 @@
       color: $base;
       font-weight: 500;
     }
+  }
+
+  &__product-price {
+    color: $base;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
   }
 
   &__cta {
