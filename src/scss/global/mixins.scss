@@ -4,6 +4,24 @@
   margin: 0;
 }
 
+@mixin scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: $border-fill transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $border-fill;
+    border-radius: 10px;
+  }
+}
+
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {

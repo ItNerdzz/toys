@@ -44,7 +44,7 @@
   }
 
   &__filters {
-    color: $white;
+    color: $base;
     padding-left: calc($padding-x * 2.06);
 
     @include vp-tablet {
@@ -61,10 +61,36 @@
   }
 
   &__filters-wrapper {
-    background-color: $primary;
+    background-color: $accent-bg;
+    border-radius: $br-default;
+    padding: 40px 30px;
 
     @include vp-tablet-landscape {
       margin-bottom: 30px;
+    }
+
+    .bapf_button.bapf_reset {
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 20px;
+
+      color: $white;
+      background-color: $primary;
+      border-radius: 8px;
+      border: none;
+      user-select: none;
+
+      transition: opacity $trans-default,  background-color $trans-default, color $trans-default;
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      @include hover-focus {
+        background-color: $primary-hover;
+      }
     }
   }
 

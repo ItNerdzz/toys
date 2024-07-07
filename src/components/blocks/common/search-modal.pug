@@ -1,0 +1,61 @@
+mixin search-modal(className)
+  .search-modal(class=className)
+    .wrapper
+      .search-modal__inner
+        button.search-modal__close.search-modal__close--js.btn.btn--clear(type="button")
+          svg
+            use(href="/images/sprite.svg#cross")
+
+        .search-modal__products.search-modal__products--recent.search-modal__hidden
+          .search-modal__title Просмотренные товары
+          ul.search-modal__product-list
+            li.search-modal__product-item
+              a.search-modal__link(href="/shop/single-product/")
+                img.search-modal__product-image(src="/images/product.png", width="300", height="100" alt="")
+                h3.search-modal__product-title 20111150 Мотор высокочастотный HSI5562P-R 0.35KW 220380V 12000RPM
+                span.search-modal__product-article Артитикул
+                  b 7898
+                span.search-modal__product-price 1300 Руб.
+
+        .search-modal__category
+          .search-modal__title Категории
+          ul.search-modal__category-list
+            li.search-modal__category-item
+              a.search-modal__link(href="/shop/")
+                img.search-modal__category-image(src="/images/category-1.png", width="300", height="100" alt="")
+                h3.search-modal__category-title Подарки
+            li.search-modal__category-item
+              a.search-modal__link(href="/shop/")
+                img.search-modal__category-image(src="/images/category-1.png", width="300", height="100" alt="")
+                h3.search-modal__category-title Подарки
+
+        .search-modal__products.search-modal__products--find
+          .search-modal__title Товары
+          ul.search-modal__product-list
+            li.search-modal__product-item
+              a.search-modal__link(href="/shop/single-product/")
+                img.search-modal__product-image(src="/images/product.png", width="300", height="100" alt="")
+                h3.search-modal__product-title 20111150 Мотор высокочастотный HSI5562P-R 0.35KW 220380V 12000RPM
+                span.search-modal__product-article Артитикул
+                  b 7898
+                span.search-modal__product-price 1300 Руб.
+
+        .search-modal__cta
+          .wrapper
+            .search-modal__cta-inner
+              h3.search-modal__cta-title Не нашли то что хотели?
+              .search-modal__cta-subtitle Скомплектуем подарок <br />согласно вашим пожеланиям
+              button.search-modal__cta-button.btn.callback-button Связаться
+
+        .search-modal__nothing.search-modal__hidden
+          .search-modal__nothing-title Ничего не найдено
+          .search-modal__nothing-text
+            | Свяжитесь с менеджером для уточнения
+            br
+            | поставки в кратчайшие сроки
+          button.search-modal__nothing-callback.btn.callback-button(type="button") Связаться
+
+        a.search-modal__more.btn.search-modal__hidden(href="?") Смотреть все
+
+        .search-modal__preloader
+          img(src="/images/cart-preloader.svg", width="40" height="40")

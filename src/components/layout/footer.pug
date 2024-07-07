@@ -141,3 +141,11 @@ mixin footer(footerMods)
             each option in optionsBottomBar
               li
                 +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__bottom-bar-link
+
+  +popup('cart cart--side-cart', 'Корзина')
+    //+checkout
+    +cart
+
+  +popup('callback-popup', 'Заказать звонок')
+    +contact-form()
+

@@ -5,6 +5,12 @@ import 'swiper/css/navigation';
 
 import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './init-modals';
+import './header.js';
+import './popup.js';
+import './callback.js';
+import './cart.js';
+import './add-to-cart.js';
+
 import {initIntroSwiper} from './intro-swiper';
 import {initAdvantagesSwiper} from './advantages-swiper';
 import {initSliderImageSwiper} from './slider-image-swiper';

@@ -1,0 +1,285 @@
+.cart .woocommerce {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cart--side-cart .woocommerce {
+  flex-grow: 1;
+  max-height: calc(100% - 49px);
+}
+
+.cart__list {
+  @include clearlist;
+  @include scrollbar;
+
+  margin-bottom: $indent;
+  flex-grow: 1;
+  overflow-y: auto;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.cart__item {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  align-items: center;
+  gap: $indent;
+  padding: $indent 40px $indent 10px;
+  border-bottom: 1px solid $accent-bg;
+}
+
+.cart__item-image {
+  height: 121px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
+
+.cart__item-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__item-name {
+  color: $base;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 6px;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
+
+.cart__item-sku {
+  color: $grey;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 9px;
+
+  b {
+    color: $base;
+    font-weight: 500;
+  }
+}
+
+.cart__item-price {
+  color: $base;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 11px;
+}
+
+.cart .woocommerce-cart-form {
+}
+
+.cart__quantity-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid $accent-bg;
+  border-radius: 6px;
+  width: fit-content;
+  max-width: 100px;
+}
+
+.cart__quantity-decrease,
+.cart__quantity-increase {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  font-size: 20px;
+  font-weight: 1000;
+  line-height: 1;
+  border: none;
+  background: transparent;
+}
+
+.cart__quantity-value {
+  display: inline-block;
+  color: $base;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 0 8px;
+  height: 26px;
+  border: none;
+  text-align: center;
+  width: 26px;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.cart__item-remove {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border: none;
+  background-color: transparent;
+  color: $base;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.2;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+.cart__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: $base;
+  font-size: 16px;
+  font-weight: 500;
+
+  span {
+    color: $base;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+
+.cart__callback {
+  background-color: $accent-bg;
+  border: 1px solid $accent-bg;
+  color: $primary;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px;
+
+  &:active {
+    color: $white;
+  }
+
+  @include hover-focus {
+    color: $white;
+  }
+}
+
+.cart__checkout {
+  padding: 13px;
+}
+
+.cart__checkout-container {
+  display: none;
+}
+
+.cart__checkout-container--opened {
+  display: block;
+}
+
+.cart .cart__list--hidden,
+.cart .cart__buttons--hidden {
+  display: none;
+}
+
+.cart__empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.cart__empty-image {
+  max-width: 203px;
+  margin-bottom: 35px;
+  margin-top: auto;
+}
+
+.cart__empty-close {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: auto;
+}
+
+.cart__empty-text {
+  color: $base;
+  font-size: 20px;
+  line-height: 140%;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
+}
+
+.cart__preloader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($white, 0.5);
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  &.cart__preloader--show {
+    display: flex;
+  }
+}

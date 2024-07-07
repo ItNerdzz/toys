@@ -1,19 +1,26 @@
-.btn {
+.btn,
+.button {
   font-family: $base-font;
   cursor: pointer;
   display: inline-flex;
-  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
 
   color: $white;
   background-color: $primary;
   border-radius: 8px;
-
+  border: none;
   user-select: none;
 
   transition: opacity $trans-default,  background-color $trans-default, color $trans-default;
 
   &:active {
     opacity: 0.8;
+  }
+
+  @include hover-focus {
+    background-color: $primary-hover;
   }
 
   &--tabs {
@@ -74,6 +81,20 @@
     }
   }
 
+  &--cart-main {
+    border: none;
+    border-radius: 6px;
+    padding: 10.5px 12px;
+    margin: auto 0;
+
+    justify-content: center;
+
+    @include hover-focus {
+      background-color: $accent-bg-items-hover;
+    }
+  }
+
+
   &--border-dashed,
   &--border-dashed-base,
   &--border-dashed-primary {
@@ -82,9 +103,14 @@
     border: 2px dashed rgba($white, 0.5);
     padding: 15px 32px 16px;
 
+    &:active {
+      color: $base;
+      background-color: $primary-hover;
+    }
+
     @include hover-focus {
       color: $base;
-      background-color: $white;
+      background-color: $primary-hover;
     }
 
   }
@@ -119,10 +145,5 @@
       border-color: $primary-hover;
     }
   }
-}
 
-.button--small {
-}
-
-.button--alt {
 }
