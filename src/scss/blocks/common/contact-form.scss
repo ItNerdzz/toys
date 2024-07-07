@@ -1,0 +1,124 @@
+.contact-form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.contact-form__title {
+  margin-bottom: 12px;
+}
+
+.contact-form__subtitle {
+  color: $grey;
+  font-size: 15px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+
+.contact-form__form {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.contact-form__input,
+textarea.contact-form__input {
+  //border: 1px solid $grey;
+  margin-bottom: 16px;
+}
+
+textarea.contact-form__input {
+  resize: none;
+  margin-bottom: auto;
+}
+
+.contact-form__submit {
+  padding: 13px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.contact-form__privacy {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: $base;
+  font-size: 12px;
+  line-height: 140%;
+
+  a {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+  }
+
+  &:has(input:checked) {
+    .contact-form__privacy-indicator::after {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .contact-form__privacy-indicator::after {
+      opacity: 0.4;
+    }
+  }
+}
+
+.contact-form__privacy-indicator {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: $br-default;
+  border: 1px solid $base;
+
+  &::after {
+    opacity: 0;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: $base;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.contact-form .wpcf7 {
+  flex-grow: 1;
+  display: flex;
+
+  form.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span[data-name="your-comment"] {
+    margin-bottom: auto;
+  }
+}
+
+.contact-form .wpcf7-form-control-wrap {
+  height: fit-content;
+  display: flex;
+
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.contact-form span[data-name="privacy"] {
+  .wpcf7-not-valid-tip {
+    bottom: 100%;
+    top: auto;
+  }
+}

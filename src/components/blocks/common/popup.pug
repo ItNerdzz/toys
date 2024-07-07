@@ -1,0 +1,10 @@
+mixin popup(className, title)
+
+  section.popup(class=className)
+    .popup__inner
+      .popup__header
+        .popup__title= title
+        button.popup__close(type="button")
+          svg
+            use(href="/images/sprite.svg#cross")
+      block

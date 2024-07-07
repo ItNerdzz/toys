@@ -1,0 +1,19 @@
+mixin contact-form(className)
+  .contact-form
+    h2.contact-form__title.title.title--small Проконсультируем по ценам и срокам
+    .contact-form__subtitle Свяжемся в течение 5 минут
+    .contact-form__form
+      input.contact-form__destination(type="hidden")
+      input.contact-form__region(type="hidden")
+      input.contact-form__input.input(type="text", name="name", placeholder="Имя")
+      input.contact-form__input.input(type="text", name="phone", placeholder="Телефон*")
+      input.contact-form__input.input(type="text", name="email", placeholder="Почта")
+      textarea.contact-form__input.input(type="text", name="comment", rows="5", placeholder="Комментарий")
+      input.contact-form__submit.btn(type="submit", value="Отправить")
+      label.contact-form__privacy
+        span.contact-form__privacy-indicator
+        span
+          | Даю свое согласие на обработку персональных данных в соответствии с
+          |
+          a(href="/privacy") Политикой в отношении обработки персональных данных
+        input.visually-hidden(type="checkbox")
