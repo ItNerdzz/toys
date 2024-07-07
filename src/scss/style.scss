@@ -30,6 +30,9 @@
 
 // BLOCKS
 
+// modals
+@import 'blocks/modals/modal.scss';
+
 // common...
 @import 'blocks/common/manufacturers.scss';
 @import 'blocks/common/confidence.scss';
@@ -75,6 +78,8 @@
 @import 'blocks/shipping-payment/shipping.scss';
 @import 'blocks/shipping-payment/payment.scss';
 
+@import 'blocks/sale-page/sale.scss';
+
 // PAGES
 @import 'pages/page-home.scss';
 @import 'pages/catalog.scss';
@@ -85,3 +90,4 @@
 @import 'pages/manufacturers-page.scss';
 @import 'pages/contacts-page.scss';
 @import 'pages/shipping-payment-page.scss';
+@import 'pages/sale-page.scss';

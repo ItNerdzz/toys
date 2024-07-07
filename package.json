@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@vituum/vite-plugin-pug": "^1.1.0",
+    "scroll-lock": "^2.1.5",
     "swiper": "^11.1.4"
   }
 }
