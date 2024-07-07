@@ -15,12 +15,11 @@
     width: 49px;
     min-height: 48px;
     border: none;
-    //border: 1px solid $primary;
     border-radius: 0 6px 6px 0;
     transition: all .3s ease-in-out;
     box-sizing: border-box;
 
-    @include vp-tablet-landscape {
+    @include vp-desktop {
       display: flex;
     }
 
@@ -35,6 +34,9 @@
 
   &__input-container {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
   }
 
   &__input {
@@ -42,56 +44,32 @@
       padding-right:66px;
     }
   }
-}
 
+  &__close-modal-button {
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    padding: 3px;
+    transition: all 0.3s ease-in-out;
 
-/*.search-form__input-container {
-  position: relative
-}
+    &:active {
+      color: $primary;
+    }
 
-@media screen and (min-width: 720px) {
-  .search-form__input {
-      padding-right:66px
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
   }
 }
-
-.search-form__submit {
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  padding: 15px 13px;
-  width: 44px;
-  min-height: 48px;
-  background-color: #0a327a;
-  border: none;
-  border: 1px solid #fff;
-  border-radius: 0 8px 8px 0;
-  transition: all .3s ease-in-out;
-  box-sizing: border-box
-}
-
-.search-form__submit:active {
-  background-color: #fff;
-  color: #0a327a;
-  border: 1px solid #0a327a
-}
-
-@media (hover: hover) {
-  .search-form__submit:hover,.search-form__submit:focus {
-      background-color:#fff;
-      color: #0a327a;
-      border: 1px solid #0a327a
-  }
-}
-
-@media screen and (min-width: 720px) {
-  .search-form__submit {
-      display:flex
-  }
-}*/

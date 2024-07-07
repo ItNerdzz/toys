@@ -58,7 +58,11 @@ mixin header(headerMods, currentUrl)
     ];
 
   header.header(class=headerMods)
+    +search-modal('header__search-modal')
+
     +header-bar(optionsNav).header__header-bar
+
+    +mobile-menu(optionsNav).header__menu
 
     .wrapper
       .header__inner
@@ -101,7 +105,8 @@ mixin header(headerMods, currentUrl)
           button.header__search-button(type="button")
             +icon("search", 18, 18)
 
-          +btn().btn--cart-main.header__cart-button.header__cart-button--has Корзина
+          +btn().btn--cart-main.header__cart-button
+            span Корзина
             span.header__cart-icon
               +icon("icon-cart", 18, 21)
             span.header__cart-value 0
@@ -110,5 +115,3 @@ mixin header(headerMods, currentUrl)
             span
             span
             span
-
-    +mobile-menu(optionsNav).header__menu

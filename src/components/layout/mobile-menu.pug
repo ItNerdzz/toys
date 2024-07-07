@@ -23,20 +23,24 @@ mixin mobile-menu(optionsNav)
 
 
   .mobile-menu&attributes(attributes)
-    .wrapper
-      .mobile-menu__group
-        +link({href: "catalog.html", ariaLabel: "Переход к странице каталога"}).mobile-menu__group-link
-          +icon("catalog-wide", 14, 14)
-          span Каталог товаров
+    .mobile-menu__group
+      .wrapper
+        .mobile-menu__group-ionner
+          +link({href: "catalog.html", ariaLabel: "Переход к странице каталога"}).mobile-menu__group-link
+            +icon("catalog-wide", 14, 14)
+            span Каталог товаров
 
-      .mobile-menu__group
-        each option in optionsLink
-          +link({href: option.link, ariaLabel: option.ariaLabel}).mobile-menu__group-link
-            +icon(option.nameIcon, 18, 18)
-            span!= option.nameItem
+    .mobile-menu__group
+      .wrapper
+        .mobile-menu__group-inner
+          each option in optionsLink
+            +link({href: option.link, ariaLabel: option.ariaLabel}).mobile-menu__group-link
+              +icon(option.nameIcon, 18, 18)
+              span!= option.nameItem
 
-        +btn().btn--border-dashed-primary.mobile-menu__callback.callback-button
-          span Заказать звонок
+          +btn().btn--border-dashed-primary.mobile-menu__callback.callback-button
+            span Заказать звонок
 
-      .mobile-menu__group
+    .mobile-menu__group
+      .wrapper
         +navigation(optionsNav).mobile-menu__navigation

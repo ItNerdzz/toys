@@ -1,11 +1,13 @@
 .header-bar {
+  z-index: 2;
+  position: relative;
   max-width: 100vw;
   color: $special-color-header;
 
   display: none;
   background-color: $accent-bg;
 
-  @include vp-tablet-landscape {
+  @include vp-desktop {
     display: block;
   }
 
