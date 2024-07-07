@@ -44,7 +44,7 @@
     margin: 0 auto;
 
     @include vp-tablet-landscape {
-      display: block;
+      display: flex;
       width: 12.5%;
       min-width: 170px;
     }
