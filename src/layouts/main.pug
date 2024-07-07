@@ -13,17 +13,17 @@ html(lang="ru")
 
   body
     //-include /components/layout/header.pug
-    .wrapper-main(class=wrapperMods)
+    //-.wrapper-main(class=wrapperMods)
 
-      if (hasHeader)
-        +header(headerMods, currentUrl)
+    if (hasHeader)
+      +header(headerMods, currentUrl)
 
-      block main
-        //-block pageContent
+    block main
+      //-block pageContent
 
-      //-include /components/layout/footer.pug
-      if (hasFooter)
-        +footer(footerMods)
+    //-include /components/layout/footer.pug
+    if (hasFooter)
+      +footer(footerMods)
 
     block modals
 
