@@ -79,6 +79,20 @@
     }
   }
 
+  &--cart-main {
+    border: none;
+    border-radius: 6px;
+    padding: 10.5px 12px;
+    margin: auto 0;
+
+    justify-content: center;
+
+    @include hover-focus {
+      background-color: $accent-bg-items-hover;
+    }
+  }
+
+
   &--border-dashed,
   &--border-dashed-base,
   &--border-dashed-primary {

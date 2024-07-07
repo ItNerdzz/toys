@@ -46,10 +46,6 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 140%;
-
-    @media screen and (min-width: $tablet-landscape) {
-      padding-top: 24px;
-    }
   }
 
   &__category-list {
@@ -57,13 +53,24 @@
 
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
   }
 
   &__category-item &__link {
     display: flex;
     gap: $indent;
     align-items: center;
+    background-color: $accent-bg-items;
+    border-radius: $br-default;
+    transition: $trans-default;
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    @include hover-focus {
+      background-color: $accent-bg-items-hover;
+    }
   }
 
   &__category-image {
@@ -73,7 +80,7 @@
   }
 
   &__category-title {
-    color: $primary;
+    color: $base;
     font-size: 16px;
     font-weight: 600;
     line-height: 140%;
@@ -85,7 +92,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
   }
 
   &__product-item &__link {
@@ -97,6 +104,15 @@
     grid-template-rows: min-content min-content;
     align-content: center;
     gap: 0 $indent;
+    transition: $trans-default;
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    @include hover-focus {
+      background-color: $accent-bg;
+    }
   }
 
   &__product-image {
@@ -109,7 +125,7 @@
   &__product-title {
     grid-area: title;
     align-self: end;
-    color: $primary;
+    color: $base;
     font-size: 14px;
     font-weight: 600;
     line-height: 140%;
@@ -179,7 +195,7 @@
   &__close {
     display: none;
     position: sticky;
-    top: 48px;
+    top: 35px;
     left: 100%;
     right: 0;
     width: 48px;

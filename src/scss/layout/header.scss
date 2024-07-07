@@ -264,6 +264,10 @@
       height: 19px;
     }
 
+    @include hover-focus {
+
+    }
+
     @include vp-desktop {
       span:first-child {
         display: inline-block;

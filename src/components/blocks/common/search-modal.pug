@@ -6,7 +6,7 @@ mixin search-modal(className)
           svg
             use(href="/images/sprite.svg#cross")
 
-        .search-modal__products.search-modal__products--recent
+        .search-modal__products.search-modal__products--recent.search-modal__hidden
           .search-modal__title Просмотренные товары
           ul.search-modal__product-list
             li.search-modal__product-item
@@ -16,7 +16,19 @@ mixin search-modal(className)
                 span.search-modal__product-article Артитикул
                   b 7898
 
-        .search-modal__products.search-modal__products--find.search-modal__hidden
+        .search-modal__category
+          .search-modal__title Категории
+          ul.search-modal__category-list
+            li.search-modal__category-item
+              a.search-modal__link(href="/shop/")
+                img.search-modal__category-image(src="/images/category-1.png", width="300", height="100" alt="")
+                h3.search-modal__category-title Подарки
+            li.search-modal__category-item
+              a.search-modal__link(href="/shop/")
+                img.search-modal__category-image(src="/images/category-1.png", width="300", height="100" alt="")
+                h3.search-modal__category-title Подарки
+
+        .search-modal__products.search-modal__products--find
           .search-modal__title Товары
           ul.search-modal__product-list
             li.search-modal__product-item
