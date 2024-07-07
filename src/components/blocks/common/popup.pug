@@ -1,6 +1,6 @@
 mixin popup(className, title)
 
-  section.popup(class=className)
+  section.popup(class=className, role="dialog", aria-modal="true")
     .popup__inner
       .popup__header
         .popup__title= title

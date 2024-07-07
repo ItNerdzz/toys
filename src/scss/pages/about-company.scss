@@ -42,12 +42,4 @@
       margin-bottom: 100px;
     }
   }
-
-  &__viewed {
-    margin-bottom: 110px;
-
-    @include vp-tablet {
-      margin-bottom: 120px;
-    }
-  }
 }
