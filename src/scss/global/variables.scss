@@ -47,3 +47,4 @@ $desktop: 1440px;
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
 $trans-600:                         0.6s $tf-default;
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);

@@ -35,5 +35,5 @@ mixin sale()
                 .text.text--super-big.sale__card-text
                   p!= option.text
 
-                +btn().btn--border-dashed-base.sale__card-btn
+                +btn().btn--border-dashed-base.sale__card-btn(data-open-modal="feedback")
                   span Подробнее

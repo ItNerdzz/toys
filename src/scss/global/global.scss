@@ -16,9 +16,9 @@ html {
   color: $black;
   font-weight: 400;
   font-size: 15px;
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-  scrollbar-gutter: stable;
+  //scroll-behavior: smooth;
+  //scroll-padding-top: 100px;
+  //scrollbar-gutter: stable;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,3 +92,24 @@ textarea {
 .locked {
   overflow: hidden;
 }
+
+// Утилитарные классы блокировки страницы для модальных окон, меню и т.д.
+.scroll-lock-ios {
+  position: fixed;
+
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
