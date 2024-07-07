@@ -14,6 +14,10 @@
     box-shadow: 0px 0px 14px rgba($black, 0.08);
   }
 
+  .added_to_cart.wc-forward {
+    display: none;
+  }
+
   &__link {
     img {
       //width: 72.33%;

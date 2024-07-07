@@ -1,0 +1,104 @@
+mixin checkout(className)
+  section.checkout(class=className)
+    .woocommerce
+      .woocommerce-notices-wrapper
+
+      .checkout__thankyou
+        img(src="/images/thank-you.svg" width="300" height="100" alt="Спасибо за доверие!")
+        .checkout__thankyou-title Спасибо за доверие!
+        .checkout__thankyou-subtitle Скоро мы свяжемся с Вами <br /> для уточнения деталей
+        a.checkout__thankyou-close.btn Продолжить выбор
+
+      form.checkout.woocommerce-checkout(name="checkout" method="post" action="https://itnerds-dev.ru/checkout/" enctype="multipart/form-data" novalidate="novalidate")
+        .col2-set#customer_details
+          .col-1
+            .woocommerce-billing-fields
+              h3 Детали оплаты
+              .woocommerce-billing-fields__field-wrapper
+                p.form-row.form-row-wide.thwcfd-optional.thwcfd-field-wrapper.thwcfd-field-text#billing_first_name_field(data-priority="10")
+                  label.screen-reader-text(for="billing_first_name") Имя
+                    span.optional (необязательно)
+                  .woocommerce-input-wrapper
+                    input.input-text(type="text" name="billing_first_name" id="billing_first_name" placeholder="Имя" value="" autocomplete="given-name")
+                p.form-row.form-row-wide.thwcfd-required.thwcfd-field-wrapper.thwcfd-field-tel.validate-required.validate-phone#billing_phone_field(data-priority="100")
+                  label.screen-reader-text(for="billing_phone") Телефон*
+                    abbr.required(title="обязательно") *
+                  .woocommerce-input-wrapper
+                    input.input-text(type="tel" name="billing_phone" id="billing_phone" placeholder="Телефон*" value="" autocomplete="tel")
+                p.form-row.form-row-wide.thwcfd-optional.thwcfd-field-wrapper.thwcfd-field-email.validate-email#billing_email_field(data-priority="110")
+                  label.screen-reader-text(for="billing_email") Почта
+                    span.optional (необязательно)
+                  .woocommerce-input-wrapper
+                    input.input-text(type="email" name="billing_email" id="billing_email" placeholder="Почта" value="" autocomplete="email username")
+                p.form-row.form-row-wide.thwcfd-field-wrapper.thwcfd-field-textarea#billing_comment_field(data-priority="120")
+                  label.screen-reader-text(for="billing_comment") Комментарий
+                    span.optional (необязательно)
+                  .woocommerce-input-wrapper
+                    textarea.input-text(name="billing_comment" id="billing_comment" placeholder="Комментарий" rows="2" cols="5")
+          .col-2
+            .woocommerce-shipping-fields
+            .woocommerce-additional-fields
+        h3#order_review_heading Ваш заказ
+        #order_review.woocommerce-checkout-review-order
+          table.shop_table.woocommerce-checkout-review-order-table
+            thead
+              tr
+                th.product-name Товар
+                th.product-total Подытог
+            tbody
+              tr.cart_item
+                td.product-name 0-652 - 05 - 5000 магнитная лента точность 0, 1, ширина 5 - 10 для Holzma
+                  strong.product-quantity × 1
+                td.product-total
+                  span.woocommerce-Price-amount.amount
+                    bdi 0.00
+                      span.woocommerce-Price-currencySymbol ₽
+              tr.cart_item
+                td.product-name Насос Wagner PUMA 110 запчасть № 2314275
+                  strong.product-quantity × 1
+                td.product-total
+                  span.woocommerce-Price-amount.amount
+                    bdi 0.00
+                      span.woocommerce-Price-currencySymbol ₽
+              tr.cart_item
+                td.product-name 0000600278F CATENA 8MM MAGLIE=92 05B-1 CHIUSA PERNO RIB
+                  strong.product-quantity × 1
+                td.product-total
+                  span.woocommerce-Price-amount.amount
+                    bdi 0.00
+                      span.woocommerce-Price-currencySymbol ₽
+              tr.cart_item
+                td.product-name 0000600886F CATENA ISO 05B-1 8X3 94 CH.PERNO RIB
+                  strong.product-quantity × 1
+                td.product-total
+                  span.woocommerce-Price-amount.amount
+                    bdi 0.00
+                      span.woocommerce-Price-currencySymbol ₽
+            tfoot
+              tr.cart-subtotal
+                th Подытог
+                td
+                  span.woocommerce-Price-amount.amount
+                    bdi 0.00
+                      span.woocommerce-Price-currencySymbol ₽
+              tr.order-total
+                th Итого
+                td
+                  strong
+                    span.woocommerce-Price-amount.amount
+                      bdi 0.00
+                        span.woocommerce-Price-currencySymbol ₽
+          #payment.woocommerce-checkout-payment
+            .form-row.place-order
+              noscript
+                | Поскольку ваш браузер не поддерживает JavaScript или в нем он отключен, просим убедиться в том, что вы нажали кнопку
+                em Обновить итог
+                | перед регистрацией заказа. Иначе, есть риск неправильного подсчета стоимости.
+                br
+                button.button.alt(type="submit" name="woocommerce_checkout_update_totals" value="Обновить итог") Обновить итог
+            .woocommerce-terms-and-conditions-wrapper
+              .woocommerce-privacy-policy-text
+            button.btn(type="submit" name="woocommerce_checkout_place_order" id="place_order" value="Отправить" data-value="Отправить") Отправить
+            input#woocommerce-process-checkout-nonce(type="hidden" name="woocommerce-process-checkout-nonce" value="395179f4c3")
+            input(type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review")
+
