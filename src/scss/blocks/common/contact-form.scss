@@ -7,6 +7,10 @@
 
 .contact-form__title {
   margin-bottom: 12px;
+
+  @include vp-tablet-landscape {
+    max-width: 230px;
+  }
 }
 
 .contact-form__subtitle {
