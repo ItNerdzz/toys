@@ -1,0 +1,79 @@
+mixin gifts-attachments()
+  -
+    const optionsGifts = [
+      {
+        linkItem: '#',
+        nameItem: 'Подарки с символом года'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Подарки в упаковке из текстиля'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Подарки в упаковке из жести'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Подарки в упаковке из картона'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Подарки в тубе'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Подарочные наборы'
+      },
+    ];
+
+    const optionsAttachments = [
+      {
+        linkItem: '#',
+        nameItem: 'Наборы для творчества'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Развивающие наборы'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Настольные игры'
+      },
+      {
+        linkItem: '#',
+        nameItem: 'Игрушки и прочее'
+      },
+    ];
+
+  section.gifts-attachments&attributes(attributes)
+    .wrapper
+      .gifts-attachments__container
+
+        .title.title--medium.gifts-attachments__title
+          h2 Наш каталог
+
+
+        .gifts-attachments__category-inner
+          .gifts-attachments__inner-title
+            h3 ПОДАРКИ
+            +img("category-gifts", "png", 187, 137, "Иконка категории.")
+
+          ul.gifts-attachments__list-gifts
+
+            each option in optionsGifts
+              li.gifts-attachments__item-gifts
+                +btn({href: option.linkItem}).gifts-attachments__btn(aria-label="Переход в раздел подарков")
+                  span!= option.nameItem
+
+        .gifts-attachments__category-inner
+          .gifts-attachments__inner-title
+            h3 ВЛОЖЕНИЯ
+            +img("category-attachments", "png", 164, 117, "Иконка категории.")
+
+          ul.gifts-attachments__list-attachments
+
+            each option in optionsAttachments
+              li.gifts-attachments__item-attachments
+                +btn({href: option.linkItem}).gifts-attachments__btn(aria-label="Переход в раздел подарков")
+                  span!= option.nameItem
