@@ -12,6 +12,7 @@
 
   &__nav {
     margin-bottom: 70px;
+    height: fit-content;
 
     @include vp-tablet {
       margin-bottom: 80px;
@@ -19,13 +20,9 @@
 
     @include vp-tablet-landscape {
       position: sticky;
+      top: 164px;
+      height: 150px;
       margin-bottom: 0;
-    }
-  }
-
-  &__content {
-    @include vp-tablet-landscape {
-      padding-right: 18.53%;
     }
   }
 
@@ -80,62 +77,81 @@
     }
   }
 
-  &__context-section {
-    &:not(:last-child) {
-      margin-bottom: 60px;
+  //---------
 
-      @include vp-tablet {
-        margin-bottom: 70px;
-      }
-    }
-  }
-
-  &__title {
-    margin-bottom: 20px;
-
-    @include vp-tablet {
-      margin-bottom: 30px;
-    }
-  }
-
-  &__text {
+  &__content {
+    font-weight: 400;
+    font-size: 15px;
     line-height: 170%;
 
-    &:not(:last-child) {
-      margin-bottom: 40px;
+    @include vp-tablet {
+      font-size: 16px;
+    }
+
+    @include vp-tablet-landscape {
+      padding-right: 18.53%;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 140%;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      &:not(:first-child) {
+        margin-top: 60px;
+
+        @include vp-tablet {
+          margin-top: 70px;
+        }
+      }
 
       @include vp-tablet {
-        margin-bottom: 50px;
+        font-size: 28px;
+        margin-bottom: 30px;
       }
     }
-  }
 
-  &__title + &__text {
-    margin-bottom: 40px;
-
-    @include vp-tablet {
-      margin-bottom: 50px;
+    p:last-child {
+      margin-bottom: 0;
     }
-  }
 
-  &__image {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-
+    iframe,
+    video,
     img {
+      width: 100%;
+      height: auto;
+      border: none;
+      background-color: $white;
       border-radius: 8px;
       object-fit: cover;
       object-position: center;
+
+      &:not(:first-child) {
+        margin-top: 40px;
+
+        @include vp-tablet {
+          margin-top: 50px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include vp-tablet {
+          margin-bottom: 50px;
+        }
+      }
     }
-  }
 
-  &__video {
-    margin-bottom: 40px;
+    iframe,
+    video {
+      min-height: 280px;
 
-    @include vp-tablet {
-      margin-bottom: 50px;
+      @include vp-tablet {
+        min-height: 410px;
+      }
     }
   }
 }
