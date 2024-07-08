@@ -1,0 +1,21 @@
+.gifts-attachments {
+  max-width: 100vw;
+  color: $base;
+
+  &__category-inner {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__inner-title {
+    background-color: $accent-bg-items;
+    border-radius: 8px;
+  }
+
+  Img {
+    width: 137px;
+  }
+}
