@@ -4,7 +4,7 @@
   margin: 0;
   user-select: none;
 
-  &__item {
+  li {
     .link {
       @include hover-focus {
         opacity: 1;
@@ -17,7 +17,8 @@
     }
   }
 
-  &__item--accent {
+  &__item--accent,
+  a[href="/discounts/"] {
     .link {
       display: flex;
       color: $accent-link;

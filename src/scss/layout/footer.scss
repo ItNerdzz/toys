@@ -149,6 +149,10 @@
     margin: 0;
   }
 
+  &__item-list span {
+    white-space: pre-wrap;
+  }
+
   &__bottom-bar {
     border-top: 1px solid $border-fill;
     padding: 36px 0;
@@ -187,6 +191,10 @@
   &__bottom-bar-link {
     line-height: 15px;
     color: $secondary;
+  }
+
+  &__nav{
+
   }
 
   &__nav,
