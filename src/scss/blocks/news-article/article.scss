@@ -21,7 +21,6 @@
     @include vp-tablet-landscape {
       position: sticky;
       top: 164px;
-      height: 150px;
       margin-bottom: 0;
     }
   }
@@ -89,6 +88,7 @@
     }
 
     @include vp-tablet-landscape {
+      height: fit-content;
       padding-right: 18.53%;
     }
 
