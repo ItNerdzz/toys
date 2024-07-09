@@ -2,20 +2,170 @@
   max-width: 100vw;
   color: $base;
 
-  &__category-inner {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+  &__container {
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
     }
   }
 
-  &__inner-title {
-    background-color: $accent-bg-items;
-    border-radius: 8px;
+  &__title {
+    margin-bottom: 40px;
+    grid-column: 1 / -1;
+
+    @include vp-tablet {
+      margin-bottom: 50px;
+    }
   }
 
-  Img {
-    width: 137px;
+  &__category-inner {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include vp-tablet {
+        margin-bottom: 45px;
+      }
+
+      @include vp-tablet-landscape {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      height: auto;
+    }
+
+    &--gifts {
+      img {
+        right: -16px;
+        width: 187px;
+
+        @include vp-tablet {
+          right: -1px;
+          width: 204px;
+        }
+      }
+    }
+
+    &--attachments {
+      img {
+        right: -1px;
+        width: 166px;
+
+        @include vp-tablet {
+          width: 204px;
+        }
+      }
+    }
+  }
+
+
+  &__inner-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $accent-bg-items;
+    border-radius: 8px;
+
+    padding: 30px 28px;
+
+    z-index: 2;
+    transition: background-color $trans-default;
+
+    @include vp-tablet {
+      padding: 42px 40px;
+    }
+
+    @include hover {
+      background-color: $accent-bg-items-hover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      background-image: url('/images/rectangle-small-bg.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      border-radius: 8px;
+
+      @include vp-tablet {
+        width: 55%;
+      }
+
+      @include vp-tablet-landscape {
+        width: 70%;
+      }
+
+      @include vp-desktop {
+        width: 55%;
+      }
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    &:first-child {
+      margin-top: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+
+    width: 100%;
+    justify-content: space-between;
+
+    @include vp-tablet {
+      font-size: 16px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 14px;
+      margin-right: -10px;
+
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-image: url("/images/icon-arrow.svg");
+
+      background: currentColor;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      transform: rotate(180deg);
+
+      @include vp-tablet-landscape {
+        width: 9px;
+        height: 16px;
+      }
+    }
   }
 }

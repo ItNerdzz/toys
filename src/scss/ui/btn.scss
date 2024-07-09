@@ -23,6 +23,21 @@
     background-color: $primary-hover;
   }
 
+  &--border-clear {
+    color: $base;
+    background-color: $transparent;
+    border: 1px solid $border-fill;
+    padding: 18px 28px;
+
+    @include vp-tablet {
+      padding: 17px 40px;
+    }
+
+    @include hover-focus {
+      background-color: $accent-bg;
+    }
+  }
+
   &--tabs {
     color: $base;
     border-radius: 0;
