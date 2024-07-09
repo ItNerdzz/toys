@@ -275,25 +275,114 @@
     }
   }
 
-  &__quantity-set {
+  &__quantity-wrapper {
     display: flex;
     align-items: center;
+    border: 1px solid $border-fill-dark;
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 120px;
+    padding: 0 14px;
+  }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      margin: 0;
+  &__quantity-decrease,
+  &__quantity-increase {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: transparent;
+    padding: 1px 1px;
 
-      appearance: none;
+    transition: opacity $trans-default;
+
+    span {
+      &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 2px;
+        border-radius: 30px;
+        background-color: $base;
+        align-self: center;
+
+        transition: background-color $trans-default;
+      }
     }
 
-    input[type="number"] {
-      appearance: textfield;
+    &:not([disabled]) {
+      @include hover-focus {
+        span {
+          &::before,
+          &::after {
+            background-color: $primary;
+          }
+        }
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+
+
+    &[disabled] {
+      cursor: default;
+      span {
+        &::before {
+          background-color: $bg-disabled;
+        }
+      }
     }
   }
 
-  &__quantity-btn {
-    width: 16px;
-    height: 16px;
+  &__quantity-increase {
+    position: relative;
+    span {
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 16px;
+        border-radius: 30px;
+        background-color: $base;
+        top: 50%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        margin-top: -8px;
+        align-self: center;
+
+        transition: background-color $trans-default;
+      }
+    }
+  }
+
+  &__quantity-value {
+    display: inline-block;
+    color: $base;
+    font-family: $base-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+
+    padding: 5px 10px;
+    border: none;
+    background-color: $transparent;
+    text-align: center;
+    min-width: 32px;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 
   &__buttons-wrapper {
