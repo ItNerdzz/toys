@@ -117,7 +117,22 @@
     background-color: $transparent;
     border: 2px dashed rgba($white, 0.5);
     padding: 15px 32px 16px;
+  }
 
+  &--border-dashed {
+    &:active {
+      color: $base;
+      background-color: $white;
+    }
+
+    @include hover-focus {
+      color: $base;
+      background-color: $white;
+    }
+  }
+
+  &--border-dashed-base,
+  &--border-dashed-primary {
     &:active {
       color: $base;
       background-color: $primary-hover;
@@ -127,7 +142,6 @@
       color: $base;
       background-color: $primary-hover;
     }
-
   }
 
   &--border-dashed-base {
