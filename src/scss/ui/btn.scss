@@ -23,6 +23,21 @@
     background-color: $primary-hover;
   }
 
+  &--border-clear {
+    color: $base;
+    background-color: $transparent;
+    border: 1px solid $border-fill;
+    padding: 18px 28px;
+
+    @include vp-tablet {
+      padding: 17px 40px;
+    }
+
+    @include hover-focus {
+      background-color: $accent-bg;
+    }
+  }
+
   &--tabs {
     color: $base;
     border-radius: 0;
@@ -102,7 +117,22 @@
     background-color: $transparent;
     border: 2px dashed rgba($white, 0.5);
     padding: 15px 32px 16px;
+  }
 
+  &--border-dashed {
+    &:active {
+      color: $base;
+      background-color: $white;
+    }
+
+    @include hover-focus {
+      color: $base;
+      background-color: $white;
+    }
+  }
+
+  &--border-dashed-base,
+  &--border-dashed-primary {
     &:active {
       color: $base;
       background-color: $primary-hover;
@@ -112,7 +142,6 @@
       color: $base;
       background-color: $primary-hover;
     }
-
   }
 
   &--border-dashed-base {

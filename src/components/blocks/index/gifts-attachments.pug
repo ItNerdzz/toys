@@ -54,26 +54,26 @@ mixin gifts-attachments()
           h2 Наш каталог
 
 
-        .gifts-attachments__category-inner
-          .gifts-attachments__inner-title
+        .gifts-attachments__category-inner.gifts-attachments__category-inner--gifts
+          .title.title--medium-uppercase.gifts-attachments__inner-title
             h3 ПОДАРКИ
-            +img("category-gifts", "png", 187, 137, "Иконка категории.")
+            +img("category-gifts", "png", 204, 145, "Иконка категории.")
 
-          ul.gifts-attachments__list-gifts
+          ul.gifts-attachments__list
 
             each option in optionsGifts
-              li.gifts-attachments__item-gifts
-                +btn({href: option.linkItem}).gifts-attachments__btn(aria-label="Переход в раздел подарков")
+              li.gifts-attachments__item
+                +btn({href: option.linkItem}).btn--border-clear.gifts-attachments__btn(aria-label="Переход в раздел подарков")
                   span!= option.nameItem
 
-        .gifts-attachments__category-inner
-          .gifts-attachments__inner-title
+        .gifts-attachments__category-inner.gifts-attachments__category-inner--attachments
+          .title.title--medium-uppercase.gifts-attachments__inner-title
             h3 ВЛОЖЕНИЯ
-            +img("category-attachments", "png", 164, 117, "Иконка категории.")
+            +img("category-attachments", "png", 204, 145, "Иконка категории.")
 
-          ul.gifts-attachments__list-attachments
+          ul.gifts-attachments__list
 
             each option in optionsAttachments
-              li.gifts-attachments__item-attachments
-                +btn({href: option.linkItem}).gifts-attachments__btn(aria-label="Переход в раздел подарков")
+              li.gifts-attachments__item
+                +btn({href: option.linkItem}).btn--border-clear.gifts-attachments__btn(aria-label="Переход в раздел подарков")
                   span!= option.nameItem
