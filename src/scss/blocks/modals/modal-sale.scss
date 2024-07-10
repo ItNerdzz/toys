@@ -1,0 +1,48 @@
+.modal-sale {
+  &__datetime {
+    color: rgba($base, 0.7);
+    margin-bottom: 14px;
+
+    time {
+      line-height: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+    }
+  }
+
+  &__text-title {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+
+    @include vp-tablet {
+      width: 85%;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 22px;
+    padding-right: 20px;
+    max-height: 260px;
+    overflow-y: auto;
+  }
+
+  &__info-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $base;
+
+    margin-bottom: 10px;
+
+    i {
+      font-style: normal;
+    }
+  }
+
+  &__item {
+    color: rgba($base, 0.7);
+    line-height: 140%
+  }
+}
