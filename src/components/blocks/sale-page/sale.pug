@@ -6,14 +6,16 @@ mixin sale()
         dateAttributeStsrt: '2023-04-21',
         dateAttributeFinish: '2024-05-22',
         dateStart: '21.04.23',
-        dateFinish: '22.05.24'
+        dateFinish: '22.05.24',
+        classBtn: 'sale__card-btn--modal-1'
       },
       {
         text: 'Скидки при&nbsp;50% предоплате',
         dateAttributeStsrt: '2023-04-21',
         dateAttributeFinish: '2024-05-22',
         dateStart: '21.04.23',
-        dateFinish: '22.05.24'
+        dateFinish: '22.05.24',
+        classBtn: 'sale__card-btn--modal-2'
       },
     ];
 
@@ -35,5 +37,5 @@ mixin sale()
                 .text.text--super-big.sale__card-text
                   p!= option.text
 
-                +btn().btn--border-dashed-base.sale__card-btn(data-open-modal="feedback")
+                +btn().btn--border-dashed-base.sale__card-btn(class= option.classBtn)
                   span Подробнее

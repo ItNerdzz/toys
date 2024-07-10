@@ -1,6 +1,29 @@
 .popup {
   display: none;
   background-color: rgba($black, 0.6);
+
+  //flex-direction: column;
+  //background-color: rgba($base, 0.7);
+  //transform: scale(1.2);
+  //transition: opacity $trans-modal, transform $trans-modal, visibility $trans-modal;
+  //pointer-events: none;
+  //-webkit-overflow-scrolling: touch;
+  //-ms-overflow-style: none;
+  //scrollbar-width: none;
+
+  /*&::-webkit-scrollbar {
+    display: none;
+  }*/
+
+  &__wrapper {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 60px 30px;
+  }
 }
 
 .popup--opened {
@@ -46,6 +69,24 @@
   @include vp-tablet-landscape {
     padding: 18px 30px;
     max-width: 430px;
+  }
+
+  &--sale {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    padding: 46px 20px 34px;
+    border-radius: 8px;
+
+    @include vp-tablet {
+      width: 660px;
+      max-height: 490px;
+      padding: 46px 30px 34px;
+    }
+
+    @include vp-tablet-landscape {
+      width: 670px;
+    }
   }
 }
 
@@ -115,6 +156,32 @@
   @include vp-tablet-landscape {
     border: 1px solid rgba($primary, 0.4);
     color: $primary;
+  }
+
+  &--sale {
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+
+    width: 46px;
+    height: 46px;
+    padding: 0;
+
+    color: $primary;
+    background: $transparent;
+    border-radius: 6px;
+    border: 1px solid rgba($primary, 0.5);
+
+    transition: border $trans-default;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      transform: rotate(0deg);
+    }
   }
 }
 

@@ -1,9 +1,8 @@
 mixin modal(mods)
-  .modal.modal--preload(class=mods)&attributes(attributes)
-    .modal__wrapper
-      .modal__overlay(data-close-modal)
-      .modal__content
+  .modal.popup(class=mods)
+    .modal__wrapper.popup__wrapper
+      .modal__content.popup__inner.popup__inner--sale
         if block
           block
-        button.modal__close-btn(type="button", aria-label="Закрыть модальное окно", data-close-modal)
+        button.modal__close-btn.popup__close.popup__close--sale(type="button", aria-label="Закрыть модальное окно")
           +icon("icon-close", 32, 32)
