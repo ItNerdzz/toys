@@ -31,7 +31,6 @@
     font-size: 14px;
     line-height: 16px;
 
-    //position: absolute;
     max-width: 800px;
     margin: 0 auto;
     left: 0;
@@ -48,39 +47,26 @@
     font-size: 14px;
     line-height: 16px;
   }
-}
 
+  &__logistics {
+    span {
+      display: flex;
+      align-items: center;
 
-/*.header-bar {
-  display: none;
-  background-color: #f4f5f6
-}
+      &::before {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 13px;
 
-@media screen and (min-width: 1440px) {
-  .header-bar {
-      display:block
+        mask-image: url('/images/icon-lorry.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+
+        background: currentColor;
+        margin-right: 8px;
+      }
+    }
   }
 }
-
-.header-bar__inner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-  padding: 14px 0
-}
-
-.header-bar__navigation {
-  position: absolute;
-  max-width: 800px;
-  margin: 0 auto;
-  left: 0;
-  right: 0
-}
-
-.header-bar__worktime {
-  color: #727272;
-  font-weight: 500;
-  font-size: 14px
-}*/

@@ -1,0 +1,13 @@
+mixin header-category()
+
+  section.header-category&attributes(attributes)
+    .wrapper
+      .header-category__inner
+
+        .header-category__item.header-category__item--gifts
+          +link({href: "#", ariaLabel:"Переход в категорию «Подарки»"}).header-category__link.header-category__link--gifts
+            span ПОДАРКИ
+
+        .header-category__item.header-category__item--attachments
+          +link({href: "#", ariaLabel:"Переход в категорию «Вложения»"}).header-category__link.header-category__link--attachments
+            span ВЛОЖЕНИЯ
