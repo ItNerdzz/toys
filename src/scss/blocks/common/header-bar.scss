@@ -47,4 +47,26 @@
     font-size: 14px;
     line-height: 16px;
   }
+
+  &__logistics {
+    span {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 13px;
+
+        mask-image: url('/images/icon-lorry.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+
+        background: currentColor;
+        margin-right: 8px;
+      }
+    }
+  }
 }
