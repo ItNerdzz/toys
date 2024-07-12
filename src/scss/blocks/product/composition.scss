@@ -67,7 +67,7 @@
       margin-bottom: 30px;
     }
 
-    span {
+    span:not(.composition__total) {
       display: block;
       font-weight: 500;
       font-size: 15px;
@@ -85,6 +85,7 @@
         margin-bottom: 14px;
       }
     }
+
   }
 
   &__nav-list {
@@ -178,6 +179,23 @@
     position: absolute;
     top: 18px;
     right: 18px;
+
+    i {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+
+      @include vp-tablet {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__card-weight {
+    position: absolute;
+    top: 18px;
+    left: 18px;
 
     i {
       font-style: normal;

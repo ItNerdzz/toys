@@ -2,6 +2,9 @@
   max-width: 100vw;
   color: $base;
 
+  .added_to_cart.wc-forward {
+    display: none;
+  }
 
   &__container {
     display: flex;
