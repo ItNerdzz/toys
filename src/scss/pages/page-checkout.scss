@@ -1,0 +1,34 @@
+.page-checkout {
+  padding-top: 90px;
+  margin-bottom: 110px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 120px;
+    margin-bottom: 120px;
+  };
+}
+
+.page-checkout--order-received {
+  .page-checkout__title {
+    margin-bottom: 30px;
+  }
+
+  .checkout-page__checkout {
+    max-width: 100%;
+  }
+}
+
+.page-checkout .woocommerce-order-details,
+.page-checkout .woocommerce-customer-details {
+  display: none;
+}
+
+
+.checkout-page__title {
+  margin-bottom: 60px;
+}
+
+.checkout-page__checkout {
+  max-width: 660px;
+}
+

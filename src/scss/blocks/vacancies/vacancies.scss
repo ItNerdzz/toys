@@ -35,10 +35,12 @@
       width: 84px;
       height: 84px;
       margin-bottom: 22px;
+      margin-left: 10px;
 
       @include vp-tablet {
         width: 104px;
         height: 104px;
+        margin-left: 20px;
       }
     }
 

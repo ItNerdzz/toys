@@ -123,16 +123,15 @@ mixin catalog-block()
         .catalog-block__content
           .catalog-block__filters
             .catalog-block__filters-wrapper
-              .title.title--small-mix.catalog-block__filters-title
-                h2 Фильтр
-              .catalog-block__form-filters
-                | Здесь должна быть форма фильтров
+              button.btn.catalog-block__filters-button Фильтр
+                svg
+                  use(href="/images/sprite.svg#filter")
+              .catalog-block__form-filters Контент филтьтра
 
             +request("Не&nbsp;нашли\n то&nbsp;что хотели?").request--desktop-catalog.catalog-block__request-desktop
 
           .catalog-block__sort
-            .catalog-block__sort-wrapper
-              span По&nbsp;алфавиту: А-Я
+            +ordering
 
           .catalog-block__cards-wrapper
             .catalog-block__cards
