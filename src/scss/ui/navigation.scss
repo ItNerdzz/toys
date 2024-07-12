@@ -17,35 +17,33 @@
     }
   }
 
-  &__item--accent,
-  a[href="/discounts/"] {
-    .link {
-      display: flex;
+  a[href$="sale-page.html"],
+  a[href$="/discounts/"] {
+    color: $accent-link;
+    display: flex;
+    width: fit-content;
+
+    &:active:active {
+      opacity: 0.5;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 9px;
+      height: 9px;
+
+      background-image: url("/images/icon-sale.svg");
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+      align-self: center;
+      margin-right: 4.8px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
       color: $accent-link;
-      width: fit-content;
-
-      @include hover-focus {
-        opacity: 0.8;
-        color: $accent-link;
-      }
-
-      &:active:active {
-        opacity: 0.5;
-      }
-
-      &::before {
-        content: "";
-        display: block;
-        width: 9px;
-        height: 9px;
-
-        background-image: url("/images/icon-sale.svg");
-        background-size: cover;
-        background-repeat: repeat;
-        background-position: center;
-        align-self: center;
-        margin-right: 4.8px;
-      }
     }
   }
 }
