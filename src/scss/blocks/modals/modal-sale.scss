@@ -20,32 +20,19 @@
     }
   }
 
-
-  &__list {
+  &__content {
     @include scrollbar;
-    margin: 0;
-    padding-left: 22px;
-    padding-right: 20px;
     max-height: 260px;
     overflow-y: auto;
-  }
 
 
-  &__info-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    color: $base;
-
-    margin-bottom: 10px;
-
-    i {
-      font-style: normal;
-    }
-  }
-
-  &__item {
     color: rgba($base, 0.7);
-    line-height: 140%
+    line-height: 140%;
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 1em;
+    }
   }
 }

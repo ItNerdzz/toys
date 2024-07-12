@@ -65,6 +65,10 @@
     padding: 46px 20px 34px;
     border-radius: 8px;
 
+    svg {
+      transform: rotate(-45deg);
+    }
+
     @include vp-tablet {
       width: 660px;
       max-height: 490px;
@@ -167,7 +171,7 @@
     svg {
       width: 32px;
       height: 32px;
-      transform: rotate(0deg);
+      transform: rotate(45deg);
     }
   }
 }

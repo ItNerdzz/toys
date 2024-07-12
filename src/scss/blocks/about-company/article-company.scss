@@ -51,22 +51,22 @@
       color: $primary;
       margin-bottom: 32px;
     }
-  }
 
-  &__list-activities {
-    padding-left: 22px;
-    margin-top: 22px;
-    margin-bottom: 40px;
+    ul {
+      padding-left: 22px;
+      margin-top: 22px;
+      margin-bottom: 40px;
 
-    @include vp-tablet {
-      padding-left: 24px;
-      margin-bottom: 50px;
+      @include vp-tablet {
+        padding-left: 24px;
+        margin-bottom: 50px;
+      }
     }
-  }
 
-  &__item-activities {
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    ul li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
   }
 

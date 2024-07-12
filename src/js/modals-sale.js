@@ -1,28 +1,25 @@
 import {handleOpenPopup} from "./popup.js";
 
-const modalSale1 = document.querySelector('.modal--sale-1');
-const btnModal1 = document.querySelector('.sale__card-btn--modal-1');
+const modalSale = document.querySelector('.modal-sale');
+const modalButton = document.querySelectorAll('.sale__card-btn');
 
-const modalSale2 = document.querySelector('.modal--sale-2');
-const btnModal2 = document.querySelector('.sale__card-btn--modal-2');
+// sale__card
 
-const initModalSale1 = () => {
+const handleModalButton = (evt) => {
+  const saleCard = evt.target.closest('.sale__card');
+  const date = saleCard.querySelector('.sale__card-datetime');
+  const title = saleCard.querySelector('.sale__card-text');
+  const content = saleCard.querySelector('.sale__modal-content');
 
-  if (modalSale1 && btnModal1) {
-    btnModal1.addEventListener('click', () => {
-      handleOpenPopup(modalSale1);
-    });
-  }
+  modalSale.querySelector('.modal-sale__datetime').innerHTML = date.innerHTML;
+  modalSale.querySelector('.modal-sale__text-title').textContent = title.textContent;
+  modalSale.querySelector('.modal-sale__content').innerHTML = content.innerHTML;
+
+  handleOpenPopup(modalSale);
 };
 
-const initModalSale2 = () => {
-
-  if (modalSale2 && btnModal2) {
-    btnModal2.addEventListener('click', () => {
-      handleOpenPopup(modalSale2);
-    });
-  }
-};
-
-
-export {initModalSale1, initModalSale2};
+if (modalSale && modalButton) {
+  modalButton.forEach(button => {
+    button.addEventListener('click', handleModalButton);
+  });
+}

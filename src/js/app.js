@@ -8,8 +8,8 @@ import './popup.js';
 import './callback.js';
 import './cart.js';
 import './add-to-cart.js';
+import './modals-sale.js';
 
-import {initModalSale1, initModalSale2} from './modals-sale';
 import {initIntroSwiper} from './intro-swiper';
 import {initAdvantagesSwiper} from './advantages-swiper';
 import {initSliderImageSwiper} from './slider-image-swiper';
@@ -45,7 +45,5 @@ window.addEventListener('DOMContentLoaded', () => {
     initSliderCardSwiper();
     initGratitudeSwiper();
     initTabs();
-    initModalSale1();
-    initModalSale2();
   });
 });

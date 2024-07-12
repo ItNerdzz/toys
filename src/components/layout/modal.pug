@@ -1,8 +1,8 @@
 mixin modal(mods)
-  .modal.popup(class=mods)
+  .modal.popup.modal-sale(class=mods)
     .modal__wrapper.popup__wrapper
       .modal__content.popup__inner.popup__inner--sale
         if block
           block
         button.modal__close-btn.popup__close.popup__close--sale(type="button", aria-label="Закрыть модальное окно")
-          +icon("icon-close", 32, 32)
+          +icon("cross", 32, 32)

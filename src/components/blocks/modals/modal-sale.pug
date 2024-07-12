@@ -1,19 +1,9 @@
-mixin modal-sale(optionsItem)
+mixin modal-sale
 
   .text.text--medium-bold.modal-sale__datetime
     P
-      | #[time(datetime='2023-04-21') 21.04.23]
-      | -
-      | #[time(datetime='2024-05-22') 22.05.24]
 
   .text.text--super-big.modal-sale__text-title
-    p Скидки при&nbsp;50% предоплате за&nbsp;подарки в&nbsp;летние месяцы
+    p
 
-  .modal-sale__info-title
-    i Условия:
-
-  ol.modal-sale__list
-    each option in optionsItem
-      li.modal-sale__item
-        .text.text--medium.modal-sale__text-item
-          p!= option.textItem
+  .modal-sale__content
