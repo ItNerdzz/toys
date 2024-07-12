@@ -1,0 +1,22 @@
+extends /layouts/main.pug
+
+block variables
+  - const title = "Vacancies" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "vacancies-page.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+//-block pageContent
+
+block main
+  main.catalog
+    -
+      const nameIitemsBreadcrumbs = [
+        "Вакансии",
+      ];
+
+    +breadcrumbs(nameIitemsBreadcrumbs).vacancies-page__breadcrumbs
+    +vacancies().vacancies-page__vacancies
