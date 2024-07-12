@@ -3,6 +3,7 @@
   flex-direction: column;
 
   &__intro {
+    padding-top: 30px;
     margin-bottom: 21px;
 
     @include vp-tablet {

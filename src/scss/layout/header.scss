@@ -14,14 +14,6 @@
     top: -46px
   }
 
-  &__header-category {
-    margin-top: 1px;
-    visibility: visible;
-    transform: translateY(0);
-    opacity: 1;
-    transition: visible 0.6s, transform 0.6s ease, opacity 0.6s ease;
-  }
-
   &__wrapper {
     &::after {
       content: "";
@@ -460,6 +452,16 @@
   &__logo-link {
     transition: $trans-default;
   }
+
+  &__header-category {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 1px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .header--scrolled {
@@ -468,13 +470,7 @@
   }
 
   .header__header-category {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(-120%);
-    visibility: hidden;
+    top: 0;
   }
 }
 
