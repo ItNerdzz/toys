@@ -3,9 +3,17 @@
   flex-direction: column;
 
   &__breadcrumbs {
+    position: absolute;
     z-index: 1;
     padding-top: 40px;
     margin-bottom: -59px;
+
+    .wrapper {
+      padding: 0;
+    }
+    span {
+      color: $white;
+    }
 
     @include vp-tablet {
       padding-top: 45px;

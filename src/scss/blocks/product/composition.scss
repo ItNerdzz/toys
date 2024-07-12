@@ -121,10 +121,11 @@
     gap: 20px;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 40px;
 
     @include vp-tablet {
       grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 60px;
     }
 
     @include vp-tablet-landscape {
