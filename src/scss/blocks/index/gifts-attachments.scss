@@ -34,30 +34,14 @@
 
     img {
       position: absolute;
+      right: -1px;
+      width: 166px;
       bottom: 0;
       height: auto;
-    }
 
-    &--gifts {
-      img {
-        right: -16px;
-        width: 187px;
-
-        @include vp-tablet {
-          right: -1px;
-          width: 204px;
-        }
-      }
-    }
-
-    &--attachments {
-      img {
+      @include vp-tablet {
         right: -1px;
-        width: 166px;
-
-        @include vp-tablet {
-          width: 204px;
-        }
+        width: 204px;
       }
     }
   }
