@@ -1,4 +1,4 @@
-.product {
+.vacancies-page {
   display: flex;
   flex-direction: column;
 
@@ -10,15 +10,11 @@
     }
   }
 
-  &__similar-product,
-  &__composition,
-  &__advantages,
-  &__card-product {
-    margin-bottom: 90px;
+  &__vacancies {
+    margin-bottom: 110px;
 
     @include vp-tablet {
-      margin-bottom: 100px;
+      margin-bottom: 120px;
     }
   }
 }
-
