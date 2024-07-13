@@ -82,7 +82,7 @@ const handleScroll = () => {
   if (currentScrollY > 0) {
     scrollTimeout = setTimeout(() => {
       header.classList.add('header--scrolled');
-    }, 100);
+    }, 0);
   } else {
     header.classList.remove('header--scrolled');
   }

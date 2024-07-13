@@ -1,0 +1,11 @@
+mixin ordering(className)
+
+  div.ordering
+    form.woocommerce-ordering(class=className, method="get")
+      select.orderby(name="orderby")
+        option(value="menu_order", selected="selected") Исходная сортировка
+        option(value="popularity") По популярности
+        option(value="date") По новизне
+        option(value="price") Цены: по возрастанию
+        option(value="rice-desc") Цены: по убыванию
+      input(type="hidden", name="paged", value="1")

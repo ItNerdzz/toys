@@ -21,6 +21,7 @@
 @import 'ui/navigation.scss';
 @import 'ui/search-form.scss';
 @import 'ui/input.scss';
+@import 'ui/ordering.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -97,3 +98,5 @@
 @import 'pages/shipping-payment-page.scss';
 @import 'pages/sale-page.scss';
 @import 'pages/vacancies-page.scss';
+@import 'pages/page-checkout.scss';
+@import 'pages/page-404.scss';

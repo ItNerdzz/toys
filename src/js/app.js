@@ -9,6 +9,7 @@ import './callback.js';
 import './cart.js';
 import './add-to-cart.js';
 import './modals-sale.js';
+import './filter.js';
 
 import {initIntroSwiper} from './intro-swiper';
 import {initAdvantagesSwiper} from './advantages-swiper';

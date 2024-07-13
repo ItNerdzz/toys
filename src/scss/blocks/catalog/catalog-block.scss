@@ -45,10 +45,14 @@
 
   &__filters {
     color: $base;
-    padding-left: calc($padding-x * 2.06);
+    font-weight: 500;
+    grid-column: 1 / -1;
+    padding-left: $padding-x;
+    padding-right: $padding-x;
 
     @include vp-tablet {
-      padding-left: calc($padding-x-tablet * 2.0336);
+      padding-left: $padding-x-tablet;
+      padding-right: $padding-x-tablet;
     }
 
     @include vp-tablet-landscape {
@@ -63,7 +67,6 @@
   &__filters-wrapper {
     background-color: $accent-bg;
     border-radius: $br-default;
-    padding: 40px 30px;
 
     @include vp-tablet-landscape {
       margin-bottom: 30px;
@@ -82,7 +85,7 @@
       border: none;
       user-select: none;
 
-      transition: opacity $trans-default,  background-color $trans-default, color $trans-default;
+      transition: opacity $trans-default, background-color $trans-default, color $trans-default;
 
       &:active {
         opacity: 0.8;
@@ -94,14 +97,53 @@
     }
   }
 
-  &__sort {
-    padding-right: calc($padding-x * 2.06);
+  &__filters-button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 12px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
 
     @include vp-tablet {
-      padding-right: calc($padding-x-tablet * 2.0336);
+      font-size: 18px;
     }
 
     @include vp-tablet-landscape {
+      display: none;
+    }
+  }
+
+  &__form-filters {
+    display: none;
+    padding: 20px 10px;
+    margin-top: 20px;
+
+    @include vp-tablet-landscape {
+      padding: 20px 30px;
+      display: block;
+    }
+  }
+
+  &__form-filters--show {
+    display: block;
+  }
+
+  &__sort {
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+    grid-column: 1 / -1;
+
+    @include vp-tablet {
+      padding-left: $padding-x-tablet;
+      padding-right: $padding-x-tablet;
+    }
+
+    @include vp-tablet-landscape {
+      grid-column: auto;
       padding-right: 0;
     }
   }

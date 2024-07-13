@@ -16,6 +16,12 @@
     }
   }
 
+  &__slider-card {
+    .catalog-card__cart-btn span {
+      display: none;
+    }
+  }
+
   @include vp-tablet {
     margin-bottom: 120px;
   }

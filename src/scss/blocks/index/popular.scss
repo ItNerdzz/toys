@@ -24,6 +24,10 @@
 
   &__cards-item {
     width: 100%;
+
+    .catalog-card__cart-btn span {
+      display: none;
+    }
   }
 
   &__title {

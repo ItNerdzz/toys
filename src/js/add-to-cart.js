@@ -1,9 +1,9 @@
-const productQuantity = document.querySelector('.product-info__quantity');
+const productQuantity = document.querySelector('.card-product__quantity-wrapper');
 
 if (productQuantity) {
-  const input = productQuantity.querySelector('.product-info__value');
-  const buttonIncrease = productQuantity.querySelector('.product-info__increase');
-  const buttonDecrease = productQuantity.querySelector('.product-info__decrease');
+  const input = productQuantity.querySelector('.card-product__quantity-value');
+  const buttonIncrease = productQuantity.querySelector('.card-product__quantity-increase');
+  const buttonDecrease = productQuantity.querySelector('.card-product__quantity-decrease');
 
   input.addEventListener('input', event => {
     document.querySelector('.product-info__add-to-cart').setAttribute('data-quantity', input.value);
@@ -11,13 +11,23 @@ if (productQuantity) {
 
   buttonIncrease.addEventListener('click', event => {
     input.value = parseInt(input.value) + 1;
-    document.querySelector('.product-info__add-to-cart').setAttribute('data-quantity', input.value);
+    document.querySelector('.card-product__cart-btn').setAttribute('data-quantity', input.value);
+    document.querySelector('.card-product__order-btn').setAttribute('data-quantity', input.value);
+
+    if (input.value > 1) {
+      buttonDecrease.disabled = false;
+    }
   });
 
   buttonDecrease.addEventListener('click', event => {
     if (parseInt(input.value) > 1) {
       input.value = parseInt(input.value) - 1;
-      document.querySelector('.product-info__add-to-cart').setAttribute('data-quantity', input.value);
+      document.querySelector('.card-product__cart-btn').setAttribute('data-quantity', input.value);
+      document.querySelector('.card-product__order-btn').setAttribute('data-quantity', input.value);
+
+      if (input.value === 1) {
+        buttonDecrease.disabled = false;
+      }
     }
   });
 }
