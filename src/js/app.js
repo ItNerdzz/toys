@@ -20,7 +20,8 @@ import {initCardProductSwiper} from './card-product-swiper';
 import {initSliderCardSwiper} from './slider-card-swiper';
 import {initGratitudeSwiper} from './gratitude-swiper';
 import {initTabs} from './tabs';
-import {toggleAccordionItem} from './toggle-accordion-item';
+import {initVacanciesAccordion} from './vacancies-accordion';
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -46,6 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initSliderCardSwiper();
     initGratitudeSwiper();
     initTabs();
-    toggleAccordionItem();
+    initVacanciesAccordion();
   });
 });

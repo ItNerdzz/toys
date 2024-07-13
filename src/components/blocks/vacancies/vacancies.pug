@@ -46,7 +46,7 @@ mixin vacancies()
 
               ul.vacancies__accordion
                 each option in optionsItemAccordion
-                  +accordion-item(option)
+                  +accordion-item(option).vacancies__accordion-item
 
           .vacancies__no-vacancies(style="display: none;")
             +icon("icon-partner", 104, 104)
