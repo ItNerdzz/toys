@@ -1,11 +1,77 @@
 mixin vacancies()
+  -
+    const optionsItemAccordion = [
+      {
+        titlePro: 'Менеджер-кассир',
+        detailsLocation: 'г. Волгоград',
+        detailsWager: '50 000₽',
+        textRequirements: 'Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.',
+        timetable: 'Пн-пт 9:00-18:00, сб 9:00-15:00',
+        linkPhone: 'tel:+74929999999',
+        callbackContact: '+7 (492) 999-99-99, Светлана'
+      },
+      {
+        titlePro: 'Менеджер-кассир',
+        detailsLocation: 'г. Волгоград',
+        detailsWager: '50 000₽',
+        textRequirements: 'Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.',
+        timetable: 'Пн-пт 9:00-18:00, сб 9:00-15:00',
+        linkPhone: 'tel:+74929999999',
+        callbackContact: '+7 (492) 999-99-99, Светлана'
+      },
+      {
+        titlePro: 'Менеджер-кассир',
+        detailsLocation: 'г. Волгоград',
+        detailsWager: '50 000₽',
+        textRequirements: 'Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.',
+        timetable: 'Пн-пт 9:00-18:00, сб 9:00-15:00',
+        linkPhone: 'tel:+74929999999',
+        callbackContact: '+7 (492) 999-99-99, Светлана'
+      },
+    ];
+
 
   section.vacancies&attributes(attributes)
       .wrapper
         .vacancies__inner
           .vacancies__content
-            .vacancies__content-title
-              h2 Вакансии в Саратовской области
+            .title.title--medium.vacancies__content-title
+              h2 Вакансии в&nbsp;Саратовской области
+
+            .vacancies__content-container
+
+              .vacancies__navigation
+                .vacancies__navigation-title
+                  h3 Вакансии в филиалах
+
+              ul.accordion.vacancies__accordion
+                each option in optionsItemAccordion
+                  li.accordion__item.accordion-item
+
+                    button.accordion__item-button.accordion-item__button(type="button")
+                      h3.accordion__item-title!= option.titlePro
+                      P.accordion__item-details
+                        span.accordion__item-details-location!= option.detailsLocation
+                        span.accordion__item-details-wager!= option.detailsWager
+                      .accordion__item-button-icon.accordion-item__button-icon
+                        +icon("tick", 22, 22)
+
+                    .accordion__item-content-wrapper.accordion-item__content-wrapper
+                      .accordion-item__content
+
+                        dl.accordion__item-specification.accordion-item__specification
+                          .accordion__item-specification-set.accordion-item__specification-set
+                            dt.accordion__item-term Требования
+                            dd.accordion__item-definition!= option.textRequirements
+
+                          .accordion__item-specification-set.accordion-item__specification-set
+                            dt.accordion__item-term График работы
+                            dd.accordion__item-definition!= option.timetable
+
+                          .accordion__item-specification-set.accordion-item__specification-set
+                            dt.accordion__item-term Контакты для собеседования
+                            dd.accordion__item-definition
+                              +link({href: option.linkPhone, text: option.callbackContact, ariaLabel: "Переход к звонку по телефону"}).accordion__item-definition-callback
 
           .vacancies__no-vacancies(style="display: none;")
             +icon("icon-partner", 104, 104)

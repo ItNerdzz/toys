@@ -2,8 +2,46 @@
   max-width: 100vw;
   color: $base;
 
+  &__content-title {
+    width: 77%;
+    margin-bottom: 40px;
+
+    @include vp-tablet {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
   &__content {
     //display: none;
+  }
+
+  &__content-container {
+    @include vp-tablet-landscape {
+      display: grid;
+      grid-template-columns: 1fr 32.28%;
+      gap: 20px;
+    }
+  }
+
+  &__navigation {
+    margin-bottom: 30px;
+
+    @include vp-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include vp-tablet-landscape {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2;
+      margin-bottom: 0;
+    }
+  }
+
+  &__accordion {
+    @include vp-tablet-landscape {
+      //grid-column: 1 / 2;
+    }
   }
 
   &__no-vacancies {
@@ -55,6 +93,12 @@
         width: 27%;
       }
     }
+  }
+
+  &__accordion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 
 }
