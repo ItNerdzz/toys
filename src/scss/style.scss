@@ -21,7 +21,6 @@
 @import 'ui/navigation.scss';
 @import 'ui/search-form.scss';
 @import 'ui/input.scss';
-@import 'ui/accordion-item.scss';
 
 // LAYOUT
 @import 'layout/header.scss';
@@ -84,6 +83,7 @@
 @import 'blocks/sale-page/sale.scss';
 
 @import 'blocks/vacancies/vacancies.scss';
+@import 'blocks/vacancies/accordion-item.scss';
 
 // PAGES
 @import 'pages/page-home.scss';

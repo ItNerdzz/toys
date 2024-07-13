@@ -46,33 +46,7 @@ mixin vacancies()
 
               ul.vacancies__accordion
                 each option in optionsItemAccordion
-                  li.accordion-item.vacancies__accordion-item
-
-                    button.accordion-item__button(type="button")
-                      .accordion-item__button-text
-                        h3.accordion-item__title!= option.titlePro
-                        P.accordion-item__details
-                          span.accordion-item__details-location!= option.detailsLocation
-                          span.accordion-item__details-wager!= option.detailsWager
-                      .accordion-item__button-icon
-                        +icon("tick", 22, 22)
-
-                    .accordion-item__content-wrapper
-                      .accordion-item__content
-
-                        dl.accordion-item__specification
-                          .accordion-item__specification-set
-                            dt.accordion-item__term Требования
-                            dd.accordion-item__definition!= option.textRequirements
-
-                          .accordion-item__specification-set
-                            dt.accordion-item__term График работы
-                            dd.accordion-item__definition!= option.timetable
-
-                          .accordion-item__specification-set
-                            dt.accordion-item__term Контакты для&nbsp;собеседования
-                            dd.accordion-item__definition
-                              +link({href: option.linkPhone, text: option.callbackContact, ariaLabel: "Переход к звонку по телефону"}).accordion-item__definition-callback
+                  +accordion-item(option)
 
           .vacancies__no-vacancies(style="display: none;")
             +icon("icon-partner", 104, 104)
