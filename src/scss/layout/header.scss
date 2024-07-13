@@ -1,9 +1,5 @@
 .header {
-  max-width: 100vw;
   color: $base;
-
-  border-bottom: 1px solid $border-fill;
-
   z-index: 3;
   position: sticky;
 
@@ -12,30 +8,17 @@
   right: 0;
   background-color: $white;
 
+  border-bottom: 1px solid $border-fill;
+
   @include vp-desktop {
     top: -46px
   }
-
-  &__wrapper {
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $border-fill;
-    }
-  }
-
 
   &__inner {
     z-index: 1;
     position: relative;
     //padding: 20px 0;
     padding: 9px 0 13px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +30,7 @@
       position: absolute;
       top: -48px;
       right: 0;
-      bottom: 2px;
+      bottom: 1px;
       left: 0;
       background-color: #fff;
     }
@@ -117,6 +100,7 @@
     align-items: center;
     gap: 12px;
     border-radius: $br-default 0 0 $br-default;
+
     @include vp-desktop {
       display: flex;
     }
@@ -220,7 +204,7 @@
   &__search-form {
     z-index: -1;
     position: absolute;
-    top: 0;
+    top: -100%;
     left: 0;
     right: 0;
     background-color: $white;
