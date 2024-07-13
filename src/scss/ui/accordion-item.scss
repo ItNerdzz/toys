@@ -57,7 +57,7 @@
     }
 
     @include vp-tablet-landscape {
-      padding: 40px 28px;
+      padding: 40px 90px 40px 28px;
     }
   }
 
@@ -75,10 +75,17 @@
     display: flex;
     flex-direction: column;
 
+    @include vp-tablet-landscape {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+
     dt {
       margin-bottom: 12px;
 
       @include vp-tablet-landscape {
+        width: 24%;
         margin-bottom: 0;
       }
     }
@@ -87,8 +94,24 @@
       @include vp-tablet {
         width: 80%;
       }
+
+      @include vp-tablet-landscape {
+        width: 58%;
+      }
     }
 
+  }
+
+  &__button-text {
+    display: flex;
+    flex-direction: column;
+
+    @include vp-tablet {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
   }
 
   &__button {
@@ -103,7 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 20px;
     width: 100%;
     padding: 26px 18px;
     background-color: $white;
@@ -127,14 +150,37 @@
       line-height: 140%;
       color: $base;
       margin: 0;
+      margin-bottom: 8px;
 
       @include vp-tablet {
         font-size: 16px;
+        width: 50%;
+        margin-bottom: 0;
+      }
+
+      @include vp-tablet-landscape {
+        width: 40%;
       }
     }
 
     P {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
       margin: 0;
+
+      @include vp-tablet {
+        width: 50%;
+        column-gap: 60px;
+      }
+
+      @include vp-tablet-landscape {
+        width: 60%;
+      }
+
+      @include vp-desktop {
+        column-gap: 135px;
+      }
     }
 
     svg {
@@ -150,10 +196,6 @@
             color: $white;
           }
       }
-    }
-
-    @include vp-tablet {
-      gap: 160px;
     }
   }
 

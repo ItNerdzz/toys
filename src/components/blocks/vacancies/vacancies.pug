@@ -44,34 +44,35 @@ mixin vacancies()
                 .vacancies__navigation-title
                   h3 Вакансии в филиалах
 
-              ul.accordion.vacancies__accordion
+              ul.vacancies__accordion
                 each option in optionsItemAccordion
-                  li.accordion__item.accordion-item
+                  li.accordion-item.vacancies__accordion-item
 
-                    button.accordion__item-button.accordion-item__button(type="button")
-                      h3.accordion__item-title!= option.titlePro
-                      P.accordion__item-details
-                        span.accordion__item-details-location!= option.detailsLocation
-                        span.accordion__item-details-wager!= option.detailsWager
-                      .accordion__item-button-icon.accordion-item__button-icon
+                    button.accordion-item__button(type="button")
+                      .accordion-item__button-text
+                        h3.accordion-item__title!= option.titlePro
+                        P.accordion-item__details
+                          span.accordion-item__details-location!= option.detailsLocation
+                          span.accordion-item__details-wager!= option.detailsWager
+                      .accordion-item__button-icon
                         +icon("tick", 22, 22)
 
-                    .accordion__item-content-wrapper.accordion-item__content-wrapper
+                    .accordion-item__content-wrapper
                       .accordion-item__content
 
-                        dl.accordion__item-specification.accordion-item__specification
-                          .accordion__item-specification-set.accordion-item__specification-set
-                            dt.accordion__item-term Требования
-                            dd.accordion__item-definition!= option.textRequirements
+                        dl.accordion-item__specification
+                          .accordion-item__specification-set
+                            dt.accordion-item__term Требования
+                            dd.accordion-item__definition!= option.textRequirements
 
-                          .accordion__item-specification-set.accordion-item__specification-set
-                            dt.accordion__item-term График работы
-                            dd.accordion__item-definition!= option.timetable
+                          .accordion-item__specification-set
+                            dt.accordion-item__term График работы
+                            dd.accordion-item__definition!= option.timetable
 
-                          .accordion__item-specification-set.accordion-item__specification-set
-                            dt.accordion__item-term Контакты для собеседования
-                            dd.accordion__item-definition
-                              +link({href: option.linkPhone, text: option.callbackContact, ariaLabel: "Переход к звонку по телефону"}).accordion__item-definition-callback
+                          .accordion-item__specification-set
+                            dt.accordion-item__term Контакты для&nbsp;собеседования
+                            dd.accordion-item__definition
+                              +link({href: option.linkPhone, text: option.callbackContact, ariaLabel: "Переход к звонку по телефону"}).accordion-item__definition-callback
 
           .vacancies__no-vacancies(style="display: none;")
             +icon("icon-partner", 104, 104)

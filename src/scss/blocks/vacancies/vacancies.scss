@@ -12,10 +12,6 @@
     }
   }
 
-  &__content {
-    //display: none;
-  }
-
   &__content-container {
     @include vp-tablet-landscape {
       display: grid;
@@ -39,9 +35,9 @@
   }
 
   &__accordion {
-    @include vp-tablet-landscape {
-      //grid-column: 1 / 2;
-    }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__no-vacancies {
@@ -94,11 +90,4 @@
       }
     }
   }
-
-  &__accordion {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
 }
