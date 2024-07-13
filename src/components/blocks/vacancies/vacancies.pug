@@ -1,12 +1,53 @@
 mixin vacancies()
+  -
+    const optionsItemAccordion = [
+      {
+        titlePro: 'Менеджер-кассир',
+        detailsLocation: 'г. Волгоград',
+        detailsWager: '50 000₽',
+        textRequirements: 'Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.',
+        timetable: 'Пн-пт 9:00-18:00, сб 9:00-15:00',
+        linkPhone: 'tel:+74929999999',
+        callbackContact: '+7 (492) 999-99-99, Светлана'
+      },
+      {
+        titlePro: 'Менеджер-кассир',
+        detailsLocation: 'г. Волгоград',
+        detailsWager: '50 000₽',
+        textRequirements: 'Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.',
+        timetable: 'Пн-пт 9:00-18:00, сб 9:00-15:00',
+        linkPhone: 'tel:+74929999999',
+        callbackContact: '+7 (492) 999-99-99, Светлана'
+      },
+      {
+        titlePro: 'Менеджер-кассир',
+        detailsLocation: 'г. Волгоград',
+        detailsWager: '50 000₽',
+        textRequirements: 'Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.',
+        timetable: 'Пн-пт 9:00-18:00, сб 9:00-15:00',
+        linkPhone: 'tel:+74929999999',
+        callbackContact: '+7 (492) 999-99-99, Светлана'
+      },
+    ];
+
 
   section.vacancies&attributes(attributes)
       .wrapper
         .vacancies__inner
           .vacancies__content
-            .vacancies__content-title
-              h2 Вакансии в Саратовской области
+            .title.title--medium.vacancies__content-title
+              h2 Вакансии в&nbsp;Саратовской области
 
-          .vacancies__no-vacancies
+            .vacancies__content-container
+
+              .vacancies__navigation
+                .vacancies__navigation-title
+                  h3 Вакансии в филиалах
+
+              ul.vacancies__accordion
+                each option in optionsItemAccordion
+                  +accordion-item(option).vacancies__accordion-item
+
+          .vacancies__no-vacancies(style="display: none;")
             +icon("icon-partner", 104, 104)
             p На данный момент у нас нет свободных вакансий или предложений
