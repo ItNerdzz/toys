@@ -37,6 +37,12 @@
     display: flex;
     align-items: center;
     gap: 14px;
+
+    .input {
+      @include vp-desktop {
+        border-radius: 0 6px 6px 0;
+      }
+    }
   }
 
   &__input {
