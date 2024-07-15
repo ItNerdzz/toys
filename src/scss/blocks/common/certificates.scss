@@ -16,8 +16,8 @@
       background-image: url("/images/edge-bg.svg");
       background-size: cover;
       background-repeat: repeat;
-      background-position: center;
-      top: -14px;
+      background-position: top;
+      top: -27px;
       left: 0;
     }
 
@@ -32,8 +32,8 @@
       background-image: url("/images/edge-bg.svg");
       background-size: cover;
       background-repeat: repeat;
-      background-position: center;
-      bottom: -14px;
+      background-position: top;
+      bottom: -27px;
       left: 0;
 
       transform: rotate(180deg);
