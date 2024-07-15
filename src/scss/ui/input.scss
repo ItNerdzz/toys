@@ -12,14 +12,6 @@ textarea,
   width: 100%;
 }
 
-.input {
-  @include vp-desktop {
-    &--radius-right-desktop {
-      border-radius: 0 6px 6px 0;
-    }
-  }
-}
-
 textarea.input,
 .form-row textarea {
   resize: none;
