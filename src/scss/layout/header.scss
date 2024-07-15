@@ -238,7 +238,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+
+    @include vp-tablet {
+      gap: 10px;
+    }
+
+    @include vp-desktop {
+      gap: 23px;
+    }
   }
 
   &__callback-button {
