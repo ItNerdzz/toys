@@ -5,6 +5,6 @@ mixin search-form()
       button.search-form__close-modal-button.search-modal__close--js(type="button")
         svg
           use(href="/images/sprite.svg#tick")
-      input.input.search-form__input(type="text", placeholder="Поиск по: названию, артикулу, категории")
+      input.input.input--radius-right-desktop.search-form__input(type="text", placeholder="Поиск по: названию, артикулу, категории")
       button.search-form__submit(type="submit")
         +icon("search", 18, 18)
