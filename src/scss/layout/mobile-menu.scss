@@ -6,7 +6,7 @@
   right: 0;
   transition: all .9s ease-in-out;
   padding-top: 121px;
-  padding-bottom: 50px;
+  //padding-bottom: 50px;
   background-color: $white;
   max-height: 100vh;
   overflow: scroll;
@@ -16,13 +16,18 @@
   }
 
   &__group {
-    padding: 34px 0 40px;
+    padding: 34px 0 34px;
 
     &:not(:last-child) {
       border-top: 1px solid $border-fill;
     }
 
+    &:not(:first-child) {
+      padding-bottom: 45px;
+    }
+
     &:last-child {
+      padding-top: 45px;
       background-color: $accent-bg;
     }
   }
@@ -38,6 +43,7 @@
     align-items: center;
     gap: 12px;
     color: $base;
+    min-height: 36px;
     font-size: 18px;
     font-weight: 500;
     line-height: 130%;
@@ -57,12 +63,16 @@
 
     a {
       color: $base;
+      font-weight: 400;
       font-size: 16px;
-      font-weight: 500;
+      line-height: 19px;
     }
   }
 
   &__callback {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
     justify-content: center;
     margin-top: 12px
   }

@@ -164,10 +164,11 @@
     display: grid;
     gap: 1px;
     grid-template-columns: 1fr 1fr;
-    background-color: $border-fill;
+    //background-color: $border-fill;
+    background-color: $white;
 
-    padding-top: 1px;
-    padding-bottom: 1px;
+    //padding-top: 1px;
+    //padding-bottom: 1px;
 
     margin-bottom: 40px;
 
@@ -191,6 +192,11 @@
 
   &__cards-item {
     background-color: $white;
+    outline: 1px solid rgba(226, 227, 229, 1);
+
+    @include vp-tablet-landscape {
+      outline: revert;
+    }
   }
 
   &__request-wrapper {
