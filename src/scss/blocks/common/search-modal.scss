@@ -15,11 +15,11 @@
     position: relative;
     height: 100%;
     overflow-y: auto;
-    padding: 200px 24px 160px;
+    padding: 200px 0 160px;
     box-sizing: border-box;
 
     @media screen and (min-width: $tablet) {
-      padding: 210px 24px 160px;
+      padding: 210px 34px 160px 0;
     }
 
     @media screen and (min-width: $tablet-landscape) {
@@ -46,6 +46,12 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 140%;
+
+    margin-bottom: 26px;
+
+    @include vp-tablet-landscape {
+      margin-bottom: 0;
+    }
   }
 
   &__category-list {
@@ -174,23 +180,38 @@
     align-items: center;
     column-gap: 10px;
     max-width: 720px;
-    padding: $indent 30px;
+    padding: $indent 0;
     margin: 0 auto;
+
+    @include vp-tablet-landscape {
+      padding: $indent 30px;
+    }
   }
 
   &__cta-title {
     grid-area: title;
     color: $base;
-    font-size: 16px;
     font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
     margin: 0 0 4px;
+
+    @include vp-tablet {
+      font-weight: 500;
+      font-size: 16px;
+    }
   }
 
   &__cta-subtitle {
     grid-area: subtitle;
     color: $grey;
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 11px;
     line-height: 140%;
+
+    @include vp-tablet {
+      font-size: 12px;
+    }
   }
 
   &__cta-button {
