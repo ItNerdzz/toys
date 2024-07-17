@@ -49,8 +49,20 @@
 
   button[type="submit"] {
     width: 100%;
-    font-size: 16px;
+
     font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    @include vp-tablet {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @include vp-tablet-landscape {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
 
   .contact-form__privacy .checkbox {

@@ -200,8 +200,6 @@
   background-color: $accent-bg;
   border: 1px solid $accent-bg;
   color: $primary;
-  font-size: 15px;
-  font-weight: 500;
   padding: 13px;
 
   &:active {
@@ -210,6 +208,23 @@
 
   @include hover-focus {
     color: $white;
+  }
+}
+
+.cart__callback,
+.cart__checkout  {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+
+  @include vp-tablet {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include vp-tablet-landscape {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
 
@@ -223,6 +238,9 @@
 
 .cart__checkout-container--opened {
   display: block;
+
+  @include scrollbar;
+  overflow-y: auto;
 }
 
 .cart .cart__list--hidden,
@@ -252,6 +270,10 @@
   box-sizing: border-box;
   width: 100%;
   margin-top: auto;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .cart__empty-text {
