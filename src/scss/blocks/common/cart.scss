@@ -107,7 +107,8 @@
   border: 1px solid $border-fill-dark;
   border-radius: 6px;
   width: fit-content;
-  max-width: 85px;
+  // max-width: 83px; // блок на 3 цифры поменять еще ширину в value
+  max-width: 76px; // блок на 2 цифры
 
   padding: 0 8px;
 }
@@ -121,9 +122,9 @@
   justify-content: center;
   width: 26px;
   height: 26px;
-  //font-size: 20px;
-  //font-weight: 1000;
-  //line-height: 1;
+  // font-size: 20px;
+  // font-weight: 1000;
+  // line-height: 1;
   border: none;
   background: $transparent;
   color: $transparent;
@@ -199,14 +200,14 @@
   font-size: 16px;
   line-height: 140%;
   color: $base;
-  //padding: 0 8px;
   height: 26px;
   border: none;
   text-align: center;
 
   padding: 3px 5px;
   background-color: $transparent;
-  width: 100%;
+  // width: 100%; // блок на 3 цифры
+  width: 28px; // блок на 2 цифры
 
   appearance: textfield;
   resize: horizontal;
