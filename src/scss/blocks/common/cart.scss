@@ -104,39 +104,113 @@
 .cart__quantity-wrapper {
   display: flex;
   align-items: center;
-  border: 1px solid $accent-bg;
+  border: 1px solid $border-fill-dark;
   border-radius: 6px;
   width: fit-content;
-  max-width: 100px;
+  // max-width: 83px; // блок на 3 цифры поменять еще ширину в value
+  max-width: 76px; // блок на 2 цифры
+
+  padding: 0 8px;
 }
 
 .cart__quantity-decrease,
 .cart__quantity-increase {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 26px;
   height: 26px;
-  font-size: 20px;
-  font-weight: 1000;
-  line-height: 1;
+  // font-size: 20px;
+  // font-weight: 1000;
+  // line-height: 1;
   border: none;
-  background: transparent;
-  color: $base;
+  background: $transparent;
+  color: $transparent;
+
+  padding: 1px 1px;
+  transition: opacity $trans-default;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    border-radius: 30px;
+    background-color: $base;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    align-self: center;
+
+    transition: background-color $trans-default;
+  }
+
+
+  &:not([disabled]) {
+    @include hover-focus {
+      &::before,
+      &::after {
+        background-color: $primary;
+      }
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+
+  &[disabled] {
+    cursor: default;
+    &::before {
+      background-color: $bg-disabled;
+    }
+  }
+}
+
+.cart__quantity-increase {
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 10px;
+    border-radius: 30px;
+    background-color: $base;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    margin-top: -5px;
+    align-self: center;
+
+    transition: background-color $trans-default;
+  }
 }
 
 .cart__quantity-value {
-  display: inline-block;
-  color: $base;
+  display: block;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  padding: 0 8px;
+  color: $base;
   height: 26px;
   border: none;
   text-align: center;
-  width: 26px;
-  -moz-appearance: textfield;
+
+  padding: 3px 5px;
+  background-color: $transparent;
+  // width: 100%; // блок на 3 цифры
+  width: 28px; // блок на 2 цифры
+
+  appearance: textfield;
+  resize: horizontal;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -200,8 +274,6 @@
   background-color: $accent-bg;
   border: 1px solid $accent-bg;
   color: $primary;
-  font-size: 15px;
-  font-weight: 500;
   padding: 13px;
 
   &:active {
@@ -210,6 +282,23 @@
 
   @include hover-focus {
     color: $white;
+  }
+}
+
+.cart__callback,
+.cart__checkout  {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+
+  @include vp-tablet {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include vp-tablet-landscape {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
 
@@ -223,6 +312,9 @@
 
 .cart__checkout-container--opened {
   display: block;
+
+  @include scrollbar;
+  overflow-y: auto;
 }
 
 .cart .cart__list--hidden,
@@ -252,6 +344,10 @@
   box-sizing: border-box;
   width: 100%;
   margin-top: auto;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .cart__empty-text {
