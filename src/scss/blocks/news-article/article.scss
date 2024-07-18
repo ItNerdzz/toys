@@ -83,6 +83,14 @@
     font-size: 15px;
     line-height: 170%;
 
+    & > *:first-child {
+      margin-top: 0;
+
+      br {
+        display: none;
+      }
+    }
+
     @include vp-tablet {
       font-size: 16px;
     }
@@ -118,8 +126,18 @@
       }
     }
 
-    p:last-child {
-      margin-bottom: 0;
+    p {
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include vp-tablet {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
     }
 
     iframe,
@@ -133,12 +151,10 @@
       object-fit: cover;
       object-position: center;
 
-      &:not(:first-child) {
-        margin-top: 40px;
+      margin-top: 40px;
 
-        @include vp-tablet {
-          margin-top: 50px;
-        }
+      @include vp-tablet {
+        margin-top: 50px;
       }
 
       &:not(:last-child) {

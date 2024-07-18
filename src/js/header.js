@@ -2,8 +2,6 @@ const header = document.querySelector('.header');
 
 const burgerButton = document.querySelector('.header__burger-button');
 
-
-
 const toggleMenu = () => {
   if (header.classList.contains('header--menu-opened')) {
     document.body.classList.remove('locked');
@@ -23,6 +21,11 @@ burgerButton.addEventListener('click', toggleMenu);
 const searchButton = document.querySelector('.header__search-button');
 
 const searchForm = document.querySelector('.header__search-form');
+
+searchForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  document.activeElement.blur();
+});
 
 const toggleSearch = () => {
   searchForm.classList.toggle('header__search-form--opened');
