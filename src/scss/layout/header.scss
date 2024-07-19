@@ -290,10 +290,6 @@
       height: 19px;
     }
 
-    @include hover-focus {
-
-    }
-
     @include vp-desktop {
       span:first-child {
         display: inline-block;
@@ -303,6 +299,12 @@
     @include vp-desktop {
       min-width: 155px;
       padding: 14px 24px;
+    }
+
+    &.btn--cart-main {
+      @include hover-focus {
+        background-color: $accent-bg-items-hover;
+      }
     }
   }
 
