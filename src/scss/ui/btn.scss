@@ -20,7 +20,9 @@
   }
 
   @include hover-focus {
-    background-color: $primary-hover;
+    &:not(.tabs__button--active) {
+      background-color: $primary-hover;
+    }
   }
 
   &--border-clear {
