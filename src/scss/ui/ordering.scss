@@ -1,7 +1,9 @@
 .ordering,
 .woocommerce-ordering {
   display: flex;
+}
 
+.ordering {
   @include vp-tablet-landscape {
     width: fit-content;
     margin-left: auto;
@@ -14,37 +16,75 @@
   width: 100%;
 }
 
+.woocommerce-ordering {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8.8px;
+    padding: 0 15px 0 10px;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    &::after {
+      color: $primary-hover;
+    }
+  }
+}
+
 .ordering select,
 .woocommerce-ordering select {
   -moz-appearance: none;
   -webkit-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  display: flex;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-color: $accent-bg;
+  background-image: none;
+  border-radius: 8px;
+  cursor: pointer;
 
+  flex: 1;
+
+  font-family: $base-font;
   font-weight: 500;
-  font-size: 13px;
+  // font-size: 13px; // по макету
+  font-size: 16px; // лучше так
   line-height: 118%;
   color: $base;
+  // text-align: center; // центрует текст вместе с выпадашкой
 
   width: 100%;
   min-width: fit-content;
-  border: none;
-  outline: none;
-  padding: 15px;
-  border-radius: 6px;
-  background-color: $accent-bg;
+  padding: 13px 40px 13px 12%;
+  // padding-left: 40%; // псевдо центровка текста
 
-  option {
-    text-align: left;
-  }
 
   @include vp-tablet {
-    font-size: 16px;
-    padding: 13px;
+    // font-size: 16px; // по макету
+    font-size: 18px; // лучше так
   }
 
   @include vp-tablet-landscape {
     font-size: 13px;
-    padding: 9px;
+    padding: 9px 40px 9px 16px;
+    border-radius: 6px;
+  }
+
+ &::-ms-expand {
+  display: none;
+ }
+
+  option {
+    font-weight: 500;
   }
 }
