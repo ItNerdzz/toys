@@ -113,7 +113,7 @@
       margin-top: -30px;
       margin-right: auto;
 
-      background-image: url("/images/icon-certificate.svg");
+      background-image: url("/images/icon-certificate.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -194,8 +194,10 @@
     left: 60%;
     top: 50%;
     display: flex;
-    width: 26.456%;
-    height: 34.683%;
+    //width: 26.456%;
+    //height: 34.683%;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
     padding: 0;
     margin: 0;
@@ -207,13 +209,15 @@
     align-items: center;
 
     @include vp-tablet {
-      width: 21.516%;
-      height: 35.751%;
+      //width: 21.516%;
+      //height: 35.751%;
+      width: 142px;
+      height: 142px;
     };
 
     @include vp-tablet-landscape {
-      width: 23.203%;
-      height: 35.751%;
+      //width: 23.203%;
+      //height: 35.751%;
     }
 
     &::after {

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Pagination, Navigation} from 'swiper/modules';
+import { Pagination, Navigation, Autoplay} from 'swiper/modules';
 
 
 const introSwiper = document.querySelector('.intro__swiper');
@@ -10,18 +10,22 @@ const initIntroSwiper = () => {
       direction: 'horizontal',
       slidesPerView: 1, // демонстрация количества слайдов
       spaceBetween: 5, // расстояние между слайдами
-      initialSlide: 1, // с какого слайда начать показ
+      initialSlide: 0, // с какого слайда начать показ
       // autoHeight: true, // автовысота
       speed: 500, // скорость перелистывания
       watchOverflow: true, // отключает если недостаок слайдов
 
-      modules: [Pagination, Navigation],
+      modules: [Pagination, Navigation, Autoplay],
+
+      autoplay: {
+        delay: 5000
+      },
 
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
-        dynamicBullets: true, // динамический вид пагинации
+        // dynamicBullets: true, // динамический вид пагинации
       },
 
       navigation: {
