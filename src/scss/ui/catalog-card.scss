@@ -90,6 +90,12 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
+
+    &.btn--base-small {
+      @include hover-focus {
+        background-color: $accent-bg-items;
+      }
+    }
   }
 
   &__cart-btn {

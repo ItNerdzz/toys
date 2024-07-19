@@ -16,9 +16,35 @@
 
 .ordering select,
 .woocommerce-ordering select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 118%;
+  color: $base;
+
   width: 100%;
+  min-width: fit-content;
   border: none;
+  outline: none;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 6px;
   background-color: $accent-bg;
+
+  option {
+    text-align: left;
+  }
+
+  @include vp-tablet {
+    font-size: 16px;
+    padding: 13px;
+  }
+
+  @include vp-tablet-landscape {
+    font-size: 13px;
+    padding: 9px;
+  }
 }
