@@ -29,6 +29,10 @@
     }
   }
 
+  .page-numbers.dots {
+    margin-right: 10px;
+  }
+
   a.page-numbers {
     &:not(:first-child, :last-child) {
       margin-right: 20px;
