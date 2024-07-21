@@ -1,11 +1,9 @@
 .ordering,
 .woocommerce-ordering {
   display: flex;
-}
 
-.ordering {
   @include vp-tablet-landscape {
-    width: fit-content;
+    width: fit-content !important;
     margin-left: auto;
   }
 }
@@ -14,6 +12,11 @@
 .woocommerce-ordering form {
   display: flex;
   width: 100%;
+
+  @include vp-tablet-landscape {
+    width: fit-content;
+    margin-left: auto;
+  }
 }
 
 .woocommerce-ordering {
@@ -22,19 +25,25 @@
   overflow: hidden;
 
   &::after {
-    content: "\25BC";
+    content: "";
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     right: 0;
-    margin-top: -8.8px;
+    margin: auto;
     padding: 0 15px 0 10px;
     cursor: pointer;
     pointer-events: none;
+    background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%225%22%20viewBox%3D%220%200%208%205%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M3.99879%20-3.02841e-07L7.46289%204.5L0.534686%204.5L3.99879%20-3.02841e-07Z%22%20fill%3D%22%23111111%22%2F%3E%3C%2Fsvg%3E) no-repeat center;
+    width: 7px;
+    height: 5px;
+    transform: rotate(180deg);
+    transition: $trans-default;
   }
 
   @include hover-focus {
     &::after {
-      color: $primary-hover;
+      transform: rotate(0deg);
     }
   }
 }
