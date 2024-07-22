@@ -1,7 +1,7 @@
 .catalog-card {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: min-content auto;
 
   padding: 7.813% 7.032%;
   box-sizing: border-box;
@@ -19,9 +19,10 @@
   }
 
   &__link {
+    min-height: 238px; // 2 строки заглавия
+    // min-height: 262px; //3 строки заглавия
+
     img {
-      //width: 72.33%;
-      //height: auto;
       height: 156px;
       width: 100%;
       margin: 0 auto;
@@ -51,7 +52,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    justify-content: space-between;
   }
 
   &__data-add {
@@ -86,7 +87,6 @@
 
   &__buttons-wrapper {
     display: flex;
-    justify-content: space-between;
     margin-top: auto;
 
     gap: 10px;
