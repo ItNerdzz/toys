@@ -230,6 +230,7 @@
   &__options-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -237,7 +238,6 @@
   }
 
   &__options-item {
-    margin-right: 16px;
     width: 27.6%;
     min-width: 100px;
   }
