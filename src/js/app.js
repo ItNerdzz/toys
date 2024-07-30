@@ -10,6 +10,7 @@ import './cart.js';
 import './add-to-cart.js';
 import './modals-sale.js';
 import './filter.js';
+import './vacancies-tabs.js';
 
 import {initIntroSwiper} from './intro-swiper';
 import {initAdvantagesSwiper} from './advantages-swiper';

@@ -40,9 +40,19 @@ mixin vacancies()
 
             .vacancies__content-container
 
-              .vacancies__navigation
-                .vacancies__navigation-title
-                  h3 Вакансии в филиалах
+              .vacancies__tabs
+                h3.vacancies__tabs-buttons-title Вакансии в филиалах
+                ul.vacancies__tabs-list
+                  li
+                    button.vacancies__tabs-button.vacancies__tabs-button--active Волгоградская область (4)
+                  li
+                    button.vacancies__tabs-button Московская область (1)
+
+
+
+              ul.vacancies__accordion.vacancies__accordion--show
+                each option in optionsItemAccordion
+                  +accordion-item(option).vacancies__accordion-item
 
               ul.vacancies__accordion
                 each option in optionsItemAccordion

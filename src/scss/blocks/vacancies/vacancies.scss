@@ -20,8 +20,12 @@
     }
   }
 
-  &__navigation {
+  &__tabs {
     margin-bottom: 30px;
+    border-radius: $br-default;
+    background-color: $accent-bg;
+    height: fit-content;
+    padding: 40px 25px;
 
     @include vp-tablet {
       margin-bottom: 40px;
@@ -34,10 +38,59 @@
     }
   }
 
+  &__tabs-buttons-title {
+    color: $base;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0 0 18px;
+    padding-left: 15px;
+  }
+
+  &__tabs-list {
+    @include clearlist;
+  }
+
+  &__tabs-button {
+    cursor: pointer;
+    color: $base;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    border-radius: $br-default;
+    width: 100%;
+    text-align: start;
+    background-color: transparent;
+    border: none;
+    transition: $trans-default;
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    @include hover-focus {
+      background-color: $accent-bg-items;
+      opacity: 0.8;
+    }
+
+    &.vacancies__tabs-button--active {
+      background-color: $accent-bg-items;
+
+      @include hover-focus {
+        opacity: 1;
+      }
+    }
+  }
+
   &__accordion {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    @include clearlist;
+
+    display: none;
+  }
+
+  &__accordion--show {
+    display: block;
   }
 
   &__no-vacancies {
