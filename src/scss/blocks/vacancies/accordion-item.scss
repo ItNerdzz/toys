@@ -71,6 +71,7 @@
   // dd
   &__definition {
     margin-left: 0;
+    white-space: pre-wrap;
 
     @include vp-tablet {
       width: 80%;
