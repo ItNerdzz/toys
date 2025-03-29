@@ -154,6 +154,9 @@
   }
 
   &__bottom-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
     border-top: 1px solid $border-fill;
     padding: 36px 0;
 
@@ -193,7 +196,7 @@
     color: $secondary;
   }
 
-  &__nav{
+  &__nav {
 
   }
 
@@ -205,6 +208,21 @@
         margin-bottom: 10px;
       }
 
+    }
+  }
+
+  &__dev {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 120%;
+    color: $secondary;
+
+    & img {
+      width: 33px;
+      height: auto;
     }
   }
 }

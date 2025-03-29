@@ -83,11 +83,6 @@ mixin footer(footerMods)
     const optionsBottomBar = [
       {
         link: '#',
-        nameItem: 'Согласие на обработку персональных данных',
-        ariaLabel: 'Переход к разделу - Согласие на обработку персональных данных'
-      },
-      {
-        link: '#',
         nameItem: 'Политика конфиденциальности',
         ariaLabel: 'Переход к разделу - Политика конфиденциальности'
       },
@@ -141,6 +136,8 @@ mixin footer(footerMods)
             each option in optionsBottomBar
               li
                 +link({href: option.link, text: option.nameItem, ariaLabel: option.ariaLabel}).footer__bottom-bar-link
+          a.footer__dev(href='#')='Разработка'
+            img(src='/images/zen.svg')
 
   +popup('cart cart--side-cart', 'Корзина')
     //+checkout
